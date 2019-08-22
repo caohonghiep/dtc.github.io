@@ -16,6 +16,10 @@ var map = {
 		"./src/app/sub-modules/appointments/appointments.module.ts",
 		"sub-modules-appointments-appointments-module"
 	],
+	"./sub-modules/auth/auth.module": [
+		"./src/app/sub-modules/auth/auth.module.ts",
+		"sub-modules-auth-auth-module"
+	],
 	"./sub-modules/debts/debts.module": [
 		"./src/app/sub-modules/debts/debts.module.ts",
 		"sub-modules-debts-debts-module"
@@ -70,28 +74,6 @@ module.exports = "<ic-page-loader></ic-page-loader>\n<div id=\"wrapper\">\n  <ic
 
 /***/ }),
 
-/***/ "./node_modules/raw-loader/index.js!./src/app/components/auth/auth.component.html":
-/*!*******************************************************************************!*\
-  !*** ./node_modules/raw-loader!./src/app/components/auth/auth.component.html ***!
-  \*******************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div id=\"main-content\">\n  <div class=\"container-fluid\" style=\"padding-top: 25px\">\n    <amplify-authenticator></amplify-authenticator>\n  </div>\n</div>\n"
-
-/***/ }),
-
-/***/ "./node_modules/raw-loader/index.js!./src/app/components/secure/secure.component.html":
-/*!***********************************************************************************!*\
-  !*** ./node_modules/raw-loader!./src/app/components/secure/secure.component.html ***!
-  \***********************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<p>secure works!</p>\n"
-
-/***/ }),
-
 /***/ "./node_modules/raw-loader/index.js!./src/app/pages/home/home.component.html":
 /*!**************************************************************************!*\
   !*** ./node_modules/raw-loader!./src/app/pages/home/home.component.html ***!
@@ -132,7 +114,7 @@ module.exports = "<h1 mat-dialog-title></h1>\n<div mat-dialog-content>\n  <p>{{m
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<nav class=\"navbar navbar-fixed-top\">\n  <div class=\"container-fluid\">\n    <div class=\"navbar-left\">\n      <!--\n      <div class=\"navbar-btn\">\n        <a href=\"index.html\"><img src=\"assets/images/icon-light.svg\" alt=\"HexaBit Logo\" class=\"img-fluid logo\"></a>\n        <button type=\"button\" class=\"btn-toggle-offcanvas\"><i class=\"lnr lnr-menu fa fa-bars\"></i></button>\n      </div>\n      <a href=\"javascript:void(0);\" class=\"icon-menu btn-toggle-fullwidth\"><i class=\"fa fa-arrow-left\"></i></a>-->\n      <ul class=\"nav navbar-nav\">\n        <li class=\"dropdown dropdown-animated scale-right\">\n          <a href=\"javascript:void(0);\" class=\"dropdown-toggle icon-menu\" data-toggle=\"dropdown\"><i class=\"icon-grid\"></i></a>\n          <ul class=\"dropdown-menu menu-icon app_menu\">\n            <li>\n              <a class=\"#\">\n                <i class=\"icon-envelope\"></i>\n                <span>Inbox</span>\n              </a>\n            </li>\n            <li>\n              <a class=\"#\">\n                <i class=\"icon-bubbles\"></i>\n                <span>Chat</span>\n              </a>\n            </li>\n            <li>\n              <a class=\"#\">\n                <i class=\"icon-list\"></i>\n                <span>Task</span>\n              </a>\n            </li>\n            <li>\n              <a class=\"#\">\n                <i class=\"icon-globe\"></i>\n                <span>Blog</span>\n              </a>\n            </li>\n          </ul>\n        </li>\n        <li><a href=\"app-calendar.html\" class=\"icon-menu d-none d-sm-block d-md-none d-lg-block\"><i class=\"icon-calendar\"></i></a></li>\n        <li><a href=\"app-chat.html\" class=\"icon-menu d-none d-sm-block\"><i class=\"icon-bubbles\"></i></a></li>\n      </ul>\n    </div>\n\n    <div class=\"navbar-right\">\n      <!--        <form id=\"navbar-search\" class=\"navbar-form search-form\">-->\n      <!--          <input value=\"\" class=\"form-control\" placeholder=\"Search here...\" type=\"text\">-->\n      <!--          <button type=\"button\" class=\"btn btn-default\"><i class=\"icon-magnifier\"></i></button>-->\n      <!--        </form>-->\n\n      <div id=\"navbar-menu\">\n        <ul class=\"nav navbar-nav\">\n          <li class=\"dropdown dropdown-animated scale-left\">\n            <a href=\"javascript:void(0);\" class=\"dropdown-toggle icon-menu\" data-toggle=\"dropdown\">\n              <i class=\"icon-envelope\"></i>\n              <span class=\"notification-dot\"></span>\n            </a>\n            <ul class=\"dropdown-menu right_chat email\">\n              <li>\n                <a href=\"javascript:void(0);\">\n                  <div class=\"media\">\n                    <img class=\"media-object \" src=\"assets/images/xs/avatar.jpg\" alt=\"\">\n                    <div class=\"media-body\">\n                      <span class=\"name\">James Wert <small class=\"float-right\">Just now</small></span>\n                      <span class=\"message\">Lorem ipsum Veniam aliquip culpa laboris minim tempor</span>\n                    </div>\n                  </div>\n                </a>\n              </li>\n              <li>\n                <a href=\"javascript:void(0);\">\n                  <div class=\"media\">\n                    <img class=\"media-object \" src=\"assets/images/xs/avatar.jpg\" alt=\"\">\n                    <div class=\"media-body\">\n                      <span class=\"name\">Folisise Chosielie <small class=\"float-right\">12min ago</small></span>\n                      <span class=\"message\">There are many variations of Lorem Ipsum available, but the majority</span>\n                    </div>\n                  </div>\n                </a>\n              </li>\n              <li>\n                <a href=\"javascript:void(0);\">\n                  <div class=\"media\">\n                    <img class=\"media-object \" src=\"assets/images/xs/avatar.jpg\" alt=\"\">\n                    <div class=\"media-body\">\n                      <span class=\"name\">Ava Alexander <small class=\"float-right\">38min ago</small></span>\n                      <span class=\"message\">Many desktop publishing packages and web page editors</span>\n                    </div>\n                  </div>\n                </a>\n              </li>\n              <li>\n                <a href=\"javascript:void(0);\">\n                  <div class=\"media mb-0\">\n                    <img class=\"media-object \" src=\"assets/images/xs/avatar.jpg\" alt=\"\">\n                    <div class=\"media-body\">\n                      <span class=\"name\">Debra Stewart <small class=\"float-right\">2hr ago</small></span>\n                      <span class=\"message\">Contrary to popular belief, Lorem Ipsum is not simply random text</span>\n                    </div>\n                  </div>\n                </a>\n              </li>\n            </ul>\n          </li>\n          <li class=\"dropdown dropdown-animated scale-left\">\n            <a href=\"javascript:void(0);\" class=\"dropdown-toggle icon-menu\" data-toggle=\"dropdown\">\n              <i class=\"icon-bell\"></i>\n              <span class=\"notification-dot\"></span>\n            </a>\n            <ul class=\"dropdown-menu feeds_widget\">\n              <li class=\"header\">You have 5 new Notifications</li>\n              <li>\n                <a href=\"javascript:void(0);\">\n                  <div class=\"feeds-left\"><i class=\"fa fa-thumbs-o-up text-success\"></i></div>\n                  <div class=\"feeds-body\">\n                    <h4 class=\"title text-success\">7 New Feedback <small class=\"float-right text-muted\">Today</small></h4>\n                    <small>It will give a smart finishing to your site</small>\n                  </div>\n                </a>\n              </li>\n              <li>\n                <a href=\"javascript:void(0);\">\n                  <div class=\"feeds-left\"><i class=\"fa fa-user\"></i></div>\n                  <div class=\"feeds-body\">\n                    <h4 class=\"title\">New User <small class=\"float-right text-muted\">10:45</small></h4>\n                    <small>I feel great! Thanks team</small>\n                  </div>\n                </a>\n              </li>\n              <li>\n                <a href=\"javascript:void(0);\">\n                  <div class=\"feeds-left\"><i class=\"fa fa-question-circle text-warning\"></i></div>\n                  <div class=\"feeds-body\">\n                    <h4 class=\"title text-warning\">Server Warning <small class=\"float-right text-muted\">10:50</small></h4>\n                    <small>Your connection is not private</small>\n                  </div>\n                </a>\n              </li>\n              <li>\n                <a href=\"javascript:void(0);\">\n                  <div class=\"feeds-left\"><i class=\"fa fa-check text-danger\"></i></div>\n                  <div class=\"feeds-body\">\n                    <h4 class=\"title text-danger\">Issue Fixed <small class=\"float-right text-muted\">11:05</small></h4>\n                    <small>WE have fix all Design bug with Responsive</small>\n                  </div>\n                </a>\n              </li>\n              <li>\n                <a href=\"javascript:void(0);\">\n                  <div class=\"feeds-left\"><i class=\"fa fa-shopping-basket\"></i></div>\n                  <div class=\"feeds-body\">\n                    <h4 class=\"title\">7 New Orders <small class=\"float-right text-muted\">11:35</small></h4>\n                    <small>You received a new oder from Tina.</small>\n                  </div>\n                </a>\n              </li>\n            </ul>\n          </li>\n          <li><a href=\"javascript:void(0);\" class=\"right_toggle icon-menu\" title=\"Right Menu\"><i class=\"icon-settings\"></i></a></li>\n          <li><a href=\"page-login.html\" class=\"icon-menu\"><i class=\"icon-power\"></i></a></li>\n        </ul>\n      </div>\n    </div>\n  </div>\n</nav>\n"
+module.exports = "\n<nav class=\"navbar navbar-fixed-top\">\n  <div class=\"container-fluid\">\n    <div class=\"navbar-left\">\n      <!--\n      <div class=\"navbar-btn\">\n        <a href=\"index.html\"><img src=\"assets/images/icon-light.svg\" alt=\"HexaBit Logo\" class=\"img-fluid logo\"></a>\n        <button type=\"button\" class=\"btn-toggle-offcanvas\"><i class=\"lnr lnr-menu fa fa-bars\"></i></button>\n      </div>\n      <a href=\"javascript:void(0);\" class=\"icon-menu btn-toggle-fullwidth\"><i class=\"fa fa-arrow-left\"></i></a>-->\n      <ul class=\"nav navbar-nav\">\n        <li class=\"dropdown dropdown-animated scale-right\">\n          <a href=\"javascript:void(0);\" class=\"dropdown-toggle icon-menu\" data-toggle=\"dropdown\"><i class=\"icon-grid\"></i></a>\n          <ul class=\"dropdown-menu menu-icon app_menu\">\n            <li>\n              <a class=\"#\">\n                <i class=\"icon-envelope\"></i>\n                <span>Inbox</span>\n              </a>\n            </li>\n            <li>\n              <a class=\"#\">\n                <i class=\"icon-bubbles\"></i>\n                <span>Chat</span>\n              </a>\n            </li>\n            <li>\n              <a class=\"#\">\n                <i class=\"icon-list\"></i>\n                <span>Task</span>\n              </a>\n            </li>\n            <li>\n              <a class=\"#\">\n                <i class=\"icon-globe\"></i>\n                <span>Blog</span>\n              </a>\n            </li>\n          </ul>\n        </li>\n        <li><a href=\"app-calendar.html\" class=\"icon-menu d-none d-sm-block d-md-none d-lg-block\"><i class=\"icon-calendar\"></i></a></li>\n        <li><a href=\"app-chat.html\" class=\"icon-menu d-none d-sm-block\"><i class=\"icon-bubbles\"></i></a></li>\n      </ul>\n    </div>\n\n    <div class=\"navbar-right\">\n      <!--        <form id=\"navbar-search\" class=\"navbar-form search-form\">-->\n      <!--          <input value=\"\" class=\"form-control\" placeholder=\"Search here...\" type=\"text\">-->\n      <!--          <button type=\"button\" class=\"btn btn-default\"><i class=\"icon-magnifier\"></i></button>-->\n      <!--        </form>-->\n\n      <div id=\"navbar-menu\">\n        <ul class=\"nav navbar-nav\">\n          <li class=\"dropdown dropdown-animated scale-left\">\n            <a href=\"javascript:void(0);\" class=\"dropdown-toggle icon-menu\" data-toggle=\"dropdown\">\n              <i class=\"icon-envelope\"></i>\n              <span class=\"notification-dot\"></span>\n            </a>\n            <ul class=\"dropdown-menu right_chat email\">\n              <li>\n                <a href=\"javascript:void(0);\">\n                  <div class=\"media\">\n                    <img class=\"media-object \" src=\"assets/images/xs/avatar.jpg\" alt=\"\">\n                    <div class=\"media-body\">\n                      <span class=\"name\">James Wert <small class=\"float-right\">Just now</small></span>\n                      <span class=\"message\">Lorem ipsum Veniam aliquip culpa laboris minim tempor</span>\n                    </div>\n                  </div>\n                </a>\n              </li>\n              <li>\n                <a href=\"javascript:void(0);\">\n                  <div class=\"media\">\n                    <img class=\"media-object \" src=\"assets/images/xs/avatar.jpg\" alt=\"\">\n                    <div class=\"media-body\">\n                      <span class=\"name\">Folisise Chosielie <small class=\"float-right\">12min ago</small></span>\n                      <span class=\"message\">There are many variations of Lorem Ipsum available, but the majority</span>\n                    </div>\n                  </div>\n                </a>\n              </li>\n              <li>\n                <a href=\"javascript:void(0);\">\n                  <div class=\"media\">\n                    <img class=\"media-object \" src=\"assets/images/xs/avatar.jpg\" alt=\"\">\n                    <div class=\"media-body\">\n                      <span class=\"name\">Ava Alexander <small class=\"float-right\">38min ago</small></span>\n                      <span class=\"message\">Many desktop publishing packages and web page editors</span>\n                    </div>\n                  </div>\n                </a>\n              </li>\n              <li>\n                <a href=\"javascript:void(0);\">\n                  <div class=\"media mb-0\">\n                    <img class=\"media-object \" src=\"assets/images/xs/avatar.jpg\" alt=\"\">\n                    <div class=\"media-body\">\n                      <span class=\"name\">Debra Stewart <small class=\"float-right\">2hr ago</small></span>\n                      <span class=\"message\">Contrary to popular belief, Lorem Ipsum is not simply random text</span>\n                    </div>\n                  </div>\n                </a>\n              </li>\n            </ul>\n          </li>\n          <li class=\"dropdown dropdown-animated scale-left\">\n            <a href=\"javascript:void(0);\" class=\"dropdown-toggle icon-menu\" data-toggle=\"dropdown\">\n              <i class=\"icon-bell\"></i>\n              <span class=\"notification-dot\"></span>\n            </a>\n            <ul class=\"dropdown-menu feeds_widget\">\n              <li class=\"header\">You have 5 new Notifications</li>\n              <li>\n                <a href=\"javascript:void(0);\">\n                  <div class=\"feeds-left\"><i class=\"fa fa-thumbs-o-up text-success\"></i></div>\n                  <div class=\"feeds-body\">\n                    <h4 class=\"title text-success\">7 New Feedback <small class=\"float-right text-muted\">Today</small></h4>\n                    <small>It will give a smart finishing to your site</small>\n                  </div>\n                </a>\n              </li>\n              <li>\n                <a href=\"javascript:void(0);\">\n                  <div class=\"feeds-left\"><i class=\"fa fa-user\"></i></div>\n                  <div class=\"feeds-body\">\n                    <h4 class=\"title\">New User <small class=\"float-right text-muted\">10:45</small></h4>\n                    <small>I feel great! Thanks team</small>\n                  </div>\n                </a>\n              </li>\n              <li>\n                <a href=\"javascript:void(0);\">\n                  <div class=\"feeds-left\"><i class=\"fa fa-question-circle text-warning\"></i></div>\n                  <div class=\"feeds-body\">\n                    <h4 class=\"title text-warning\">Server Warning <small class=\"float-right text-muted\">10:50</small></h4>\n                    <small>Your connection is not private</small>\n                  </div>\n                </a>\n              </li>\n              <li>\n                <a href=\"javascript:void(0);\">\n                  <div class=\"feeds-left\"><i class=\"fa fa-check text-danger\"></i></div>\n                  <div class=\"feeds-body\">\n                    <h4 class=\"title text-danger\">Issue Fixed <small class=\"float-right text-muted\">11:05</small></h4>\n                    <small>WE have fix all Design bug with Responsive</small>\n                  </div>\n                </a>\n              </li>\n              <li>\n                <a href=\"javascript:void(0);\">\n                  <div class=\"feeds-left\"><i class=\"fa fa-shopping-basket\"></i></div>\n                  <div class=\"feeds-body\">\n                    <h4 class=\"title\">7 New Orders <small class=\"float-right text-muted\">11:35</small></h4>\n                    <small>You received a new oder from Tina.</small>\n                  </div>\n                </a>\n              </li>\n            </ul>\n          </li>\n          <li><a href=\"javascript:void(0);\" class=\"right_toggle icon-menu\" title=\"Right Menu\"><i class=\"icon-settings\"></i></a></li>\n<!--      Sign Out Icon -->\n          <li>\n            <a href=\"javascript:void(0);\" class=\"icon-menu\" title=\"Sign Out\">\n              <i class=\"icon-power\" (click)=\"signOut()\"></i>\n            </a>\n          </li>\n        </ul>\n      </div>\n    </div>\n  </div>\n</nav>\n"
 
 /***/ }),
 
@@ -183,9 +165,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _pages_home_home_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pages/home/home.component */ "./src/app/pages/home/home.component.ts");
-/* harmony import */ var _components_auth_auth_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/auth/auth.component */ "./src/app/components/auth/auth.component.ts");
-/* harmony import */ var _components_secure_secure_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/secure/secure.component */ "./src/app/components/secure/secure.component.ts");
-
+/* harmony import */ var _sub_modules_auth_guards_auth_guard__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./sub-modules/auth/guards/auth.guard */ "./src/app/sub-modules/auth/guards/auth.guard.ts");
 
 
 
@@ -194,43 +174,56 @@ __webpack_require__.r(__webpack_exports__);
 var routes = [
     {
         path: '',
-        redirectTo: 'auth',
+        redirectTo: 'home',
         pathMatch: 'full'
     },
-    { path: 'auth', component: _components_auth_auth_component__WEBPACK_IMPORTED_MODULE_4__["AuthComponent"], pathMatch: 'full' },
-    { path: 'secure', component: _components_secure_secure_component__WEBPACK_IMPORTED_MODULE_5__["SecureComponent"], pathMatch: 'full' },
+    {
+        path: 'auth',
+        loadChildren: './sub-modules/auth/auth.module#AuthModule'
+    },
+    // { path: 'secure', component: SecureComponent, pathMatch: 'full' },
     {
         path: 'home',
-        component: _pages_home_home_component__WEBPACK_IMPORTED_MODULE_3__["HomeComponent"]
+        component: _pages_home_home_component__WEBPACK_IMPORTED_MODULE_3__["HomeComponent"],
+        canActivate: [_sub_modules_auth_guards_auth_guard__WEBPACK_IMPORTED_MODULE_4__["AuthGuard"]]
     },
     {
         path: 'accounts',
-        loadChildren: './sub-modules/accounts/accounts.module#AccountsModule'
+        loadChildren: './sub-modules/accounts/accounts.module#AccountsModule',
+        canActivate: [_sub_modules_auth_guards_auth_guard__WEBPACK_IMPORTED_MODULE_4__["AuthGuard"]]
     },
     {
         path: 'appointments',
-        loadChildren: './sub-modules/appointments/appointments.module#AppointmentsModule'
+        loadChildren: './sub-modules/appointments/appointments.module#AppointmentsModule',
+        canActivate: [_sub_modules_auth_guards_auth_guard__WEBPACK_IMPORTED_MODULE_4__["AuthGuard"]]
     },
     {
         path: 'debts',
-        loadChildren: './sub-modules/debts/debts.module#DebtsModule'
+        loadChildren: './sub-modules/debts/debts.module#DebtsModule',
+        canActivate: [_sub_modules_auth_guards_auth_guard__WEBPACK_IMPORTED_MODULE_4__["AuthGuard"]]
     },
     {
         path: 'reports',
-        loadChildren: './sub-modules/reports/reports.module#ReportsModule'
+        loadChildren: './sub-modules/reports/reports.module#ReportsModule',
+        canActivate: [_sub_modules_auth_guards_auth_guard__WEBPACK_IMPORTED_MODULE_4__["AuthGuard"]]
     },
     {
         path: 'storage',
-        loadChildren: './sub-modules/storage/storage.module#StorageModule'
+        loadChildren: './sub-modules/storage/storage.module#StorageModule',
+        canActivate: [_sub_modules_auth_guards_auth_guard__WEBPACK_IMPORTED_MODULE_4__["AuthGuard"]]
     },
     {
         path: 'tasks',
-        loadChildren: './sub-modules/tasks/tasks.module#TasksModule'
+        loadChildren: './sub-modules/tasks/tasks.module#TasksModule',
+        canActivate: [_sub_modules_auth_guards_auth_guard__WEBPACK_IMPORTED_MODULE_4__["AuthGuard"]]
     },
     {
         path: 'equipments',
-        loadChildren: './sub-modules/equipments/equipments.module#EquipmentsModule'
+        loadChildren: './sub-modules/equipments/equipments.module#EquipmentsModule',
+        canActivate: [_sub_modules_auth_guards_auth_guard__WEBPACK_IMPORTED_MODULE_4__["AuthGuard"]]
     },
+    // otherwise redirect to home
+    { path: '**', redirectTo: '' }
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -293,7 +286,7 @@ var AppContainer = /** @class */ (function () {
         this.translate.use(language);
     };
     AppContainer.prototype.isAuthenticationUrl = function () {
-        return this.router.url.startsWith('/authentication');
+        return this.router.url.startsWith('/auth/login');
     };
     AppContainer.ctorParameters = function () { return [
         { type: _ngx_translate_core__WEBPACK_IMPORTED_MODULE_2__["TranslateService"] },
@@ -340,11 +333,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _sub_modules_generated_api__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./sub-modules/generated-api */ "./src/app/sub-modules/generated-api/index.ts");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
 /* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
-/* harmony import */ var _components_auth_auth_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/auth/auth.component */ "./src/app/components/auth/auth.component.ts");
-/* harmony import */ var _components_secure_secure_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/secure/secure.component */ "./src/app/components/secure/secure.component.ts");
-/* harmony import */ var aws_amplify_angular__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! aws-amplify-angular */ "./node_modules/aws-amplify-angular/dist/index.js");
-
-
+/* harmony import */ var aws_amplify_angular__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! aws-amplify-angular */ "./node_modules/aws-amplify-angular/dist/index.js");
 
 
 
@@ -370,9 +359,7 @@ var AppModule = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
             declarations: [
                 _app_container__WEBPACK_IMPORTED_MODULE_4__["AppContainer"],
-                _pages_home_home_component__WEBPACK_IMPORTED_MODULE_9__["HomeComponent"],
-                _components_auth_auth_component__WEBPACK_IMPORTED_MODULE_14__["AuthComponent"],
-                _components_secure_secure_component__WEBPACK_IMPORTED_MODULE_15__["SecureComponent"]
+                _pages_home_home_component__WEBPACK_IMPORTED_MODULE_9__["HomeComponent"]
             ],
             imports: [
                 _angular_common__WEBPACK_IMPORTED_MODULE_12__["CommonModule"],
@@ -390,101 +377,13 @@ var AppModule = /** @class */ (function () {
                 }),
                 _sub_modules_ic_core_ic_core_module__WEBPACK_IMPORTED_MODULE_10__["IcCoreModule"].forRoot(),
                 _sub_modules_generated_api__WEBPACK_IMPORTED_MODULE_11__["ApiModule"].forRoot(new _sub_modules_generated_api__WEBPACK_IMPORTED_MODULE_11__["Configuration"]()),
-                aws_amplify_angular__WEBPACK_IMPORTED_MODULE_16__["AmplifyAngularModule"]
+                aws_amplify_angular__WEBPACK_IMPORTED_MODULE_14__["AmplifyAngularModule"]
             ],
-            providers: [aws_amplify_angular__WEBPACK_IMPORTED_MODULE_16__["AmplifyService"]],
+            providers: [aws_amplify_angular__WEBPACK_IMPORTED_MODULE_14__["AmplifyService"]],
             bootstrap: [_app_container__WEBPACK_IMPORTED_MODULE_4__["AppContainer"]]
         })
     ], AppModule);
     return AppModule;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/components/auth/auth.component.scss":
-/*!*****************************************************!*\
-  !*** ./src/app/components/auth/auth.component.scss ***!
-  \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvYXV0aC9hdXRoLmNvbXBvbmVudC5zY3NzIn0= */"
-
-/***/ }),
-
-/***/ "./src/app/components/auth/auth.component.ts":
-/*!***************************************************!*\
-  !*** ./src/app/components/auth/auth.component.ts ***!
-  \***************************************************/
-/*! exports provided: AuthComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AuthComponent", function() { return AuthComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-
-
-var AuthComponent = /** @class */ (function () {
-    function AuthComponent() {
-    }
-    AuthComponent.prototype.ngOnInit = function () {
-    };
-    AuthComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'ic-auth',
-            template: __webpack_require__(/*! raw-loader!./auth.component.html */ "./node_modules/raw-loader/index.js!./src/app/components/auth/auth.component.html"),
-            styles: [__webpack_require__(/*! ./auth.component.scss */ "./src/app/components/auth/auth.component.scss")]
-        })
-    ], AuthComponent);
-    return AuthComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/components/secure/secure.component.scss":
-/*!*********************************************************!*\
-  !*** ./src/app/components/secure/secure.component.scss ***!
-  \*********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvc2VjdXJlL3NlY3VyZS5jb21wb25lbnQuc2NzcyJ9 */"
-
-/***/ }),
-
-/***/ "./src/app/components/secure/secure.component.ts":
-/*!*******************************************************!*\
-  !*** ./src/app/components/secure/secure.component.ts ***!
-  \*******************************************************/
-/*! exports provided: SecureComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SecureComponent", function() { return SecureComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-
-
-var SecureComponent = /** @class */ (function () {
-    function SecureComponent() {
-    }
-    SecureComponent.prototype.ngOnInit = function () {
-    };
-    SecureComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'ic-secure',
-            template: __webpack_require__(/*! raw-loader!./secure.component.html */ "./node_modules/raw-loader/index.js!./src/app/components/secure/secure.component.html"),
-            styles: [__webpack_require__(/*! ./secure.component.scss */ "./src/app/components/secure/secure.component.scss")]
-        })
-    ], SecureComponent);
-    return SecureComponent;
 }());
 
 
@@ -765,6 +664,153 @@ var HomeComponent = /** @class */ (function () {
         })
     ], HomeComponent);
     return HomeComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/sub-modules/auth/guards/auth.guard.ts":
+/*!*******************************************************!*\
+  !*** ./src/app/sub-modules/auth/guards/auth.guard.ts ***!
+  \*******************************************************/
+/*! exports provided: AuthGuard */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AuthGuard", function() { return AuthGuard; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _services_auth_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../services/auth.service */ "./src/app/sub-modules/auth/services/auth.service.ts");
+
+
+
+
+var AuthGuard = /** @class */ (function () {
+    function AuthGuard(router, authService) {
+        this.router = router;
+        this.authService = authService;
+    }
+    AuthGuard.prototype.canActivate = function (route, state) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                if (this.authService.isSignedIn()) {
+                    return [2 /*return*/, true];
+                }
+                else {
+                    this.router.navigate(['/auth/login'], { queryParams: { returnUrl: state.url } });
+                    return [2 /*return*/, false];
+                }
+                return [2 /*return*/];
+            });
+        });
+    };
+    AuthGuard.ctorParameters = function () { return [
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
+        { type: _services_auth_service__WEBPACK_IMPORTED_MODULE_3__["AuthService"] }
+    ]; };
+    AuthGuard = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        })
+    ], AuthGuard);
+    return AuthGuard;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/sub-modules/auth/services/auth.service.ts":
+/*!***********************************************************!*\
+  !*** ./src/app/sub-modules/auth/services/auth.service.ts ***!
+  \***********************************************************/
+/*! exports provided: AuthService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AuthService", function() { return AuthService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var aws_amplify_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! aws-amplify-angular */ "./node_modules/aws-amplify-angular/dist/index.js");
+/* harmony import */ var aws_amplify__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! aws-amplify */ "./node_modules/aws-amplify/lib/index.js");
+/* harmony import */ var aws_amplify__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(aws_amplify__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+
+
+
+
+
+var AuthService = /** @class */ (function () {
+    function AuthService(amplifyService, router) {
+        this.amplifyService = amplifyService;
+        this.router = router;
+        this.signedInUser = null;
+        this.signInActions = [];
+        this.signOutActions = [];
+        this.listenSignInOut();
+    }
+    AuthService.prototype.listenSignInOut = function () {
+        var _this = this;
+        this.amplifyService.authStateChange$
+            .subscribe(function (authState) {
+            if (authState.state === 'signedIn') {
+                if (!!authState.user) {
+                    _this.signedInUser = authState.user;
+                    _this.executeSignInActions({ user: _this.signedInUser });
+                }
+                else {
+                    if (!!_this.signedInUser) {
+                        var prevSignedInUser = _this.signedInUser;
+                        _this.signedInUser = null;
+                        _this.executeSignOutActions({ user: prevSignedInUser });
+                    }
+                }
+            }
+        });
+    };
+    AuthService.prototype.isSignedIn = function () {
+        return !!this.signedInUser;
+    };
+    AuthService.prototype.signOut = function () {
+        var _this = this;
+        aws_amplify__WEBPACK_IMPORTED_MODULE_3__["Auth"].signOut({})
+            .then(function (data) {
+            _this.router.navigate(['/auth/login']);
+        })
+            .catch(function (err) { return console.log(err); });
+    };
+    AuthService.prototype.executeSignInActions = function (user) {
+        this.signInActions.forEach(function (action) { return action({ user: user }); });
+    };
+    AuthService.prototype.executeSignOutActions = function (user) {
+        this.signOutActions.forEach(function (action) { return action({ user: user }); });
+    };
+    AuthService.prototype.addSignOutListener = function (action) {
+        this.signOutActions.push(action);
+    };
+    AuthService.prototype.addSignInListener = function (action) {
+        this.signInActions.push(action);
+    };
+    AuthService.prototype.removeSignOutListener = function (action) {
+        this.signOutActions = this.signOutActions.filter(function (actionItem) { return actionItem === action; });
+    };
+    AuthService.prototype.removeSignInListener = function (action) {
+        this.signInActions = this.signInActions.filter(function (actionItem) { return actionItem === action; });
+    };
+    AuthService.ctorParameters = function () { return [
+        { type: aws_amplify_angular__WEBPACK_IMPORTED_MODULE_2__["AmplifyService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] }
+    ]; };
+    AuthService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        })
+    ], AuthService);
+    return AuthService;
 }());
 
 
@@ -1761,13 +1807,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HeaderComponent", function() { return HeaderComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _auth_services_auth_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../auth/services/auth.service */ "./src/app/sub-modules/auth/services/auth.service.ts");
+
 
 
 var HeaderComponent = /** @class */ (function () {
-    function HeaderComponent() {
+    function HeaderComponent(authService) {
+        this.authService = authService;
     }
     HeaderComponent.prototype.ngOnInit = function () {
     };
+    HeaderComponent.prototype.signOut = function () {
+        this.authService.signOut();
+    };
+    HeaderComponent.ctorParameters = function () { return [
+        { type: _auth_services_auth_service__WEBPACK_IMPORTED_MODULE_2__["AuthService"] }
+    ]; };
     HeaderComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'ic-header',
