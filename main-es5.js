@@ -136,7 +136,7 @@ module.exports = "<div class=\"block-header\">\n  <div class=\"row clearfix\">\n
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- Page Loader -->\n<div class=\"page-loader-wrapper\" #loaderWrapper>\n  <div class=\"loader\">\n    <div class=\"m-t-30\">\n      <img src=\"/assets/images/logo.png\" width=\"48\" height=\"48\">\n    </div>\n    <p>Please wait...</p>\n  </div>\n</div>\n"
+module.exports = "<!-- Page Loader -->\n<div class=\"page-loader-wrapper\" #loaderWrapper>\n  <div class=\"loader\">\n    <div class=\"m-t-30\">\n      <img class=\"black-shadow\" src=\"/assets/images/logo.png\" width=\"100\" height=\"100\">\n    </div>\n    <p>Please wait...</p>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -753,6 +753,26 @@ var AuthService = /** @class */ (function () {
         this.signOutActions = [];
         this.listenSignInOut();
     }
+    ////////////////
+    AuthService.prototype.executeSignInActions = function (user) {
+        this.signInActions.forEach(function (action) { return action({ user: user }); });
+    };
+    AuthService.prototype.executeSignOutActions = function (user) {
+        this.signOutActions.forEach(function (action) { return action({ user: user }); });
+    };
+    AuthService.prototype.addSignOutListener = function (action) {
+        this.signOutActions.push(action);
+    };
+    AuthService.prototype.addSignInListener = function (action) {
+        this.signInActions.push(action);
+    };
+    AuthService.prototype.removeSignOutListener = function (action) {
+        this.signOutActions = this.signOutActions.filter(function (actionItem) { return actionItem === action; });
+    };
+    AuthService.prototype.removeSignInListener = function (action) {
+        this.signInActions = this.signInActions.filter(function (actionItem) { return actionItem === action; });
+    };
+    //////////////////
     AuthService.prototype.listenSignInOut = function () {
         var _this = this;
         this.amplifyService.authStateChange$
@@ -775,6 +795,60 @@ var AuthService = /** @class */ (function () {
     AuthService.prototype.isSignedIn = function () {
         return !!this.signedInUser;
     };
+    AuthService.prototype.signIn = function (username, password) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var user, err_1;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        _a.trys.push([0, 2, , 3]);
+                        return [4 /*yield*/, aws_amplify__WEBPACK_IMPORTED_MODULE_3__["Auth"].signIn(username, password)];
+                    case 1:
+                        user = _a.sent();
+                        if (user.challengeName === 'SMS_MFA' || user.challengeName === 'SOFTWARE_TOKEN_MFA') {
+                            // console.log(`Cognito MFA Challenge`);
+                        }
+                        else if (user.challengeName === 'NEW_PASSWORD_REQUIRED') {
+                            // You need to get the new password and required attributes from the UI inputs
+                            // and then trigger the following function with a button click
+                            // For example, the email and phone_number are required attributes
+                        }
+                        else if (user.challengeName === 'MFA_SETUP') {
+                            // This happens when the MFA method is TOTP
+                            // The user needs to setup the TOTP before using it
+                            // More info please check the Enabling MFA part
+                        }
+                        else {
+                            return [2 /*return*/, { result: true, user: user }];
+                        }
+                        return [3 /*break*/, 3];
+                    case 2:
+                        err_1 = _a.sent();
+                        if (err_1.code === 'UserNotConfirmedException') {
+                            // The error happens if the user didn't finish the confirmation step when signing up
+                            // In this case you need to resend the code and confirm the user
+                            // About how to resend the code and confirm the user, please check the signUp part
+                        }
+                        else if (err_1.code === 'PasswordResetRequiredException') {
+                            // The error happens when the password is reset in the Cognito console
+                            // In this case you need to call forgotPassword to reset the password
+                            // Please check the Forgot Password part.
+                        }
+                        else if (err_1.code === 'NotAuthorizedException') {
+                            // The error happens when the incorrect password is provided
+                        }
+                        else if (err_1.code === 'UserNotFoundException') {
+                            // The error happens when the supplied username/email does not exist in the Cognito user pool
+                        }
+                        else {
+                            // Some other errors
+                        }
+                        return [2 /*return*/, { result: false, error: err_1.message }];
+                    case 3: return [2 /*return*/];
+                }
+            });
+        });
+    };
     AuthService.prototype.signOut = function () {
         var _this = this;
         aws_amplify__WEBPACK_IMPORTED_MODULE_3__["Auth"].signOut({})
@@ -783,23 +857,45 @@ var AuthService = /** @class */ (function () {
         })
             .catch(function (err) { return console.log(err); });
     };
-    AuthService.prototype.executeSignInActions = function (user) {
-        this.signInActions.forEach(function (action) { return action({ user: user }); });
+    AuthService.prototype.forgetPassword = function (username) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var result, err_2;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        _a.trys.push([0, 2, , 3]);
+                        return [4 /*yield*/, aws_amplify__WEBPACK_IMPORTED_MODULE_3__["Auth"].forgotPassword(username)];
+                    case 1:
+                        result = _a.sent();
+                        return [2 /*return*/, { result: true, email: result.CodeDeliveryDetails.Destination }];
+                    case 2:
+                        err_2 = _a.sent();
+                        return [2 /*return*/, { result: false, error: err_2.message }];
+                    case 3: return [2 /*return*/];
+                }
+            });
+        });
     };
-    AuthService.prototype.executeSignOutActions = function (user) {
-        this.signOutActions.forEach(function (action) { return action({ user: user }); });
-    };
-    AuthService.prototype.addSignOutListener = function (action) {
-        this.signOutActions.push(action);
-    };
-    AuthService.prototype.addSignInListener = function (action) {
-        this.signInActions.push(action);
-    };
-    AuthService.prototype.removeSignOutListener = function (action) {
-        this.signOutActions = this.signOutActions.filter(function (actionItem) { return actionItem === action; });
-    };
-    AuthService.prototype.removeSignInListener = function (action) {
-        this.signInActions = this.signInActions.filter(function (actionItem) { return actionItem === action; });
+    AuthService.prototype.resetPassword = function (username, code, newPassword) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var result, err_3;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        _a.trys.push([0, 2, , 3]);
+                        return [4 /*yield*/, aws_amplify__WEBPACK_IMPORTED_MODULE_3__["Auth"].forgotPasswordSubmit(username, code, newPassword)];
+                    case 1:
+                        result = _a.sent();
+                        debugger;
+                        return [2 /*return*/, { result: true }];
+                    case 2:
+                        err_3 = _a.sent();
+                        debugger;
+                        return [2 /*return*/, { result: false, error: err_3.message }];
+                    case 3: return [2 /*return*/];
+                }
+            });
+        });
     };
     AuthService.ctorParameters = function () { return [
         { type: aws_amplify_angular__WEBPACK_IMPORTED_MODULE_2__["AmplifyService"] },
@@ -1894,7 +1990,7 @@ var NavComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3N1Yi1tb2R1bGVzL2ljLWNvcmUvY29tcG9uZW50cy9wYWdlLWxvYWRlci9wYWdlLWxvYWRlci5jb21wb25lbnQuc2NzcyJ9 */"
+module.exports = ".page-loader-wrapper {\n  background-color: rgba(255, 255, 255, 0.8);\n}\n.page-loader-wrapper img {\n  border-radius: 50%;\n  padding: 6px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc3ViLW1vZHVsZXMvaWMtY29yZS9jb21wb25lbnRzL3BhZ2UtbG9hZGVyL0M6XFxERVZcXHdvcmtzcGFjZXNcXGljbGluaWNcXGR0Yy11aS9zcmNcXGFwcFxcc3ViLW1vZHVsZXNcXGljLWNvcmVcXGNvbXBvbmVudHNcXHBhZ2UtbG9hZGVyXFxwYWdlLWxvYWRlci5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvc3ViLW1vZHVsZXMvaWMtY29yZS9jb21wb25lbnRzL3BhZ2UtbG9hZGVyL3BhZ2UtbG9hZGVyLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsMENBQUE7QUNDRjtBREFFO0VBQ0Usa0JBQUE7RUFDQSxZQUFBO0FDRUoiLCJmaWxlIjoic3JjL2FwcC9zdWItbW9kdWxlcy9pYy1jb3JlL2NvbXBvbmVudHMvcGFnZS1sb2FkZXIvcGFnZS1sb2FkZXIuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIucGFnZS1sb2FkZXItd3JhcHBlcntcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMjU1LCAyNTUsIDI1NSwgMC44KTtcclxuICBpbWd7XHJcbiAgICBib3JkZXItcmFkaXVzOiA1MCU7XHJcbiAgICBwYWRkaW5nOiA2cHg7XHJcbiAgfVxyXG59XHJcblxyXG4iLCIucGFnZS1sb2FkZXItd3JhcHBlciB7XG4gIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMjU1LCAyNTUsIDI1NSwgMC44KTtcbn1cbi5wYWdlLWxvYWRlci13cmFwcGVyIGltZyB7XG4gIGJvcmRlci1yYWRpdXM6IDUwJTtcbiAgcGFkZGluZzogNnB4O1xufSJdfQ== */"
 
 /***/ }),
 
