@@ -85,6 +85,17 @@ module.exports = "<div id=\"main-content\">\n<div class=\"container-fluid\" styl
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/index.js!./src/app/sub-modules/ic-core/components/alert-dialog/alert.dialog.html":
+/*!*********************************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/sub-modules/ic-core/components/alert-dialog/alert.dialog.html ***!
+  \*********************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<h1 mat-dialog-title></h1>\n<div mat-dialog-content>\n  <p>{{message}}</p>\n</div>\n<div mat-dialog-actions>\n  <button mat-flat-button color=\"warn\" (click)=\"close()\">OK</button>\n</div>\n"
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/index.js!./src/app/sub-modules/ic-core/components/chips-autocomplete/chips-autocomplete.component.html":
 /*!*******************************************************************************************************************************!*\
   !*** ./node_modules/raw-loader!./src/app/sub-modules/ic-core/components/chips-autocomplete/chips-autocomplete.component.html ***!
@@ -114,7 +125,7 @@ module.exports = "<h1 mat-dialog-title></h1>\n<div mat-dialog-content>\n  <p>{{m
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<nav class=\"navbar navbar-fixed-top\">\n  <div class=\"container-fluid\">\n    <div class=\"navbar-left\">\n      <!--\n      <div class=\"navbar-btn\">\n        <a href=\"index.html\"><img src=\"assets/images/icon-light.svg\" alt=\"HexaBit Logo\" class=\"img-fluid logo\"></a>\n        <button type=\"button\" class=\"btn-toggle-offcanvas\"><i class=\"lnr lnr-menu fa fa-bars\"></i></button>\n      </div>\n      <a href=\"javascript:void(0);\" class=\"icon-menu btn-toggle-fullwidth\"><i class=\"fa fa-arrow-left\"></i></a>-->\n      <ul class=\"nav navbar-nav\">\n        <li class=\"dropdown dropdown-animated scale-right\">\n          <a href=\"javascript:void(0);\" class=\"dropdown-toggle icon-menu\" data-toggle=\"dropdown\"><i class=\"icon-grid\"></i></a>\n          <ul class=\"dropdown-menu menu-icon app_menu\">\n            <li>\n              <a class=\"#\">\n                <i class=\"icon-envelope\"></i>\n                <span>Inbox</span>\n              </a>\n            </li>\n            <li>\n              <a class=\"#\">\n                <i class=\"icon-bubbles\"></i>\n                <span>Chat</span>\n              </a>\n            </li>\n            <li>\n              <a class=\"#\">\n                <i class=\"icon-list\"></i>\n                <span>Task</span>\n              </a>\n            </li>\n            <li>\n              <a class=\"#\">\n                <i class=\"icon-globe\"></i>\n                <span>Blog</span>\n              </a>\n            </li>\n          </ul>\n        </li>\n        <li><a href=\"app-calendar.html\" class=\"icon-menu d-none d-sm-block d-md-none d-lg-block\"><i class=\"icon-calendar\"></i></a></li>\n        <li><a href=\"app-chat.html\" class=\"icon-menu d-none d-sm-block\"><i class=\"icon-bubbles\"></i></a></li>\n      </ul>\n    </div>\n\n    <div class=\"navbar-right\">\n      <!--        <form id=\"navbar-search\" class=\"navbar-form search-form\">-->\n      <!--          <input value=\"\" class=\"form-control\" placeholder=\"Search here...\" type=\"text\">-->\n      <!--          <button type=\"button\" class=\"btn btn-default\"><i class=\"icon-magnifier\"></i></button>-->\n      <!--        </form>-->\n\n      <div id=\"navbar-menu\">\n        <ul class=\"nav navbar-nav\">\n          <li class=\"dropdown dropdown-animated scale-left\">\n            <a href=\"javascript:void(0);\" class=\"dropdown-toggle icon-menu\" data-toggle=\"dropdown\">\n              <i class=\"icon-envelope\"></i>\n              <span class=\"notification-dot\"></span>\n            </a>\n            <ul class=\"dropdown-menu right_chat email\">\n              <li>\n                <a href=\"javascript:void(0);\">\n                  <div class=\"media\">\n                    <img class=\"media-object \" src=\"assets/images/xs/avatar.jpg\" alt=\"\">\n                    <div class=\"media-body\">\n                      <span class=\"name\">James Wert <small class=\"float-right\">Just now</small></span>\n                      <span class=\"message\">Lorem ipsum Veniam aliquip culpa laboris minim tempor</span>\n                    </div>\n                  </div>\n                </a>\n              </li>\n              <li>\n                <a href=\"javascript:void(0);\">\n                  <div class=\"media\">\n                    <img class=\"media-object \" src=\"assets/images/xs/avatar.jpg\" alt=\"\">\n                    <div class=\"media-body\">\n                      <span class=\"name\">Folisise Chosielie <small class=\"float-right\">12min ago</small></span>\n                      <span class=\"message\">There are many variations of Lorem Ipsum available, but the majority</span>\n                    </div>\n                  </div>\n                </a>\n              </li>\n              <li>\n                <a href=\"javascript:void(0);\">\n                  <div class=\"media\">\n                    <img class=\"media-object \" src=\"assets/images/xs/avatar.jpg\" alt=\"\">\n                    <div class=\"media-body\">\n                      <span class=\"name\">Ava Alexander <small class=\"float-right\">38min ago</small></span>\n                      <span class=\"message\">Many desktop publishing packages and web page editors</span>\n                    </div>\n                  </div>\n                </a>\n              </li>\n              <li>\n                <a href=\"javascript:void(0);\">\n                  <div class=\"media mb-0\">\n                    <img class=\"media-object \" src=\"assets/images/xs/avatar.jpg\" alt=\"\">\n                    <div class=\"media-body\">\n                      <span class=\"name\">Debra Stewart <small class=\"float-right\">2hr ago</small></span>\n                      <span class=\"message\">Contrary to popular belief, Lorem Ipsum is not simply random text</span>\n                    </div>\n                  </div>\n                </a>\n              </li>\n            </ul>\n          </li>\n          <li class=\"dropdown dropdown-animated scale-left\">\n            <a href=\"javascript:void(0);\" class=\"dropdown-toggle icon-menu\" data-toggle=\"dropdown\">\n              <i class=\"icon-bell\"></i>\n              <span class=\"notification-dot\"></span>\n            </a>\n            <ul class=\"dropdown-menu feeds_widget\">\n              <li class=\"header\">You have 5 new Notifications</li>\n              <li>\n                <a href=\"javascript:void(0);\">\n                  <div class=\"feeds-left\"><i class=\"fa fa-thumbs-o-up text-success\"></i></div>\n                  <div class=\"feeds-body\">\n                    <h4 class=\"title text-success\">7 New Feedback <small class=\"float-right text-muted\">Today</small></h4>\n                    <small>It will give a smart finishing to your site</small>\n                  </div>\n                </a>\n              </li>\n              <li>\n                <a href=\"javascript:void(0);\">\n                  <div class=\"feeds-left\"><i class=\"fa fa-user\"></i></div>\n                  <div class=\"feeds-body\">\n                    <h4 class=\"title\">New User <small class=\"float-right text-muted\">10:45</small></h4>\n                    <small>I feel great! Thanks team</small>\n                  </div>\n                </a>\n              </li>\n              <li>\n                <a href=\"javascript:void(0);\">\n                  <div class=\"feeds-left\"><i class=\"fa fa-question-circle text-warning\"></i></div>\n                  <div class=\"feeds-body\">\n                    <h4 class=\"title text-warning\">Server Warning <small class=\"float-right text-muted\">10:50</small></h4>\n                    <small>Your connection is not private</small>\n                  </div>\n                </a>\n              </li>\n              <li>\n                <a href=\"javascript:void(0);\">\n                  <div class=\"feeds-left\"><i class=\"fa fa-check text-danger\"></i></div>\n                  <div class=\"feeds-body\">\n                    <h4 class=\"title text-danger\">Issue Fixed <small class=\"float-right text-muted\">11:05</small></h4>\n                    <small>WE have fix all Design bug with Responsive</small>\n                  </div>\n                </a>\n              </li>\n              <li>\n                <a href=\"javascript:void(0);\">\n                  <div class=\"feeds-left\"><i class=\"fa fa-shopping-basket\"></i></div>\n                  <div class=\"feeds-body\">\n                    <h4 class=\"title\">7 New Orders <small class=\"float-right text-muted\">11:35</small></h4>\n                    <small>You received a new oder from Tina.</small>\n                  </div>\n                </a>\n              </li>\n            </ul>\n          </li>\n          <li><a href=\"javascript:void(0);\" class=\"right_toggle icon-menu\" title=\"Right Menu\"><i class=\"icon-settings\"></i></a></li>\n<!--      Sign Out Icon -->\n          <li>\n            <a href=\"javascript:void(0);\" class=\"icon-menu\" title=\"Sign Out\">\n              <i class=\"icon-power\" (click)=\"signOut()\"></i>\n            </a>\n          </li>\n        </ul>\n      </div>\n    </div>\n  </div>\n</nav>\n"
+module.exports = "\n<nav class=\"navbar navbar-fixed-top\">\n  <div class=\"container-fluid\">\n    <div class=\"navbar-left\">\n      <!--\n      <div class=\"navbar-btn\">\n        <a href=\"index.html\"><img src=\"assets/images/icon-light.svg\" alt=\"HexaBit Logo\" class=\"img-fluid logo\"></a>\n        <button type=\"button\" class=\"btn-toggle-offcanvas\"><i class=\"lnr lnr-menu fa fa-bars\"></i></button>\n      </div>\n      <a href=\"javascript:void(0);\" class=\"icon-menu btn-toggle-fullwidth\"><i class=\"fa fa-arrow-left\"></i></a>-->\n      <ul class=\"nav navbar-nav\">\n        <li class=\"dropdown dropdown-animated scale-right\">\n          <a href=\"javascript:void(0);\" class=\"dropdown-toggle icon-menu\" data-toggle=\"dropdown\"><i class=\"icon-grid\"></i></a>\n          <ul class=\"dropdown-menu menu-icon app_menu\">\n            <li>\n              <a class=\"#\">\n                <i class=\"icon-envelope\"></i>\n                <span>Inbox</span>\n              </a>\n            </li>\n            <li>\n              <a class=\"#\">\n                <i class=\"icon-bubbles\"></i>\n                <span>Chat</span>\n              </a>\n            </li>\n            <li>\n              <a class=\"#\">\n                <i class=\"icon-list\"></i>\n                <span>Task</span>\n              </a>\n            </li>\n            <li>\n              <a class=\"#\">\n                <i class=\"icon-globe\"></i>\n                <span>Blog</span>\n              </a>\n            </li>\n          </ul>\n        </li>\n        <li><a href=\"app-calendar.html\" class=\"icon-menu d-none d-sm-block d-md-none d-lg-block\"><i class=\"icon-calendar\"></i></a></li>\n        <li><a href=\"app-chat.html\" class=\"icon-menu d-none d-sm-block\"><i class=\"icon-bubbles\"></i></a></li>\n      </ul>\n    </div>\n\n    <div class=\"navbar-right\">\n      <!--        <form id=\"navbar-search\" class=\"navbar-form search-form\">-->\n      <!--          <input value=\"\" class=\"form-control\" placeholder=\"Search here...\" type=\"text\">-->\n      <!--          <button type=\"button\" class=\"btn btn-default\"><i class=\"icon-magnifier\"></i></button>-->\n      <!--        </form>-->\n\n      <div id=\"navbar-menu\">\n        <ul class=\"nav navbar-nav\">\n          <li class=\"dropdown dropdown-animated scale-left\">\n            <a href=\"javascript:void(0);\" class=\"dropdown-toggle icon-menu\" data-toggle=\"dropdown\">\n              <i class=\"icon-envelope\"></i>\n              <span class=\"notification-dot\"></span>\n            </a>\n            <ul class=\"dropdown-menu right_chat email\">\n              <li>\n                <a href=\"javascript:void(0);\">\n                  <div class=\"media\">\n                    <img class=\"media-object \" src=\"assets/images/xs/avatar.jpg\" alt=\"\">\n                    <div class=\"media-body\">\n                      <span class=\"name\">James Wert <small class=\"float-right\">Just now</small></span>\n                      <span class=\"message\">Lorem ipsum Veniam aliquip culpa laboris minim tempor</span>\n                    </div>\n                  </div>\n                </a>\n              </li>\n              <li>\n                <a href=\"javascript:void(0);\">\n                  <div class=\"media\">\n                    <img class=\"media-object \" src=\"assets/images/xs/avatar.jpg\" alt=\"\">\n                    <div class=\"media-body\">\n                      <span class=\"name\">Folisise Chosielie <small class=\"float-right\">12min ago</small></span>\n                      <span class=\"message\">There are many variations of Lorem Ipsum available, but the majority</span>\n                    </div>\n                  </div>\n                </a>\n              </li>\n              <li>\n                <a href=\"javascript:void(0);\">\n                  <div class=\"media\">\n                    <img class=\"media-object \" src=\"assets/images/xs/avatar.jpg\" alt=\"\">\n                    <div class=\"media-body\">\n                      <span class=\"name\">Ava Alexander <small class=\"float-right\">38min ago</small></span>\n                      <span class=\"message\">Many desktop publishing packages and web page editors</span>\n                    </div>\n                  </div>\n                </a>\n              </li>\n              <li>\n                <a href=\"javascript:void(0);\">\n                  <div class=\"media mb-0\">\n                    <img class=\"media-object \" src=\"assets/images/xs/avatar.jpg\" alt=\"\">\n                    <div class=\"media-body\">\n                      <span class=\"name\">Debra Stewart <small class=\"float-right\">2hr ago</small></span>\n                      <span class=\"message\">Contrary to popular belief, Lorem Ipsum is not simply random text</span>\n                    </div>\n                  </div>\n                </a>\n              </li>\n            </ul>\n          </li>\n          <li class=\"dropdown dropdown-animated scale-left\">\n            <a href=\"javascript:void(0);\" class=\"dropdown-toggle icon-menu\" data-toggle=\"dropdown\">\n              <i class=\"icon-bell\"></i>\n              <span class=\"notification-dot\"></span>\n            </a>\n            <ul class=\"dropdown-menu feeds_widget\">\n              <li class=\"header\">You have 5 new Notifications</li>\n              <li>\n                <a href=\"javascript:void(0);\">\n                  <div class=\"feeds-left\"><i class=\"fa fa-thumbs-o-up text-success\"></i></div>\n                  <div class=\"feeds-body\">\n                    <h4 class=\"title text-success\">7 New Feedback <small class=\"float-right text-muted\">Today</small></h4>\n                    <small>It will give a smart finishing to your site</small>\n                  </div>\n                </a>\n              </li>\n              <li>\n                <a href=\"javascript:void(0);\">\n                  <div class=\"feeds-left\"><i class=\"fa fa-user\"></i></div>\n                  <div class=\"feeds-body\">\n                    <h4 class=\"title\">New User <small class=\"float-right text-muted\">10:45</small></h4>\n                    <small>I feel great! Thanks team</small>\n                  </div>\n                </a>\n              </li>\n              <li>\n                <a href=\"javascript:void(0);\">\n                  <div class=\"feeds-left\"><i class=\"fa fa-question-circle text-warning\"></i></div>\n                  <div class=\"feeds-body\">\n                    <h4 class=\"title text-warning\">Server Warning <small class=\"float-right text-muted\">10:50</small></h4>\n                    <small>Your connection is not private</small>\n                  </div>\n                </a>\n              </li>\n              <li>\n                <a href=\"javascript:void(0);\">\n                  <div class=\"feeds-left\"><i class=\"fa fa-check text-danger\"></i></div>\n                  <div class=\"feeds-body\">\n                    <h4 class=\"title text-danger\">Issue Fixed <small class=\"float-right text-muted\">11:05</small></h4>\n                    <small>WE have fix all Design bug with Responsive</small>\n                  </div>\n                </a>\n              </li>\n              <li>\n                <a href=\"javascript:void(0);\">\n                  <div class=\"feeds-left\"><i class=\"fa fa-shopping-basket\"></i></div>\n                  <div class=\"feeds-body\">\n                    <h4 class=\"title\">7 New Orders <small class=\"float-right text-muted\">11:35</small></h4>\n                    <small>You received a new oder from Tina.</small>\n                  </div>\n                </a>\n              </li>\n            </ul>\n          </li>\n          <li><a href=\"javascript:void(0);\" class=\"right_toggle icon-menu\" title=\"Right Menu\"><i class=\"icon-settings\"></i></a></li>\n<!--&lt;!&ndash;      Sign Out Icon &ndash;&gt;-->\n<!--          <li>-->\n<!--            <a href=\"javascript:void(0);\" class=\"icon-menu\" title=\"Sign Out\">-->\n<!--              <i class=\"icon-power\" (click)=\"signOut()\"></i>-->\n<!--            </a>-->\n<!--          </li>-->\n          <li class=\"dropdown dropdown-animated scale-left\">\n            <a href=\"javascript:void(0);\" class=\"dropdown-toggle icon-menu\" data-toggle=\"dropdown\">\n              <img class=\"rounded-circle avatar\" src=\"assets/images/xs/avatar.jpg\">\n            </a>\n            <ul class=\"dropdown-menu feeds_widget\">\n              <li>\n                <a href=\"javascript:void(0);\">\n                  <div class=\"feeds-left\">\n                    <img class=\"rounded-circle avatar\" src=\"assets/images/xs/avatar.jpg\">\n                  </div>\n                  <div class=\"feeds-body\">\n                    <h4 class=\"title text-success\">My Information</h4>\n                  </div>\n                </a>\n              </li>\n              <li>\n                <a href=\"javascript:void(0);\" (click)=\"signUp()\">\n                  <div class=\"feeds-left\"><i class=\"fa fa-user-plus text-primary\"></i></div>\n                  <div class=\"feeds-body\">\n                    <h4 class=\"title text-primary\"> New Account</h4>\n                  </div>\n                </a>\n              </li>\n              <li>\n                <a href=\"javascript:void(0);\" (click)=\"changePassword()\">\n                  <div class=\"feeds-left\"><i class=\"fa fa-key text-warning\"></i></div>\n                  <div class=\"feeds-body\">\n                    <h4 class=\"title text-warning\"> Change Password</h4>\n                  </div>\n                </a>\n              </li>\n              <li>\n                <a href=\"javascript:void(0);\" (click)=\"signOut()\">\n                  <div class=\"feeds-left\"><i class=\"fa fa-sign-out text-danger\"></i></div>\n                  <div class=\"feeds-body\">\n                    <h4 class=\"title text-danger\">Sign Out</h4>\n                  </div>\n                </a>\n              </li>\n\n            </ul>\n          </li>\n        </ul>\n      </div>\n    </div>\n  </div>\n</nav>\n"
 
 /***/ }),
 
@@ -136,7 +147,7 @@ module.exports = "<div class=\"block-header\">\n  <div class=\"row clearfix\">\n
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- Page Loader -->\n<div class=\"page-loader-wrapper\" #loaderWrapper>\n  <div class=\"loader\">\n    <div class=\"m-t-30\">\n      <img class=\"black-shadow\" src=\"/assets/images/logo.png\" width=\"100\" height=\"100\">\n    </div>\n    <p>Please wait...</p>\n  </div>\n</div>\n"
+module.exports = "<!-- Page Loader -->\n<div class=\"page-loader-wrapper\" #loaderWrapper>\n  <div class=\"loader\">\n    <div class=\"db-spinner\"></div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -286,7 +297,7 @@ var AppContainer = /** @class */ (function () {
         this.translate.use(language);
     };
     AppContainer.prototype.isAuthenticationUrl = function () {
-        return this.router.url.startsWith('/auth/login');
+        return this.router.url.startsWith('/auth');
     };
     AppContainer.ctorParameters = function () { return [
         { type: _ngx_translate_core__WEBPACK_IMPORTED_MODULE_2__["TranslateService"] },
@@ -359,7 +370,7 @@ var AppModule = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
             declarations: [
                 _app_container__WEBPACK_IMPORTED_MODULE_4__["AppContainer"],
-                _pages_home_home_component__WEBPACK_IMPORTED_MODULE_9__["HomeComponent"]
+                _pages_home_home_component__WEBPACK_IMPORTED_MODULE_9__["HomeComponent"],
             ],
             imports: [
                 _angular_common__WEBPACK_IMPORTED_MODULE_12__["CommonModule"],
@@ -696,11 +707,12 @@ var AuthGuard = /** @class */ (function () {
     AuthGuard.prototype.canActivate = function (route, state) {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
             return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                // return true;
                 if (this.authService.isSignedIn()) {
                     return [2 /*return*/, true];
                 }
                 else {
-                    this.router.navigate(['/auth/login'], { queryParams: { returnUrl: state.url } });
+                    this.router.navigate(['/auth/sign-in'], { queryParams: { returnUrl: state.url } });
                     return [2 /*return*/, false];
                 }
                 return [2 /*return*/];
@@ -853,7 +865,7 @@ var AuthService = /** @class */ (function () {
         var _this = this;
         aws_amplify__WEBPACK_IMPORTED_MODULE_3__["Auth"].signOut({})
             .then(function (data) {
-            _this.router.navigate(['/auth/login']);
+            _this.router.navigate(['/auth/sign-in']);
         })
             .catch(function (err) { return console.log(err); });
     };
@@ -886,14 +898,100 @@ var AuthService = /** @class */ (function () {
                         return [4 /*yield*/, aws_amplify__WEBPACK_IMPORTED_MODULE_3__["Auth"].forgotPasswordSubmit(username, code, newPassword)];
                     case 1:
                         result = _a.sent();
-                        debugger;
                         return [2 /*return*/, { result: true }];
                     case 2:
                         err_3 = _a.sent();
-                        debugger;
                         return [2 /*return*/, { result: false, error: err_3.message }];
                     case 3: return [2 /*return*/];
                 }
+            });
+        });
+    };
+    AuthService.prototype.changePassword = function (oldPassword, newPassword) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var user, data, err_4;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        _a.trys.push([0, 3, , 4]);
+                        return [4 /*yield*/, aws_amplify__WEBPACK_IMPORTED_MODULE_3__["Auth"].currentAuthenticatedUser()];
+                    case 1:
+                        user = _a.sent();
+                        return [4 /*yield*/, aws_amplify__WEBPACK_IMPORTED_MODULE_3__["Auth"].changePassword(user, oldPassword, newPassword)];
+                    case 2:
+                        data = _a.sent();
+                        return [2 /*return*/, { result: true }];
+                    case 3:
+                        err_4 = _a.sent();
+                        if (err_4.code === 'NotAuthorizedException') {
+                            err_4.message = 'Old Password is incorrect';
+                        }
+                        return [2 /*return*/, { result: false, error: err_4.message }];
+                    case 4: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    AuthService.prototype.signUp = function (username, email, password) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var data, err_5;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        _a.trys.push([0, 2, , 3]);
+                        return [4 /*yield*/, aws_amplify__WEBPACK_IMPORTED_MODULE_3__["Auth"].signUp({
+                                username: username, password: password,
+                                attributes: {
+                                    email: email,
+                                    phone_number: '+840937745005'
+                                },
+                                validationData: []
+                            })];
+                    case 1:
+                        data = _a.sent();
+                        return [2 /*return*/, { result: true }];
+                    case 2:
+                        err_5 = _a.sent();
+                        return [2 /*return*/, { result: false, error: err_5.message }];
+                    case 3: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    AuthService.prototype.activeAccount = function (username, verificationCode) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var data, err_6;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        _a.trys.push([0, 2, , 3]);
+                        return [4 /*yield*/, aws_amplify__WEBPACK_IMPORTED_MODULE_3__["Auth"].confirmSignUp(username, verificationCode, {
+                                // Optional. Force user confirmation irrespective of existing alias. By default set to True.
+                                forceAliasCreation: true
+                            })];
+                    case 1:
+                        data = _a.sent();
+                        return [2 /*return*/, { result: true }];
+                    case 2:
+                        err_6 = _a.sent();
+                        return [2 /*return*/, { result: false, error: err_6.message }];
+                    case 3: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    AuthService.prototype.resendActiveAccountCode = function (username) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var data;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                try {
+                    data = aws_amplify__WEBPACK_IMPORTED_MODULE_3__["Auth"].resendSignUp(username);
+                    return [2 /*return*/, { result: true }];
+                }
+                catch (err) {
+                    return [2 /*return*/, { result: false, error: err.message }];
+                }
+                return [2 /*return*/];
             });
         });
     };
@@ -1705,6 +1803,64 @@ var COLLECTION_FORMATS = {
 
 /***/ }),
 
+/***/ "./src/app/sub-modules/ic-core/components/alert-dialog/alert.dialog.scss":
+/*!*******************************************************************************!*\
+  !*** ./src/app/sub-modules/ic-core/components/alert-dialog/alert.dialog.scss ***!
+  \*******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".mat-dialog-actions {\n  justify-content: center;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc3ViLW1vZHVsZXMvaWMtY29yZS9jb21wb25lbnRzL2FsZXJ0LWRpYWxvZy9DOlxcREVWXFx3b3Jrc3BhY2VzXFxpY2xpbmljXFxkdGMtdWkvc3JjXFxhcHBcXHN1Yi1tb2R1bGVzXFxpYy1jb3JlXFxjb21wb25lbnRzXFxhbGVydC1kaWFsb2dcXGFsZXJ0LmRpYWxvZy5zY3NzIiwic3JjL2FwcC9zdWItbW9kdWxlcy9pYy1jb3JlL2NvbXBvbmVudHMvYWxlcnQtZGlhbG9nL2FsZXJ0LmRpYWxvZy5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsdUJBQUE7QUNDRiIsImZpbGUiOiJzcmMvYXBwL3N1Yi1tb2R1bGVzL2ljLWNvcmUvY29tcG9uZW50cy9hbGVydC1kaWFsb2cvYWxlcnQuZGlhbG9nLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubWF0LWRpYWxvZy1hY3Rpb25ze1xyXG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG59XHJcbiIsIi5tYXQtZGlhbG9nLWFjdGlvbnMge1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbn0iXX0= */"
+
+/***/ }),
+
+/***/ "./src/app/sub-modules/ic-core/components/alert-dialog/alert.dialog.ts":
+/*!*****************************************************************************!*\
+  !*** ./src/app/sub-modules/ic-core/components/alert-dialog/alert.dialog.ts ***!
+  \*****************************************************************************/
+/*! exports provided: AlertDialog */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AlertDialog", function() { return AlertDialog; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+
+
+
+var AlertDialog = /** @class */ (function () {
+    function AlertDialog(dialogRef, message) {
+        this.dialogRef = dialogRef;
+        this.message = message;
+    }
+    AlertDialog.prototype.close = function () {
+        this.dialogRef.close();
+    };
+    AlertDialog.prototype.ngOnInit = function () {
+    };
+    AlertDialog.ctorParameters = function () { return [
+        { type: _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialogRef"] },
+        { type: String, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [_angular_material__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"],] }] }
+    ]; };
+    AlertDialog = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'ic-alert-dialog',
+            template: __webpack_require__(/*! raw-loader!./alert.dialog.html */ "./node_modules/raw-loader/index.js!./src/app/sub-modules/ic-core/components/alert-dialog/alert.dialog.html"),
+            styles: [__webpack_require__(/*! ./alert.dialog.scss */ "./src/app/sub-modules/ic-core/components/alert-dialog/alert.dialog.scss")]
+        })
+        // tslint:disable-next-line:component-class-suffix
+        ,
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"]))
+    ], AlertDialog);
+    return AlertDialog;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/sub-modules/ic-core/components/chips-autocomplete/chips-autocomplete.component.scss":
 /*!*****************************************************************************************************!*\
   !*** ./src/app/sub-modules/ic-core/components/chips-autocomplete/chips-autocomplete.component.scss ***!
@@ -1887,7 +2043,7 @@ var ConfirmDialog = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3N1Yi1tb2R1bGVzL2ljLWNvcmUvY29tcG9uZW50cy9oZWFkZXIvaGVhZGVyLmNvbXBvbmVudC5zY3NzIn0= */"
+module.exports = "#navbar-menu > ul > li a.dropdown-toggle.icon-menu > img.rounded-circle.avatar {\n  width: 16px;\n}\n#navbar-menu > ul > li > ul > li .feeds-left {\n  width: 40px;\n}\n#navbar-menu > ul > li > ul > li .feeds-left i {\n  font-size: 32px;\n}\n#navbar-menu > ul > li > ul > li .feeds-left img {\n  width: 32px;\n}\n#navbar-menu > ul > li > ul > li .feeds-body {\n  width: 200px;\n}\n#navbar-menu > ul > li > ul > li .feeds-body .title {\n  line-height: 2rem;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  overflow: hidden;\n  width: calc(100% - 40px);\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc3ViLW1vZHVsZXMvaWMtY29yZS9jb21wb25lbnRzL2hlYWRlci9DOlxcREVWXFx3b3Jrc3BhY2VzXFxpY2xpbmljXFxkdGMtdWkvc3JjXFxhcHBcXHN1Yi1tb2R1bGVzXFxpYy1jb3JlXFxjb21wb25lbnRzXFxoZWFkZXJcXGhlYWRlci5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvc3ViLW1vZHVsZXMvaWMtY29yZS9jb21wb25lbnRzL2hlYWRlci9oZWFkZXIuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBSVE7RUFDRSxXQUFBO0FDSFY7QURRVTtFQUNFLFdBQUE7QUNOWjtBRE9ZO0VBQ0UsZUFBQTtBQ0xkO0FET1k7RUFDRSxXQUFBO0FDTGQ7QURRVTtFQUNFLFlBQUE7QUNOWjtBRE9ZO0VBQ0UsaUJBQUE7RUFDQSx1QkFBQTtFQUNBLG1CQUFBO0VBQ0EsZ0JBQUE7RUFDQSx3QkFBQTtBQ0xkIiwiZmlsZSI6InNyYy9hcHAvc3ViLW1vZHVsZXMvaWMtY29yZS9jb21wb25lbnRzL2hlYWRlci9oZWFkZXIuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIjbmF2YmFyLW1lbnV7XHJcbiAgPnVse1xyXG4gICAgPmxpe1xyXG4gICAgICBhLmRyb3Bkb3duLXRvZ2dsZS5pY29uLW1lbnV7XHJcbiAgICAgICAgPmltZy5yb3VuZGVkLWNpcmNsZS5hdmF0YXJ7XHJcbiAgICAgICAgICB3aWR0aDogMTZweDtcclxuICAgICAgICB9XHJcbiAgICAgIH1cclxuICAgICAgPnVse1xyXG4gICAgICAgID5saXtcclxuICAgICAgICAgIC5mZWVkcy1sZWZ0e1xyXG4gICAgICAgICAgICB3aWR0aDogNDBweDtcclxuICAgICAgICAgICAgaXtcclxuICAgICAgICAgICAgICBmb250LXNpemU6IDMycHg7XHJcbiAgICAgICAgICAgIH1cclxuICAgICAgICAgICAgaW1ne1xyXG4gICAgICAgICAgICAgIHdpZHRoOiAzMnB4O1xyXG4gICAgICAgICAgICB9XHJcbiAgICAgICAgICB9XHJcbiAgICAgICAgICAuZmVlZHMtYm9keXtcclxuICAgICAgICAgICAgd2lkdGg6IDIwMHB4O1xyXG4gICAgICAgICAgICAudGl0bGV7XHJcbiAgICAgICAgICAgICAgbGluZS1oZWlnaHQ6IDJyZW07XHJcbiAgICAgICAgICAgICAgdGV4dC1vdmVyZmxvdzogZWxsaXBzaXM7XHJcbiAgICAgICAgICAgICAgd2hpdGUtc3BhY2U6IG5vd3JhcDtcclxuICAgICAgICAgICAgICBvdmVyZmxvdzogaGlkZGVuO1xyXG4gICAgICAgICAgICAgIHdpZHRoOiBjYWxjKDEwMCUgLSA0MHB4KTtcclxuICAgICAgICAgICAgfVxyXG4gICAgICAgICAgfVxyXG5cclxuICAgICAgICB9XHJcbiAgICAgIH1cclxuICAgIH1cclxuICB9XHJcblxyXG5cclxufVxyXG5cclxuIiwiI25hdmJhci1tZW51ID4gdWwgPiBsaSBhLmRyb3Bkb3duLXRvZ2dsZS5pY29uLW1lbnUgPiBpbWcucm91bmRlZC1jaXJjbGUuYXZhdGFyIHtcbiAgd2lkdGg6IDE2cHg7XG59XG4jbmF2YmFyLW1lbnUgPiB1bCA+IGxpID4gdWwgPiBsaSAuZmVlZHMtbGVmdCB7XG4gIHdpZHRoOiA0MHB4O1xufVxuI25hdmJhci1tZW51ID4gdWwgPiBsaSA+IHVsID4gbGkgLmZlZWRzLWxlZnQgaSB7XG4gIGZvbnQtc2l6ZTogMzJweDtcbn1cbiNuYXZiYXItbWVudSA+IHVsID4gbGkgPiB1bCA+IGxpIC5mZWVkcy1sZWZ0IGltZyB7XG4gIHdpZHRoOiAzMnB4O1xufVxuI25hdmJhci1tZW51ID4gdWwgPiBsaSA+IHVsID4gbGkgLmZlZWRzLWJvZHkge1xuICB3aWR0aDogMjAwcHg7XG59XG4jbmF2YmFyLW1lbnUgPiB1bCA+IGxpID4gdWwgPiBsaSAuZmVlZHMtYm9keSAudGl0bGUge1xuICBsaW5lLWhlaWdodDogMnJlbTtcbiAgdGV4dC1vdmVyZmxvdzogZWxsaXBzaXM7XG4gIHdoaXRlLXNwYWNlOiBub3dyYXA7XG4gIG92ZXJmbG93OiBoaWRkZW47XG4gIHdpZHRoOiBjYWxjKDEwMCUgLSA0MHB4KTtcbn0iXX0= */"
 
 /***/ }),
 
@@ -1903,21 +2059,49 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HeaderComponent", function() { return HeaderComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _auth_services_auth_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../auth/services/auth.service */ "./src/app/sub-modules/auth/services/auth.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _auth_services_auth_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../auth/services/auth.service */ "./src/app/sub-modules/auth/services/auth.service.ts");
+
 
 
 
 var HeaderComponent = /** @class */ (function () {
-    function HeaderComponent(authService) {
+    function HeaderComponent(authService, router) {
         this.authService = authService;
+        this.router = router;
     }
     HeaderComponent.prototype.ngOnInit = function () {
     };
     HeaderComponent.prototype.signOut = function () {
         this.authService.signOut();
     };
+    HeaderComponent.prototype.signUp = function () {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.router.navigate(['auth/sign-up'], { queryParams: { returnUrl: this.router.url } })];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    HeaderComponent.prototype.changePassword = function () {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.router.navigate(['auth/change-password'], { queryParams: { returnUrl: this.router.url } })];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
     HeaderComponent.ctorParameters = function () { return [
-        { type: _auth_services_auth_service__WEBPACK_IMPORTED_MODULE_2__["AuthService"] }
+        { type: _auth_services_auth_service__WEBPACK_IMPORTED_MODULE_3__["AuthService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] }
     ]; };
     HeaderComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -1990,7 +2174,7 @@ var NavComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".page-loader-wrapper {\n  background-color: rgba(255, 255, 255, 0.8);\n}\n.page-loader-wrapper img {\n  border-radius: 50%;\n  padding: 6px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc3ViLW1vZHVsZXMvaWMtY29yZS9jb21wb25lbnRzL3BhZ2UtbG9hZGVyL0M6XFxERVZcXHdvcmtzcGFjZXNcXGljbGluaWNcXGR0Yy11aS9zcmNcXGFwcFxcc3ViLW1vZHVsZXNcXGljLWNvcmVcXGNvbXBvbmVudHNcXHBhZ2UtbG9hZGVyXFxwYWdlLWxvYWRlci5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvc3ViLW1vZHVsZXMvaWMtY29yZS9jb21wb25lbnRzL3BhZ2UtbG9hZGVyL3BhZ2UtbG9hZGVyLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsMENBQUE7QUNDRjtBREFFO0VBQ0Usa0JBQUE7RUFDQSxZQUFBO0FDRUoiLCJmaWxlIjoic3JjL2FwcC9zdWItbW9kdWxlcy9pYy1jb3JlL2NvbXBvbmVudHMvcGFnZS1sb2FkZXIvcGFnZS1sb2FkZXIuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIucGFnZS1sb2FkZXItd3JhcHBlcntcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMjU1LCAyNTUsIDI1NSwgMC44KTtcclxuICBpbWd7XHJcbiAgICBib3JkZXItcmFkaXVzOiA1MCU7XHJcbiAgICBwYWRkaW5nOiA2cHg7XHJcbiAgfVxyXG59XHJcblxyXG4iLCIucGFnZS1sb2FkZXItd3JhcHBlciB7XG4gIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMjU1LCAyNTUsIDI1NSwgMC44KTtcbn1cbi5wYWdlLWxvYWRlci13cmFwcGVyIGltZyB7XG4gIGJvcmRlci1yYWRpdXM6IDUwJTtcbiAgcGFkZGluZzogNnB4O1xufSJdfQ== */"
+module.exports = ".page-loader-wrapper {\n  background-color: rgba(255, 255, 255, 0.8);\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.page-loader-wrapper .loader {\n  width: 75px;\n  height: 75px;\n  position: static;\n}\n.db-spinner {\n  width: 75px;\n  height: 75px;\n  border-radius: 50%;\n  background-color: transparent;\n  border: 2px solid #222;\n  border-top: 2px solid #03A9F4;\n  border-bottom: 2px solid #03A9F4;\n  -webkit-animation: 1s spin linear infinite;\n  animation: 1s spin linear infinite;\n}\n@-webkit-keyframes spin {\n  from {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg);\n  }\n  to {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg);\n  }\n}\n@keyframes spin {\n  from {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg);\n  }\n  to {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg);\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc3ViLW1vZHVsZXMvaWMtY29yZS9jb21wb25lbnRzL3BhZ2UtbG9hZGVyL0M6XFxERVZcXHdvcmtzcGFjZXNcXGljbGluaWNcXGR0Yy11aS9zcmNcXGFwcFxcc3ViLW1vZHVsZXNcXGljLWNvcmVcXGNvbXBvbmVudHNcXHBhZ2UtbG9hZGVyXFxwYWdlLWxvYWRlci5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvc3ViLW1vZHVsZXMvaWMtY29yZS9jb21wb25lbnRzL3BhZ2UtbG9hZGVyL3BhZ2UtbG9hZGVyLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsMENBQUE7RUFDQSxhQUFBO0VBQ0EsdUJBQUE7RUFDQSxtQkFBQTtBQ0NGO0FEQUU7RUFDRSxXQUFBO0VBQ0EsWUFBQTtFQUNBLGdCQUFBO0FDRUo7QURLQTtFQUNFLFdBQUE7RUFDQSxZQUFBO0VBQ0Esa0JBQUE7RUFDQSw2QkFBQTtFQUNBLHNCQUFBO0VBQ0EsNkJBQUE7RUFDQSxnQ0FBQTtFQUNBLDBDQUFBO0VBQ0Esa0NBQUE7QUNGRjtBREtBO0VBQ0U7SUFDRSwrQkFBQTtJQUNBLHVCQUFBO0VDRkY7RURJQTtJQUNFLGlDQUFBO0lBQ0EseUJBQUE7RUNGRjtBQUNGO0FES0E7RUFDRTtJQUNFLCtCQUFBO0lBQ0EsdUJBQUE7RUNIRjtFREtBO0lBQ0UsaUNBQUE7SUFDQSx5QkFBQTtFQ0hGO0FBQ0YiLCJmaWxlIjoic3JjL2FwcC9zdWItbW9kdWxlcy9pYy1jb3JlL2NvbXBvbmVudHMvcGFnZS1sb2FkZXIvcGFnZS1sb2FkZXIuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIucGFnZS1sb2FkZXItd3JhcHBlcntcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMjU1LCAyNTUsIDI1NSwgMC44KTtcclxuICBkaXNwbGF5OiBmbGV4O1xyXG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XHJcbiAgLmxvYWRlcntcclxuICAgIHdpZHRoOiA3NXB4O1xyXG4gICAgaGVpZ2h0OiA3NXB4O1xyXG4gICAgcG9zaXRpb246IHN0YXRpYztcclxuXHJcbiAgfVxyXG5cclxuXHJcbn1cclxuXHJcbi5kYi1zcGlubmVyIHtcclxuICB3aWR0aDogNzVweDtcclxuICBoZWlnaHQ6IDc1cHg7XHJcbiAgYm9yZGVyLXJhZGl1czogNTAlO1xyXG4gIGJhY2tncm91bmQtY29sb3I6IHRyYW5zcGFyZW50O1xyXG4gIGJvcmRlcjogMnB4IHNvbGlkICMyMjI7XHJcbiAgYm9yZGVyLXRvcDogMnB4IHNvbGlkICMwM0E5RjQ7XHJcbiAgYm9yZGVyLWJvdHRvbTogMnB4IHNvbGlkICMwM0E5RjQ7XHJcbiAgLXdlYmtpdC1hbmltYXRpb246IDFzIHNwaW4gbGluZWFyIGluZmluaXRlO1xyXG4gIGFuaW1hdGlvbjogMXMgc3BpbiBsaW5lYXIgaW5maW5pdGU7XHJcbn1cclxuXHJcbkAtd2Via2l0LWtleWZyYW1lcyBzcGluIHtcclxuICBmcm9tIHtcclxuICAgIC13ZWJraXQtdHJhbnNmb3JtOiByb3RhdGUoMGRlZyk7XHJcbiAgICB0cmFuc2Zvcm06IHJvdGF0ZSgwZGVnKTtcclxuICB9XHJcbiAgdG8ge1xyXG4gICAgLXdlYmtpdC10cmFuc2Zvcm06IHJvdGF0ZSgzNjBkZWcpO1xyXG4gICAgdHJhbnNmb3JtOiByb3RhdGUoMzYwZGVnKTtcclxuICB9XHJcbn1cclxuXHJcbkBrZXlmcmFtZXMgc3BpbiB7XHJcbiAgZnJvbSB7XHJcbiAgICAtd2Via2l0LXRyYW5zZm9ybTogcm90YXRlKDBkZWcpO1xyXG4gICAgdHJhbnNmb3JtOiByb3RhdGUoMGRlZyk7XHJcbiAgfVxyXG4gIHRvIHtcclxuICAgIC13ZWJraXQtdHJhbnNmb3JtOiByb3RhdGUoMzYwZGVnKTtcclxuICAgIHRyYW5zZm9ybTogcm90YXRlKDM2MGRlZyk7XHJcbiAgfVxyXG59XHJcbiIsIi5wYWdlLWxvYWRlci13cmFwcGVyIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjgpO1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbn1cbi5wYWdlLWxvYWRlci13cmFwcGVyIC5sb2FkZXIge1xuICB3aWR0aDogNzVweDtcbiAgaGVpZ2h0OiA3NXB4O1xuICBwb3NpdGlvbjogc3RhdGljO1xufVxuXG4uZGItc3Bpbm5lciB7XG4gIHdpZHRoOiA3NXB4O1xuICBoZWlnaHQ6IDc1cHg7XG4gIGJvcmRlci1yYWRpdXM6IDUwJTtcbiAgYmFja2dyb3VuZC1jb2xvcjogdHJhbnNwYXJlbnQ7XG4gIGJvcmRlcjogMnB4IHNvbGlkICMyMjI7XG4gIGJvcmRlci10b3A6IDJweCBzb2xpZCAjMDNBOUY0O1xuICBib3JkZXItYm90dG9tOiAycHggc29saWQgIzAzQTlGNDtcbiAgLXdlYmtpdC1hbmltYXRpb246IDFzIHNwaW4gbGluZWFyIGluZmluaXRlO1xuICBhbmltYXRpb246IDFzIHNwaW4gbGluZWFyIGluZmluaXRlO1xufVxuXG5ALXdlYmtpdC1rZXlmcmFtZXMgc3BpbiB7XG4gIGZyb20ge1xuICAgIC13ZWJraXQtdHJhbnNmb3JtOiByb3RhdGUoMGRlZyk7XG4gICAgdHJhbnNmb3JtOiByb3RhdGUoMGRlZyk7XG4gIH1cbiAgdG8ge1xuICAgIC13ZWJraXQtdHJhbnNmb3JtOiByb3RhdGUoMzYwZGVnKTtcbiAgICB0cmFuc2Zvcm06IHJvdGF0ZSgzNjBkZWcpO1xuICB9XG59XG5Aa2V5ZnJhbWVzIHNwaW4ge1xuICBmcm9tIHtcbiAgICAtd2Via2l0LXRyYW5zZm9ybTogcm90YXRlKDBkZWcpO1xuICAgIHRyYW5zZm9ybTogcm90YXRlKDBkZWcpO1xuICB9XG4gIHRvIHtcbiAgICAtd2Via2l0LXRyYW5zZm9ybTogcm90YXRlKDM2MGRlZyk7XG4gICAgdHJhbnNmb3JtOiByb3RhdGUoMzYwZGVnKTtcbiAgfVxufSJdfQ== */"
 
 /***/ }),
 
@@ -2080,6 +2264,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_chips_autocomplete_chips_autocomplete_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/chips-autocomplete/chips-autocomplete.component */ "./src/app/sub-modules/ic-core/components/chips-autocomplete/chips-autocomplete.component.ts");
 /* harmony import */ var _material_module__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../material-module */ "./src/app/material-module.ts");
 /* harmony import */ var _components_confirm_dialog_confirm_dialog__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/confirm-dialog/confirm.dialog */ "./src/app/sub-modules/ic-core/components/confirm-dialog/confirm.dialog.ts");
+/* harmony import */ var _components_alert_dialog_alert_dialog__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/alert-dialog/alert.dialog */ "./src/app/sub-modules/ic-core/components/alert-dialog/alert.dialog.ts");
+
 
 
 
@@ -2104,7 +2290,8 @@ var components = [
     _pages_abstract_page_abstract_page_component__WEBPACK_IMPORTED_MODULE_9__["AbstractPageComponent"]
 ];
 var entryComponents = [
-    _components_confirm_dialog_confirm_dialog__WEBPACK_IMPORTED_MODULE_15__["ConfirmDialog"]
+    _components_confirm_dialog_confirm_dialog__WEBPACK_IMPORTED_MODULE_15__["ConfirmDialog"],
+    _components_alert_dialog_alert_dialog__WEBPACK_IMPORTED_MODULE_16__["AlertDialog"]
 ];
 var providers = [
     _services_page_loader_service__WEBPACK_IMPORTED_MODULE_7__["PageLoaderService"],
@@ -2132,7 +2319,9 @@ var IcCoreModule = /** @class */ (function () {
     var IcCoreModule_1;
     IcCoreModule = IcCoreModule_1 = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-            declarations: tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](components, entryComponents),
+            declarations: tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](components, entryComponents, [
+                _components_alert_dialog_alert_dialog__WEBPACK_IMPORTED_MODULE_16__["AlertDialog"]
+            ]),
             entryComponents: entryComponents,
             imports: tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](modules),
             exports: tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](components, entryComponents, modules)
@@ -2149,7 +2338,7 @@ var IcCoreModule = /** @class */ (function () {
 /*!**********************************************!*\
   !*** ./src/app/sub-modules/ic-core/index.ts ***!
   \**********************************************/
-/*! exports provided: providers, IcCoreModule, HeaderComponent, PageLoaderComponent, NavComponent, ChipsAutocompleteComponent, ConfirmDialog, AbstractPageComponent, PageLoaderService, UtilityService */
+/*! exports provided: providers, IcCoreModule, HeaderComponent, PageLoaderComponent, NavComponent, ChipsAutocompleteComponent, ConfirmDialog, AlertDialog, AbstractPageComponent, PageLoaderService, UtilityService */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2169,19 +2358,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_confirm_dialog_confirm_dialog__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/confirm-dialog/confirm.dialog */ "./src/app/sub-modules/ic-core/components/confirm-dialog/confirm.dialog.ts");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ConfirmDialog", function() { return _components_confirm_dialog_confirm_dialog__WEBPACK_IMPORTED_MODULE_4__["ConfirmDialog"]; });
 
-/* harmony import */ var _pages_abstract_page_abstract_page_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./pages/abstract-page/abstract-page.component */ "./src/app/sub-modules/ic-core/pages/abstract-page/abstract-page.component.ts");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "AbstractPageComponent", function() { return _pages_abstract_page_abstract_page_component__WEBPACK_IMPORTED_MODULE_5__["AbstractPageComponent"]; });
+/* harmony import */ var _components_alert_dialog_alert_dialog__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/alert-dialog/alert.dialog */ "./src/app/sub-modules/ic-core/components/alert-dialog/alert.dialog.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "AlertDialog", function() { return _components_alert_dialog_alert_dialog__WEBPACK_IMPORTED_MODULE_5__["AlertDialog"]; });
 
-/* harmony import */ var _services_page_loader_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./services/page-loader.service */ "./src/app/sub-modules/ic-core/services/page-loader.service.ts");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PageLoaderService", function() { return _services_page_loader_service__WEBPACK_IMPORTED_MODULE_6__["PageLoaderService"]; });
+/* harmony import */ var _pages_abstract_page_abstract_page_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./pages/abstract-page/abstract-page.component */ "./src/app/sub-modules/ic-core/pages/abstract-page/abstract-page.component.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "AbstractPageComponent", function() { return _pages_abstract_page_abstract_page_component__WEBPACK_IMPORTED_MODULE_6__["AbstractPageComponent"]; });
 
-/* harmony import */ var _services_utility_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./services/utility.service */ "./src/app/sub-modules/ic-core/services/utility.service.ts");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "UtilityService", function() { return _services_utility_service__WEBPACK_IMPORTED_MODULE_7__["UtilityService"]; });
+/* harmony import */ var _services_page_loader_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./services/page-loader.service */ "./src/app/sub-modules/ic-core/services/page-loader.service.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PageLoaderService", function() { return _services_page_loader_service__WEBPACK_IMPORTED_MODULE_7__["PageLoaderService"]; });
 
-/* harmony import */ var _ic_core_module__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./ic-core.module */ "./src/app/sub-modules/ic-core/ic-core.module.ts");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "providers", function() { return _ic_core_module__WEBPACK_IMPORTED_MODULE_8__["providers"]; });
+/* harmony import */ var _services_utility_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./services/utility.service */ "./src/app/sub-modules/ic-core/services/utility.service.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "UtilityService", function() { return _services_utility_service__WEBPACK_IMPORTED_MODULE_8__["UtilityService"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "IcCoreModule", function() { return _ic_core_module__WEBPACK_IMPORTED_MODULE_8__["IcCoreModule"]; });
+/* harmony import */ var _ic_core_module__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./ic-core.module */ "./src/app/sub-modules/ic-core/ic-core.module.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "providers", function() { return _ic_core_module__WEBPACK_IMPORTED_MODULE_9__["providers"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "IcCoreModule", function() { return _ic_core_module__WEBPACK_IMPORTED_MODULE_9__["IcCoreModule"]; });
+
 
 
 
