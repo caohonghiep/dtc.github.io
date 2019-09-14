@@ -11242,6 +11242,8 @@ AppointmentsContainer = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         styles: [__webpack_require__(/*! ./appointments.container.scss */ "./src/app/sub-modules/appointments/appointments.container.scss")]
     })
     // tslint:disable-next-line:component-class-suffix
+    ,
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
 ], AppointmentsContainer);
 
 

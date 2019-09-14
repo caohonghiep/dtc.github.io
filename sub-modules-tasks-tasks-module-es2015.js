@@ -55,7 +55,7 @@ TasksRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "::ng-deep .mat-form-field-underline {\n  display: none;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc3ViLW1vZHVsZXMvdGFza3MvQzpcXERFVlxcd29ya3NwYWNlc1xcaWNsaW5pY1xcZHRjLXVpL3NyY1xcYXBwXFxzdWItbW9kdWxlc1xcdGFza3NcXHRhc2tzLmNvbnRhaW5lci5zY3NzIiwic3JjL2FwcC9zdWItbW9kdWxlcy90YXNrcy90YXNrcy5jb250YWluZXIuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGFBQUE7QUNDRiIsImZpbGUiOiJzcmMvYXBwL3N1Yi1tb2R1bGVzL3Rhc2tzL3Rhc2tzLmNvbnRhaW5lci5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiOjpuZy1kZWVwIC5tYXQtZm9ybS1maWVsZC11bmRlcmxpbmUge1xyXG4gIGRpc3BsYXk6IG5vbmU7XHJcbn1cclxuIiwiOjpuZy1kZWVwIC5tYXQtZm9ybS1maWVsZC11bmRlcmxpbmUge1xuICBkaXNwbGF5OiBub25lO1xufSJdfQ== */"
+module.exports = "::ng-deep .mat-form-field-underline {\n  display: none;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc3ViLW1vZHVsZXMvdGFza3MvQzpcXERFVlxcd29ya3NwYWNlc1xcaWNsaW5pY1xcU291cmNlXFxVSS9zcmNcXGFwcFxcc3ViLW1vZHVsZXNcXHRhc2tzXFx0YXNrcy5jb250YWluZXIuc2NzcyIsInNyYy9hcHAvc3ViLW1vZHVsZXMvdGFza3MvdGFza3MuY29udGFpbmVyLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxhQUFBO0FDQ0YiLCJmaWxlIjoic3JjL2FwcC9zdWItbW9kdWxlcy90YXNrcy90YXNrcy5jb250YWluZXIuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIjo6bmctZGVlcCAubWF0LWZvcm0tZmllbGQtdW5kZXJsaW5lIHtcclxuICBkaXNwbGF5OiBub25lO1xyXG59XHJcbiIsIjo6bmctZGVlcCAubWF0LWZvcm0tZmllbGQtdW5kZXJsaW5lIHtcbiAgZGlzcGxheTogbm9uZTtcbn0iXX0= */"
 
 /***/ }),
 
@@ -110,7 +110,8 @@ TasksContainer = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         selector: 'ic-tasks',
         template: __webpack_require__(/*! raw-loader!./tasks.container.html */ "./node_modules/raw-loader/index.js!./src/app/sub-modules/tasks/tasks.container.html"),
         styles: [__webpack_require__(/*! ./tasks.container.scss */ "./src/app/sub-modules/tasks/tasks.container.scss")]
-    })
+    }),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
 ], TasksContainer);
 
 

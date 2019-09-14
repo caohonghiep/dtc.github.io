@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>product-detail works!</p>\n"
+module.exports = "<p>product-detail works!</p>\r\n"
 
 /***/ }),
 
@@ -29,7 +29,7 @@ module.exports = "<div id=\"main-content\">\r\n  <div class=\"block-header\">\r\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<router-outlet></router-outlet>\n"
+module.exports = "<router-outlet></router-outlet>\r\n"
 
 /***/ }),
 
@@ -68,7 +68,8 @@ ProductDetailComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         selector: 'ic-product-detail',
         template: __webpack_require__(/*! raw-loader!./product-detail.component.html */ "./node_modules/raw-loader/index.js!./src/app/sub-modules/storage/pages/product-detail/product-detail.component.html"),
         styles: [__webpack_require__(/*! ./product-detail.component.scss */ "./src/app/sub-modules/storage/pages/product-detail/product-detail.component.scss")]
-    })
+    }),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
 ], ProductDetailComponent);
 
 
@@ -82,7 +83,7 @@ ProductDetailComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".control form mat-form-field {\n  margin: 0 20px;\n}\n.control form .icon-shuffle:before {\n  font-size: 16px;\n}\n.control > div button {\n  margin: 0 4px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc3ViLW1vZHVsZXMvc3RvcmFnZS9wYWdlcy9wcm9kdWN0cy9DOlxcREVWXFx3b3Jrc3BhY2VzXFxpY2xpbmljXFxkdGMtdWkvc3JjXFxhcHBcXHN1Yi1tb2R1bGVzXFxzdG9yYWdlXFxwYWdlc1xccHJvZHVjdHNcXHByb2R1Y3RzLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9zdWItbW9kdWxlcy9zdG9yYWdlL3BhZ2VzL3Byb2R1Y3RzL3Byb2R1Y3RzLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUdJO0VBQ0UsY0FBQTtBQ0ZOO0FES007RUFDRSxlQUFBO0FDSFI7QURTRztFQUNFLGFBQUE7QUNQTCIsImZpbGUiOiJzcmMvYXBwL3N1Yi1tb2R1bGVzL3N0b3JhZ2UvcGFnZXMvcHJvZHVjdHMvcHJvZHVjdHMuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY29udHJvbHtcclxuICAvL3BhZGRpbmc6IDE2cHg7XHJcbiAgZm9ybXtcclxuICAgIG1hdC1mb3JtLWZpZWxke1xyXG4gICAgICBtYXJnaW46IDAgMjBweDtcclxuICAgIH1cclxuICAgIC5pY29uLXNodWZmbGV7XHJcbiAgICAgICY6YmVmb3JlIHtcclxuICAgICAgICBmb250LXNpemU6IDE2cHg7XHJcbiAgICAgIH1cclxuICAgIH1cclxuICB9XHJcblxyXG4gID5kaXZ7XHJcbiAgIGJ1dHRvbntcclxuICAgICBtYXJnaW46IDAgNHB4O1xyXG4gICB9XHJcbiAgfVxyXG5cclxufVxyXG5cclxuXHJcbiIsIi5jb250cm9sIGZvcm0gbWF0LWZvcm0tZmllbGQge1xuICBtYXJnaW46IDAgMjBweDtcbn1cbi5jb250cm9sIGZvcm0gLmljb24tc2h1ZmZsZTpiZWZvcmUge1xuICBmb250LXNpemU6IDE2cHg7XG59XG4uY29udHJvbCA+IGRpdiBidXR0b24ge1xuICBtYXJnaW46IDAgNHB4O1xufSJdfQ== */"
+module.exports = ".control form mat-form-field {\n  margin: 0 20px;\n}\n.control form .icon-shuffle:before {\n  font-size: 16px;\n}\n.control > div button {\n  margin: 0 4px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc3ViLW1vZHVsZXMvc3RvcmFnZS9wYWdlcy9wcm9kdWN0cy9DOlxcREVWXFx3b3Jrc3BhY2VzXFxpY2xpbmljXFxTb3VyY2VcXFVJL3NyY1xcYXBwXFxzdWItbW9kdWxlc1xcc3RvcmFnZVxccGFnZXNcXHByb2R1Y3RzXFxwcm9kdWN0cy5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvc3ViLW1vZHVsZXMvc3RvcmFnZS9wYWdlcy9wcm9kdWN0cy9wcm9kdWN0cy5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFHSTtFQUNFLGNBQUE7QUNGTjtBREtNO0VBQ0UsZUFBQTtBQ0hSO0FEU0c7RUFDRSxhQUFBO0FDUEwiLCJmaWxlIjoic3JjL2FwcC9zdWItbW9kdWxlcy9zdG9yYWdlL3BhZ2VzL3Byb2R1Y3RzL3Byb2R1Y3RzLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmNvbnRyb2x7XHJcbiAgLy9wYWRkaW5nOiAxNnB4O1xyXG4gIGZvcm17XHJcbiAgICBtYXQtZm9ybS1maWVsZHtcclxuICAgICAgbWFyZ2luOiAwIDIwcHg7XHJcbiAgICB9XHJcbiAgICAuaWNvbi1zaHVmZmxle1xyXG4gICAgICAmOmJlZm9yZSB7XHJcbiAgICAgICAgZm9udC1zaXplOiAxNnB4O1xyXG4gICAgICB9XHJcbiAgICB9XHJcbiAgfVxyXG5cclxuICA+ZGl2e1xyXG4gICBidXR0b257XHJcbiAgICAgbWFyZ2luOiAwIDRweDtcclxuICAgfVxyXG4gIH1cclxuXHJcbn1cclxuXHJcblxyXG4iLCIuY29udHJvbCBmb3JtIG1hdC1mb3JtLWZpZWxkIHtcbiAgbWFyZ2luOiAwIDIwcHg7XG59XG4uY29udHJvbCBmb3JtIC5pY29uLXNodWZmbGU6YmVmb3JlIHtcbiAgZm9udC1zaXplOiAxNnB4O1xufVxuLmNvbnRyb2wgPiBkaXYgYnV0dG9uIHtcbiAgbWFyZ2luOiAwIDRweDtcbn0iXX0= */"
 
 /***/ }),
 
@@ -110,7 +111,8 @@ ProductsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         selector: 'ic-products',
         template: __webpack_require__(/*! raw-loader!./products.component.html */ "./node_modules/raw-loader/index.js!./src/app/sub-modules/storage/pages/products/products.component.html"),
         styles: [__webpack_require__(/*! ./products.component.scss */ "./src/app/sub-modules/storage/pages/products/products.component.scss")]
-    })
+    }),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
 ], ProductsComponent);
 
 
@@ -207,6 +209,8 @@ StorageContainer = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         styles: [__webpack_require__(/*! ./storage.container.scss */ "./src/app/sub-modules/storage/storage.container.scss")]
     })
     // tslint:disable-next-line:component-class-suffix
+    ,
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
 ], StorageContainer);
 
 
