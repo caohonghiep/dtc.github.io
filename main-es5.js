@@ -1915,7 +1915,7 @@ var CameraStreamComponent = /** @class */ (function () {
         context.fillStyle = '#AAA';
         context.fillRect(0, 0, this.canvas.width, this.canvas.height);
         var data = this.canvas.toDataURL('image/png');
-        this.photo.setAttribute('src', data);
+        // this.photo.setAttribute('src', data);
     };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
