@@ -356,7 +356,7 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ic-page-loader></ic-page-loader>\r\n<div id=\"wrapper\">\r\n  <ic-header *ngIf=\"!isAuthenticationUrl()\"></ic-header>\r\n  <router-outlet></router-outlet>\r\n\r\n</div>\r\n"
+module.exports = "<ic-page-loader></ic-page-loader>\r\n<div id=\"wrapper\">\r\n  <ic-header *ngIf=\"!isAuthenticationUrl()\"></ic-header>\r\n<!--  <ic-choose-photo (chose)=\"showFile($event)\"></ic-choose-photo>-->\r\n\r\n<!--  <ic-take-photo (took)=\"croppedPhoto($event)\"></ic-take-photo>-->\r\n\r\n<!--  <button (click)=\"takePhoto()\">take photo</button>-->\r\n\r\n<!--  <button (click)=\"cropPhoto()\">crop photo</button>-->\r\n<!--  <ic-crop-photo dataUrl=\"https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg\"></ic-crop-photo>-->\r\n  <router-outlet></router-outlet>\r\n\r\n</div>\r\n"
 
 /***/ }),
 
@@ -378,7 +378,18 @@ module.exports = "<div id=\"main-content\">\r\n<div class=\"container-fluid\" st
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h1 mat-dialog-title></h1>\r\n<div mat-dialog-content>\r\n  <p>{{message}}</p>\r\n</div>\r\n<div mat-dialog-actions>\r\n  <button mat-flat-button color=\"warn\" (click)=\"close()\">OK</button>\r\n</div>\r\n"
+module.exports = "<h1 mat-dialog-title>{{title}}</h1>\r\n<div mat-dialog-content>\r\n  <p>{{message}}</p>\r\n</div>\r\n<div mat-dialog-actions>\r\n  <button class=\"agree\" mat-flat-button color=\"warn\" (click)=\"close()\">OK</button>\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/sub-modules/ic-core/components/camera-stream/camera-stream.component.html":
+/*!*********************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/sub-modules/ic-core/components/camera-stream/camera-stream.component.html ***!
+  \*********************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"content-area\">\n  <div class=\"camera\">\n    <video #video (canplay)=\"canplay($event)\" class=\"video\">Video stream not available.</video>\n    <button #startButton (click)=\"takePicture($event)\" class=\"start-button\" mat-icon-button color=\"primary\">\n      <mat-icon>photo_camera</mat-icon>\n    </button>\n\n  </div>\n  <canvas #canvas class=\"canvas\">\n  </canvas>\n<!--  <div class=\"output\">-->\n<!--    <img #photo class=\"photo\" alt=\"The screen capture will appear in this box.\">-->\n<!--  </div>-->\n</div>\n"
 
 /***/ }),
 
@@ -389,7 +400,18 @@ module.exports = "<h1 mat-dialog-title></h1>\r\n<div mat-dialog-content>\r\n  <p
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<mat-form-field class=\"chip-list\">\r\n  <mat-chip-list #chipList aria-label=\"Fruit selection\">\r\n    <mat-chip\r\n      *ngFor=\"let item of selectedItems\"\r\n      [selectable]=\"selectable\"\r\n      [removable]=\"removable\"\r\n      (removed)=\"remove(item)\">\r\n      {{item}}\r\n      <mat-icon matChipRemove *ngIf=\"removable\">cancel</mat-icon>\r\n    </mat-chip>\r\n    <input\r\n      placeholder=\"{{placeholder}}\"\r\n      #input\r\n      [formControl]=\"inputCtrl\"\r\n      [matAutocomplete]=\"auto\"\r\n      [matChipInputFor]=\"chipList\"\r\n      [matChipInputSeparatorKeyCodes]=\"separatorKeysCodes\"\r\n      [matChipInputAddOnBlur]=\"addOnBlur\"\r\n      (matChipInputTokenEnd)=\"add($event)\">\r\n  </mat-chip-list>\r\n  <mat-autocomplete #auto=\"matAutocomplete\" (optionSelected)=\"selected($event)\">\r\n    <mat-option *ngFor=\"let item of filteredItems | async\" [value]=\"item\">\r\n      {{item}}\r\n    </mat-option>\r\n  </mat-autocomplete>\r\n</mat-form-field>\r\n"
+module.exports = "<mat-form-field class=\"chip-list\">\r\n  <mat-chip-list #chipList aria-label=\"Fruit selection\" [disabled]=\"disabled\">\r\n    <mat-chip\r\n      *ngFor=\"let item of selectedItems\"\r\n      [selectable]=\"selectable\"\r\n      [removable]=\"removable\"\r\n      (removed)=\"remove(item)\">\r\n      {{item}}\r\n      <mat-icon matChipRemove *ngIf=\"removable\">cancel</mat-icon>\r\n    </mat-chip>\r\n    <input\r\n      placeholder=\"{{placeholder}}\"\r\n      #input\r\n      [formControl]=\"inputCtrl\"\r\n      [matAutocomplete]=\"auto\"\r\n      [matChipInputFor]=\"chipList\"\r\n      [matChipInputSeparatorKeyCodes]=\"separatorKeysCodes\"\r\n      [matChipInputAddOnBlur]=\"addOnBlur\"\r\n      (matChipInputTokenEnd)=\"add($event)\">\r\n  </mat-chip-list>\r\n  <mat-autocomplete #auto=\"matAutocomplete\" (optionSelected)=\"selected($event)\">\r\n    <mat-option *ngFor=\"let item of filteredItems | async\" [value]=\"item\">\r\n      {{item}}\r\n    </mat-option>\r\n  </mat-autocomplete>\r\n</mat-form-field>\r\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/sub-modules/ic-core/components/choose-photo/choose-photo.component.html":
+/*!*******************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/sub-modules/ic-core/components/choose-photo/choose-photo.component.html ***!
+  \*******************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<button mat-icon-button (click)=\"chooseFile()\">\n  <mat-icon>add_photo_alternate</mat-icon>\n</button>\n<input #input type=\"file\" (change)=\"readPhoto($event)\" accept=\"image/*\"/>\n"
 
 /***/ }),
 
@@ -400,7 +422,29 @@ module.exports = "<mat-form-field class=\"chip-list\">\r\n  <mat-chip-list #chip
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h1 mat-dialog-title></h1>\r\n<div mat-dialog-content>\r\n  <p>{{message}}</p>\r\n</div>\r\n<div mat-dialog-actions>\r\n  <button mat-flat-button color=\"warn\" (click)=\"onNoClick()\">No</button>\r\n  <button mat-raised-button [mat-dialog-close]=\"true\" cdkFocusInitial>Yes</button>\r\n</div>\r\n"
+module.exports = "<h1 mat-dialog-title>{{title}}</h1>\r\n<div mat-dialog-content>\r\n  <p>{{message}}</p>\r\n</div>\r\n<div mat-dialog-actions>\r\n  <button mat-raised-button class=\"agree\" [mat-dialog-close]=\"true\" cdkFocusInitial>Yes</button>\r\n  <button mat-flat-button class=\"disagree\" color=\"warn\" (click)=\"onNoClick()\">No</button>\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/sub-modules/ic-core/components/crop-photo-dialog/crop-photo.dialog.html":
+/*!*******************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/sub-modules/ic-core/components/crop-photo-dialog/crop-photo.dialog.html ***!
+  \*******************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<ic-crop-photo *ngIf=\"!!dataUrl\" [dataUrl]=\"dataUrl\" (cropped)=\"cropPhoto($event)\"></ic-crop-photo>\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/sub-modules/ic-core/components/crop-photo/crop-photo.component.html":
+/*!***************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/sub-modules/ic-core/components/crop-photo/crop-photo.component.html ***!
+  \***************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div #cropZone></div>\n<div class=\"button-container\">\n  <button (click)=\"crop()\" mat-mini-fab color=\"primary\">\n    <mat-icon>crop</mat-icon>\n  </button>\n</div>\n"
 
 /***/ }),
 
@@ -434,6 +478,28 @@ module.exports = "<div class=\"block-header\">\r\n  <div class=\"row clearfix\">
 /***/ (function(module, exports) {
 
 module.exports = "<!-- Page Loader -->\r\n<div class=\"page-loader-wrapper\" #loaderWrapper>\r\n  <div class=\"loader\">\r\n    <div class=\"db-spinner\"></div>\r\n  </div>\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/sub-modules/ic-core/components/take-photo-dialog/take-photo.dialog.html":
+/*!*******************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/sub-modules/ic-core/components/take-photo-dialog/take-photo.dialog.html ***!
+  \*******************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<ic-camera-stream (taken)=\"takenPhoto($event)\" ></ic-camera-stream>\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/sub-modules/ic-core/components/take-photo/take-photo.component.html":
+/*!***************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/sub-modules/ic-core/components/take-photo/take-photo.component.html ***!
+  \***************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<button mat-icon-button (click)=\"open()\">\n  <mat-icon>add_a_photo</mat-icon>\n</button>\n"
 
 /***/ }),
 
@@ -672,12 +738,12 @@ const MY_FORMATS = {
 function initializerProviderFactory(initializer) {
     return () => initializer.load();
 }
-jquery__WEBPACK_IMPORTED_MODULE_17__(document).on('focusout', 'input', (event) => {
-    const val = jquery__WEBPACK_IMPORTED_MODULE_17__(event.target).val();
+jquery__WEBPACK_IMPORTED_MODULE_17___default()(document).on('focusout', 'input', (event) => {
+    const val = jquery__WEBPACK_IMPORTED_MODULE_17___default()(event.target).val();
     if (typeof val === 'string' || val instanceof String) {
-        jquery__WEBPACK_IMPORTED_MODULE_17__(event.target).val(val.trim());
+        jquery__WEBPACK_IMPORTED_MODULE_17___default()(event.target).val(val.trim());
     }
-    jquery__WEBPACK_IMPORTED_MODULE_17__(event.target).val((jquery__WEBPACK_IMPORTED_MODULE_17__(event.target).val()));
+    jquery__WEBPACK_IMPORTED_MODULE_17___default()(event.target).val((jquery__WEBPACK_IMPORTED_MODULE_17___default()(event.target).val()));
 });
 let AppModule = class AppModule {
 };
@@ -1022,12 +1088,11 @@ let AuthGuard = class AuthGuard {
     }
     canActivate(route, state) {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
-            return true;
             if (this.authService.isSignedIn()) {
                 return true;
             }
             else {
-                this.router.navigate(['/auth/sign-in'], { queryParams: { returnUrl: state.url } });
+                yield this.router.navigate(['/auth/sign-in'], { queryParams: { returnUrl: state.url } });
                 return false;
             }
         });
@@ -1127,9 +1192,7 @@ let AuthService = class AuthService {
                     // console.log(`Cognito MFA Challenge`);
                 }
                 else if (user.challengeName === 'NEW_PASSWORD_REQUIRED') {
-                    // You need to get the new password and required attributes from the UI inputs
-                    // and then trigger the following function with a button click
-                    // For example, the email and phone_number are required attributes
+                    return { result: true, user };
                 }
                 else if (user.challengeName === 'MFA_SETUP') {
                     // This happens when the MFA method is TOTP
@@ -1251,6 +1314,21 @@ let AuthService = class AuthService {
             }
         });
     }
+    completeNewPassword(newPassword) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+            try {
+                this.signedInUser = yield aws_amplify__WEBPACK_IMPORTED_MODULE_3__["Auth"].completeNewPassword(this['NEW_PASSWORD_REQUIRED'], newPassword, {
+                // email,
+                // phone_number,
+                });
+                this['NEW_PASSWORD_REQUIRED'] = undefined;
+                return { result: true };
+            }
+            catch (err) {
+                return { result: false, error: err.message };
+            }
+        });
+    }
 };
 AuthService.ctorParameters = () => [
     { type: aws_amplify_angular__WEBPACK_IMPORTED_MODULE_2__["AmplifyService"] },
@@ -1267,37 +1345,36 @@ AuthService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
-/***/ "./src/app/sub-modules/ic-core/adapters/api-request.adapter.ts":
-/*!*********************************************************************!*\
-  !*** ./src/app/sub-modules/ic-core/adapters/api-request.adapter.ts ***!
-  \*********************************************************************/
-/*! exports provided: ApiRequestAdapter */
+/***/ "./src/app/sub-modules/ic-core/api/abstract.api.ts":
+/*!*********************************************************!*\
+  !*** ./src/app/sub-modules/ic-core/api/abstract.api.ts ***!
+  \*********************************************************/
+/*! exports provided: AbstractApi */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ApiRequestAdapter", function() { return ApiRequestAdapter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AbstractApi", function() { return AbstractApi; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
-/* harmony import */ var _providers_initializer_provider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../providers/initializer.provider */ "./src/app/sub-modules/ic-core/providers/initializer.provider.ts");
-/* harmony import */ var _services_utility_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../services/utility.service */ "./src/app/sub-modules/ic-core/services/utility.service.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+/* harmony import */ var _providers_initializer_provider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../providers/initializer.provider */ "./src/app/sub-modules/ic-core/providers/initializer.provider.ts");
 
 
 
 
-// @Injectable({
-//   providedIn: 'root'
-// })
+let AbstractApi = 
 // tslint:disable-next-line:no-shadowed-variable
-class ApiRequestAdapter {
+class AbstractApi {
     constructor(clazz, httpClient, initializerProvider) {
         this.httpClient = httpClient;
         this.initializerProvider = initializerProvider;
         this.modelClass = clazz;
         this.contextPath = initializerProvider.CONFIG.api.contextPath;
+        this.uri = initializerProvider.CONFIG.api.uri[clazz.name[0].toLowerCase() + clazz.name.substring(1)];
     }
     get url() {
-        return `${this.contextPath}/${this.uri}`;
+        return this.deepPath ? `${this.contextPath}/${this.deepPath}/${this.uri}` : `${this.contextPath}/${this.uri}`;
     }
     /*
       protected unitName(name: string): string {
@@ -1389,7 +1466,7 @@ class ApiRequestAdapter {
             return t;
         });
     }
-    manualRequest(url, method, body) {
+    manualRequest(method, url, body) {
         const xmlhttp = new XMLHttpRequest(); // new HttpRequest instance
         try {
             xmlhttp.open(method, url, false);
@@ -1402,62 +1479,73 @@ class ApiRequestAdapter {
         }
         return JSON.parse(xmlhttp.responseText);
     }
-    get(id) {
+    get(id, deepPath) {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+            this.deepPath = deepPath;
             const t = yield this.request('GET', `${this.url}/${id}`);
-            return _services_utility_service__WEBPACK_IMPORTED_MODULE_3__["UtilityService"].parseDataToModel(t, this.modelClass);
+            const model = new this.modelClass({});
+            model.fromRequestData(t);
+            return model;
         });
     }
-    search(query) {
+    search(query, deepPath) {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
-            let httpParams = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpParams"]();
+            this.deepPath = deepPath;
+            let httpParams = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpParams"]();
             Object.keys(query).forEach(key => {
                 httpParams = httpParams.append(key, query[key]);
             });
             // const t: T[] = await this.request<T[]>('GET', this.url, {params: httpParams});
             const t = yield this.request('GET', this.url, { params: httpParams });
-            return (!!t && Array.isArray(t.records)) ? (_services_utility_service__WEBPACK_IMPORTED_MODULE_3__["UtilityService"].parseDataToArrayModel(t.records, this.modelClass)) : [];
+            return (!!t && Array.isArray(t.records)) ? (t.records.map(record => {
+                const model = new this.modelClass({});
+                model.fromRequestData(record);
+                return model;
+            })) : [];
         });
     }
     getAll() {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
         });
     }
-    create(obj) {
+    create(obj, deepPath) {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+            this.deepPath = deepPath;
             // const t: T = await this.request<T>('POST', this.url, {body: obj});
             // obj.id = t.toString();
-            const t = yield this.manualRequest(this.url, 'POST', obj.parseModelToData());
+            const t = yield this.manualRequest('POST', this.url, obj.toRequestData());
             obj.id = t.id;
             return obj;
         });
     }
-    createChild(parentId, childProperty, childObject) {
+    createDeepChild(id, childProperty, childObject) {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
-            let httpParams = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpParams"]();
+            let httpParams = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpParams"]();
             httpParams = httpParams.append(childProperty, '$');
-            const t = yield this.request('POST', `${this.url}/${parentId}`, { body: childObject, params: httpParams });
+            const t = yield this.request('POST', `${this.url}/${id}`, { body: childObject, params: httpParams });
             return t;
         });
     }
-    replace(id, obj) {
+    replace(t, deepPath) {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+            this.deepPath = deepPath;
             // const t: T = await this.request<T>('PUT', `${this.url}/${id}`, {body: obj});
             // return t;
-            this.manualRequest(`${this.url}/${id}`, 'PUT', obj);
+            this.manualRequest('PUT', `${this.url}/${t.id}`, (new this.modelClass(t)).toRequestData());
         });
     }
-    update(id, obj) {
+    update(t, deepPath) {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+            this.deepPath = deepPath;
             // const t: T = await this.request<T>('PATCH', `${this.url}/${id}`, {body: obj});
             // return t;
-            this.manualRequest(`${this.url}/${id}`, 'PATCH', (new this.modelClass(obj)).parseModelToData());
+            this.manualRequest('PATCH', `${this.url}/${t.id}`, (new this.modelClass(t)).toRequestData());
         });
     }
     // tslint:disable-next-line:variable-name
     updateChild(id, childProperty, childQuery, obj) {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
-            let httpParams = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpParams"]();
+            let httpParams = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpParams"]();
             httpParams = httpParams.append(childProperty, '$');
             Object.keys(childQuery).forEach(key => {
                 httpParams = httpParams.append(key, childQuery[key]);
@@ -1468,7 +1556,7 @@ class ApiRequestAdapter {
     }
     updateMany(query, obj) {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
-            let httpParams = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpParams"]();
+            let httpParams = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpParams"]();
             Object.keys(query).forEach(key => {
                 httpParams = httpParams.append(key, query[key]);
             });
@@ -1476,18 +1564,28 @@ class ApiRequestAdapter {
             return t;
         });
     }
-    delete(id) {
+    delete(id, deepPath) {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+            this.deepPath = deepPath;
             const t = yield this.request('DELETE', `${this.url}/${id}`, {});
             return t;
         });
     }
-}
-ApiRequestAdapter.ctorParameters = () => [
+};
+AbstractApi.ctorParameters = () => [
     { type: Function },
-    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"] },
-    { type: _providers_initializer_provider__WEBPACK_IMPORTED_MODULE_2__["InitializerProvider"] }
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] },
+    { type: _providers_initializer_provider__WEBPACK_IMPORTED_MODULE_3__["InitializerProvider"] }
 ];
+AbstractApi = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+        providedIn: 'root'
+    })
+    // tslint:disable-next-line:no-shadowed-variable
+    ,
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [Function, _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"], _providers_initializer_provider__WEBPACK_IMPORTED_MODULE_3__["InitializerProvider"]])
+], AbstractApi);
+
 
 
 /***/ }),
@@ -1522,19 +1620,23 @@ __webpack_require__.r(__webpack_exports__);
 let AlertDialog = 
 // tslint:disable-next-line:component-class-suffix
 class AlertDialog {
-    constructor(dialogRef, message) {
+    constructor(dialogRef, data) {
         this.dialogRef = dialogRef;
-        this.message = message;
+        this.data = data;
     }
     close() {
         this.dialogRef.close();
     }
     ngOnInit() {
+        // @ts-ignore
+        this.message = this.data.message || '';
+        // @ts-ignore
+        this.title = this.data.title || '';
     }
 };
 AlertDialog.ctorParameters = () => [
     { type: _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialogRef"] },
-    { type: String, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [_angular_material__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"],] }] }
+    { type: Object, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [_angular_material__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"],] }] }
 ];
 AlertDialog = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -1545,8 +1647,136 @@ AlertDialog = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     // tslint:disable-next-line:component-class-suffix
     ,
     tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"])),
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialogRef"], String])
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialogRef"], Object])
 ], AlertDialog);
+
+
+
+/***/ }),
+
+/***/ "./src/app/sub-modules/ic-core/components/camera-stream/camera-stream.component.scss":
+/*!*******************************************************************************************!*\
+  !*** ./src/app/sub-modules/ic-core/components/camera-stream/camera-stream.component.scss ***!
+  \*******************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".video {\n  border: 1px solid black;\n  box-shadow: 2px 2px 3px black;\n  width: 320px;\n  height: 240px;\n}\n\n.photo {\n  border: 1px solid black;\n  box-shadow: 2px 2px 3px black;\n}\n\n.canvas {\n  display: none;\n}\n\n.camera {\n  display: inline-block;\n}\n\n.output {\n  display: inline-block;\n}\n\n.start-button {\n  display: block;\n  position: relative;\n  margin-left: auto;\n  margin-right: auto;\n  bottom: 32px;\n  background-color: rgba(0, 150, 0, 0.5);\n  border: 1px solid rgba(255, 255, 255, 0.7);\n  box-shadow: 0px 0px 1px 2px rgba(0, 0, 0, 0.2);\n  font-size: 14px;\n  font-family: \"Lucida Grande\", \"Arial\", sans-serif;\n  color: white;\n}\n\n.content-area {\n  font-size: 16px;\n  font-family: \"Lucida Grande\", \"Arial\", sans-serif;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc3ViLW1vZHVsZXMvaWMtY29yZS9jb21wb25lbnRzL2NhbWVyYS1zdHJlYW0vQzpcXERFVlxcd29ya3NwYWNlc1xcaWNsaW5pY1xcU291cmNlXFxVSS9zcmNcXGFwcFxcc3ViLW1vZHVsZXNcXGljLWNvcmVcXGNvbXBvbmVudHNcXGNhbWVyYS1zdHJlYW1cXGNhbWVyYS1zdHJlYW0uY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL3N1Yi1tb2R1bGVzL2ljLWNvcmUvY29tcG9uZW50cy9jYW1lcmEtc3RyZWFtL2NhbWVyYS1zdHJlYW0uY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSx1QkFBQTtFQUNBLDZCQUFBO0VBQ0EsWUFBQTtFQUNBLGFBQUE7QUNDRjs7QURFQTtFQUNFLHVCQUFBO0VBQ0EsNkJBQUE7QUNDRjs7QURJQTtFQUNFLGFBQUE7QUNERjs7QURJQTtFQUVFLHFCQUFBO0FDRkY7O0FES0E7RUFFRSxxQkFBQTtBQ0hGOztBRE1BO0VBQ0UsY0FBQTtFQUNBLGtCQUFBO0VBQ0EsaUJBQUE7RUFDQSxrQkFBQTtFQUNBLFlBQUE7RUFDQSxzQ0FBQTtFQUNBLDBDQUFBO0VBQ0EsOENBQUE7RUFDQSxlQUFBO0VBQ0EsaURBQUE7RUFDQSxZQUFBO0FDSEY7O0FETUE7RUFDRSxlQUFBO0VBQ0EsaURBQUE7QUNIRiIsImZpbGUiOiJzcmMvYXBwL3N1Yi1tb2R1bGVzL2ljLWNvcmUvY29tcG9uZW50cy9jYW1lcmEtc3RyZWFtL2NhbWVyYS1zdHJlYW0uY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIudmlkZW8ge1xyXG4gIGJvcmRlcjogMXB4IHNvbGlkIGJsYWNrO1xyXG4gIGJveC1zaGFkb3c6IDJweCAycHggM3B4IGJsYWNrO1xyXG4gIHdpZHRoOjMyMHB4O1xyXG4gIGhlaWdodDoyNDBweDtcclxufVxyXG5cclxuLnBob3RvIHtcclxuICBib3JkZXI6IDFweCBzb2xpZCBibGFjaztcclxuICBib3gtc2hhZG93OiAycHggMnB4IDNweCBibGFjaztcclxuICAvL3dpZHRoOjMyMHB4O1xyXG4gIC8vaGVpZ2h0OjI0MHB4O1xyXG59XHJcblxyXG4uY2FudmFzIHtcclxuICBkaXNwbGF5Om5vbmU7XHJcbn1cclxuXHJcbi5jYW1lcmEge1xyXG4gIC8vd2lkdGg6IDM0MHB4O1xyXG4gIGRpc3BsYXk6aW5saW5lLWJsb2NrO1xyXG59XHJcblxyXG4ub3V0cHV0IHtcclxuICAvL3dpZHRoOiAzNDBweDtcclxuICBkaXNwbGF5OmlubGluZS1ibG9jaztcclxufVxyXG5cclxuLnN0YXJ0LWJ1dHRvbiB7XHJcbiAgZGlzcGxheTpibG9jaztcclxuICBwb3NpdGlvbjpyZWxhdGl2ZTtcclxuICBtYXJnaW4tbGVmdDphdXRvO1xyXG4gIG1hcmdpbi1yaWdodDphdXRvO1xyXG4gIGJvdHRvbTozMnB4O1xyXG4gIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMCwgMTUwLCAwLCAwLjUpO1xyXG4gIGJvcmRlcjogMXB4IHNvbGlkIHJnYmEoMjU1LCAyNTUsIDI1NSwgMC43KTtcclxuICBib3gtc2hhZG93OiAwcHggMHB4IDFweCAycHggcmdiYSgwLCAwLCAwLCAwLjIpO1xyXG4gIGZvbnQtc2l6ZTogMTRweDtcclxuICBmb250LWZhbWlseTogXCJMdWNpZGEgR3JhbmRlXCIsIFwiQXJpYWxcIiwgc2Fucy1zZXJpZjtcclxuICBjb2xvcjogcmdiYSgyNTUsIDI1NSwgMjU1LCAxLjApO1xyXG59XHJcblxyXG4uY29udGVudC1hcmVhIHtcclxuICBmb250LXNpemU6IDE2cHg7XHJcbiAgZm9udC1mYW1pbHk6IFwiTHVjaWRhIEdyYW5kZVwiLCBcIkFyaWFsXCIsIHNhbnMtc2VyaWY7XHJcbiAgLy93aWR0aDogNzYwcHg7XHJcbn1cclxuIiwiLnZpZGVvIHtcbiAgYm9yZGVyOiAxcHggc29saWQgYmxhY2s7XG4gIGJveC1zaGFkb3c6IDJweCAycHggM3B4IGJsYWNrO1xuICB3aWR0aDogMzIwcHg7XG4gIGhlaWdodDogMjQwcHg7XG59XG5cbi5waG90byB7XG4gIGJvcmRlcjogMXB4IHNvbGlkIGJsYWNrO1xuICBib3gtc2hhZG93OiAycHggMnB4IDNweCBibGFjaztcbn1cblxuLmNhbnZhcyB7XG4gIGRpc3BsYXk6IG5vbmU7XG59XG5cbi5jYW1lcmEge1xuICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG59XG5cbi5vdXRwdXQge1xuICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG59XG5cbi5zdGFydC1idXR0b24ge1xuICBkaXNwbGF5OiBibG9jaztcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICBtYXJnaW4tbGVmdDogYXV0bztcbiAgbWFyZ2luLXJpZ2h0OiBhdXRvO1xuICBib3R0b206IDMycHg7XG4gIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMCwgMTUwLCAwLCAwLjUpO1xuICBib3JkZXI6IDFweCBzb2xpZCByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuNyk7XG4gIGJveC1zaGFkb3c6IDBweCAwcHggMXB4IDJweCByZ2JhKDAsIDAsIDAsIDAuMik7XG4gIGZvbnQtc2l6ZTogMTRweDtcbiAgZm9udC1mYW1pbHk6IFwiTHVjaWRhIEdyYW5kZVwiLCBcIkFyaWFsXCIsIHNhbnMtc2VyaWY7XG4gIGNvbG9yOiB3aGl0ZTtcbn1cblxuLmNvbnRlbnQtYXJlYSB7XG4gIGZvbnQtc2l6ZTogMTZweDtcbiAgZm9udC1mYW1pbHk6IFwiTHVjaWRhIEdyYW5kZVwiLCBcIkFyaWFsXCIsIHNhbnMtc2VyaWY7XG59Il19 */"
+
+/***/ }),
+
+/***/ "./src/app/sub-modules/ic-core/components/camera-stream/camera-stream.component.ts":
+/*!*****************************************************************************************!*\
+  !*** ./src/app/sub-modules/ic-core/components/camera-stream/camera-stream.component.ts ***!
+  \*****************************************************************************************/
+/*! exports provided: CameraStreamComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CameraStreamComponent", function() { return CameraStreamComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+
+
+const canvasToBlob = (canvas) => {
+    return new Promise((resolve) => {
+        canvas.toBlob((blob) => {
+            resolve(blob);
+        }, 'image/png', 1);
+    });
+};
+let CameraStreamComponent = class CameraStreamComponent {
+    constructor() {
+        this.taken = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        this.streaming = false;
+    }
+    ngOnInit() {
+        this.width = this.width || 400;
+        this.height = this.height || 400;
+    }
+    ngAfterViewInit() {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+            this.video = this.videoElementRef.nativeElement;
+            this.video = this.videoElementRef.nativeElement;
+            this.canvas = this.canvasElementRef.nativeElement;
+            // this.photo = this.photoElementRef.nativeElement;
+            this.startButton = this.startButtonElementRef.nativeElement;
+            try {
+                //// Can be 'user' or 'environment' to access back or front camera (NEAT!)
+                const stream = yield navigator.mediaDevices.getUserMedia({ video: { facingMode: 'user' }, audio: false });
+                this.video.srcObject = stream;
+                this.video.play();
+            }
+            catch (err) {
+                console.log('An error occurred: ' + err);
+            }
+            this.clearPhoto();
+        });
+    }
+    canplay(ev) {
+        if (!this.streaming) {
+            this.video.setAttribute('width', this.width);
+            this.video.setAttribute('height', this.height);
+            this.canvas.setAttribute('width', this.width);
+            this.canvas.setAttribute('height', this.height);
+            this.streaming = true;
+        }
+    }
+    takePicture(event) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+            const context = this.canvas.getContext('2d');
+            this.canvas.width = this.video.videoWidth; // this.width;
+            this.canvas.height = this.video.videoHeight; // this.height;
+            context.drawImage(this.video, 0, 0); // , this.width, this.height);
+            // context.drawImage(this.video, 0, 0, this.width);
+            const base64String = this.canvas.toDataURL('image/png');
+            const file = yield canvasToBlob(this.canvas);
+            const dataUrl = URL.createObjectURL(file);
+            this.taken.emit({ file, dataUrl, base64String });
+            event.preventDefault();
+        });
+    }
+    clearPhoto() {
+        const context = this.canvas.getContext('2d');
+        context.fillStyle = '#AAA';
+        context.fillRect(0, 0, this.canvas.width, this.canvas.height);
+        const data = this.canvas.toDataURL('image/png');
+        this.photo.setAttribute('src', data);
+    }
+};
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Number)
+], CameraStreamComponent.prototype, "width", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Number)
+], CameraStreamComponent.prototype, "height", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Object)
+], CameraStreamComponent.prototype, "taken", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('video', { static: false }),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"])
+], CameraStreamComponent.prototype, "videoElementRef", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('canvas', { static: false }),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"])
+], CameraStreamComponent.prototype, "canvasElementRef", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('startButton', { static: false }),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"])
+], CameraStreamComponent.prototype, "startButtonElementRef", void 0);
+CameraStreamComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'ic-camera-stream',
+        template: __webpack_require__(/*! raw-loader!./camera-stream.component.html */ "./node_modules/raw-loader/index.js!./src/app/sub-modules/ic-core/components/camera-stream/camera-stream.component.html"),
+        styles: [__webpack_require__(/*! ./camera-stream.component.scss */ "./src/app/sub-modules/ic-core/components/camera-stream/camera-stream.component.scss")]
+    }),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+], CameraStreamComponent);
 
 
 
@@ -1593,9 +1823,17 @@ let ChipsAutocompleteComponent = class ChipsAutocompleteComponent {
         this.addOnBlur = false;
         this.separatorKeysCodes = [_angular_cdk_keycodes__WEBPACK_IMPORTED_MODULE_1__["ENTER"], _angular_cdk_keycodes__WEBPACK_IMPORTED_MODULE_1__["COMMA"]];
         this.inputCtrl = new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"]();
+        // tslint:disable-next-line:no-output-on-prefix
         this.onAdd = new _angular_core__WEBPACK_IMPORTED_MODULE_2__["EventEmitter"]();
+        // tslint:disable-next-line:no-output-on-prefix
         this.onRemove = new _angular_core__WEBPACK_IMPORTED_MODULE_2__["EventEmitter"]();
         this.filteredItems = this.inputCtrl.valueChanges.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["startWith"])(null), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["map"])((item) => this._filter(item)));
+    }
+    ngOnInit() {
+        this.disabled = !!this.disabled;
+        if (!Array.isArray(this.selectedItems)) {
+            this.selectedItems = [];
+        }
     }
     add(event) {
         // if (!this.matAutocomplete.isOpen) {
@@ -1639,6 +1877,10 @@ let ChipsAutocompleteComponent = class ChipsAutocompleteComponent {
 };
 tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"])(),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Boolean)
+], ChipsAutocompleteComponent.prototype, "disabled", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"])(),
     tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
 ], ChipsAutocompleteComponent.prototype, "placeholder", void 0);
 tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -1678,6 +1920,109 @@ ChipsAutocompleteComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
+/***/ "./src/app/sub-modules/ic-core/components/choose-photo/choose-photo.component.scss":
+/*!*****************************************************************************************!*\
+  !*** ./src/app/sub-modules/ic-core/components/choose-photo/choose-photo.component.scss ***!
+  \*****************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "input {\n  display: none;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc3ViLW1vZHVsZXMvaWMtY29yZS9jb21wb25lbnRzL2Nob29zZS1waG90by9DOlxcREVWXFx3b3Jrc3BhY2VzXFxpY2xpbmljXFxTb3VyY2VcXFVJL3NyY1xcYXBwXFxzdWItbW9kdWxlc1xcaWMtY29yZVxcY29tcG9uZW50c1xcY2hvb3NlLXBob3RvXFxjaG9vc2UtcGhvdG8uY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL3N1Yi1tb2R1bGVzL2ljLWNvcmUvY29tcG9uZW50cy9jaG9vc2UtcGhvdG8vY2hvb3NlLXBob3RvLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsYUFBQTtBQ0NGIiwiZmlsZSI6InNyYy9hcHAvc3ViLW1vZHVsZXMvaWMtY29yZS9jb21wb25lbnRzL2Nob29zZS1waG90by9jaG9vc2UtcGhvdG8uY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJpbnB1dCB7XHJcbiAgZGlzcGxheTogbm9uZTtcclxufVxyXG4iLCJpbnB1dCB7XG4gIGRpc3BsYXk6IG5vbmU7XG59Il19 */"
+
+/***/ }),
+
+/***/ "./src/app/sub-modules/ic-core/components/choose-photo/choose-photo.component.ts":
+/*!***************************************************************************************!*\
+  !*** ./src/app/sub-modules/ic-core/components/choose-photo/choose-photo.component.ts ***!
+  \***************************************************************************************/
+/*! exports provided: ChoosePhotoComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ChoosePhotoComponent", function() { return ChoosePhotoComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _services_dialog_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/dialog.service */ "./src/app/sub-modules/ic-core/services/dialog.service.ts");
+
+
+
+const base64ToBlob = (dataURI, contentType) => {
+    const byteString = atob(dataURI.split(',')[1]);
+    const ab = new ArrayBuffer(byteString.length);
+    const ia = new Uint8Array(ab);
+    for (let i = 0; i < byteString.length; i++) {
+        ia[i] = byteString.charCodeAt(i);
+    }
+    return new Blob([ab], { type: contentType });
+};
+const blobToBase64 = blob => new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onerror = reject;
+    reader.onload = () => {
+        resolve(reader.result);
+    };
+    reader.readAsDataURL(blob);
+});
+let ChoosePhotoComponent = class ChoosePhotoComponent {
+    constructor(dialogService) {
+        this.dialogService = dialogService;
+        this.chose = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+    }
+    ngOnInit() {
+    }
+    chooseFile() {
+        this.input.nativeElement.click();
+    }
+    readPhoto(event) {
+        const input = event.target;
+        const url = input.value;
+        const ext = url.substring(url.lastIndexOf('.') + 1).toLowerCase();
+        if (input.files && input.files[0] && (ext === 'gif' || ext === 'png' || ext === 'jpeg' || ext === 'jpg')) { // check again
+            const file = input.files[0];
+            const reader = new FileReader();
+            const dataUrl = URL.createObjectURL(file);
+            const contentType = input.files[0].type;
+            reader.onload = (ev) => tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+                // @ts-ignore
+                const base64String = ev.target.result;
+                // this.chose.emit({file, dataUrl, base64String});
+                yield this.cropPhoto({ file, dataUrl, base64String });
+            });
+            reader.readAsDataURL(file);
+        }
+    }
+    cropPhoto(data) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+            const croppedData = yield this.dialogService.openCropDialog(data.dataUrl);
+            this.chose.emit(croppedData);
+        });
+    }
+};
+ChoosePhotoComponent.ctorParameters = () => [
+    { type: _services_dialog_service__WEBPACK_IMPORTED_MODULE_2__["DialogService"] }
+];
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('input', { static: false }),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"])
+], ChoosePhotoComponent.prototype, "input", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Object)
+], ChoosePhotoComponent.prototype, "chose", void 0);
+ChoosePhotoComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'ic-choose-photo',
+        template: __webpack_require__(/*! raw-loader!./choose-photo.component.html */ "./node_modules/raw-loader/index.js!./src/app/sub-modules/ic-core/components/choose-photo/choose-photo.component.html"),
+        styles: [__webpack_require__(/*! ./choose-photo.component.scss */ "./src/app/sub-modules/ic-core/components/choose-photo/choose-photo.component.scss")]
+    }),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_dialog_service__WEBPACK_IMPORTED_MODULE_2__["DialogService"]])
+], ChoosePhotoComponent);
+
+
+
+/***/ }),
+
 /***/ "./src/app/sub-modules/ic-core/components/confirm-dialog/confirm.dialog.scss":
 /*!***********************************************************************************!*\
   !*** ./src/app/sub-modules/ic-core/components/confirm-dialog/confirm.dialog.scss ***!
@@ -1708,17 +2053,23 @@ __webpack_require__.r(__webpack_exports__);
 let ConfirmDialog = 
 // tslint:disable-next-line:component-class-suffix
 class ConfirmDialog {
-    constructor(dialogRef, message) {
+    constructor(dialogRef, data) {
         this.dialogRef = dialogRef;
-        this.message = message;
+        this.data = data;
     }
     onNoClick() {
         this.dialogRef.close();
     }
+    ngOnInit() {
+        // @ts-ignore
+        this.message = this.data.message || '';
+        // @ts-ignore
+        this.title = this.data.title || '';
+    }
 };
 ConfirmDialog.ctorParameters = () => [
     { type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MatDialogRef"] },
-    { type: String, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"],] }] }
+    { type: Object, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"],] }] }
 ];
 ConfirmDialog = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -1729,8 +2080,158 @@ ConfirmDialog = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     // tslint:disable-next-line:component-class-suffix
     ,
     tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"])),
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MatDialogRef"], String])
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MatDialogRef"], Object])
 ], ConfirmDialog);
+
+
+
+/***/ }),
+
+/***/ "./src/app/sub-modules/ic-core/components/crop-photo-dialog/crop-photo.dialog.scss":
+/*!*****************************************************************************************!*\
+  !*** ./src/app/sub-modules/ic-core/components/crop-photo-dialog/crop-photo.dialog.scss ***!
+  \*****************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3N1Yi1tb2R1bGVzL2ljLWNvcmUvY29tcG9uZW50cy9jcm9wLXBob3RvLWRpYWxvZy9jcm9wLXBob3RvLmRpYWxvZy5zY3NzIn0= */"
+
+/***/ }),
+
+/***/ "./src/app/sub-modules/ic-core/components/crop-photo-dialog/crop-photo.dialog.ts":
+/*!***************************************************************************************!*\
+  !*** ./src/app/sub-modules/ic-core/components/crop-photo-dialog/crop-photo.dialog.ts ***!
+  \***************************************************************************************/
+/*! exports provided: CropPhotoDialog */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CropPhotoDialog", function() { return CropPhotoDialog; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
+
+
+
+let CropPhotoDialog = 
+// tslint:disable-next-line:component-class-suffix
+class CropPhotoDialog {
+    constructor(dialogRef, data) {
+        this.dialogRef = dialogRef;
+        this.data = data;
+    }
+    ngOnInit() {
+        // @ts-ignore
+        this.dataUrl = this.data.dataUrl;
+    }
+    cropPhoto(event) {
+        this.dialogRef.close(event);
+    }
+};
+CropPhotoDialog.ctorParameters = () => [
+    { type: _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialogRef"] },
+    { type: Object, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [_angular_material__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"],] }] }
+];
+CropPhotoDialog = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'ic-crop-photo-dialog',
+        template: __webpack_require__(/*! raw-loader!./crop-photo.dialog.html */ "./node_modules/raw-loader/index.js!./src/app/sub-modules/ic-core/components/crop-photo-dialog/crop-photo.dialog.html"),
+        styles: [__webpack_require__(/*! ./crop-photo.dialog.scss */ "./src/app/sub-modules/ic-core/components/crop-photo-dialog/crop-photo.dialog.scss")]
+    })
+    // tslint:disable-next-line:component-class-suffix
+    ,
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"])),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialogRef"], Object])
+], CropPhotoDialog);
+
+
+
+/***/ }),
+
+/***/ "./src/app/sub-modules/ic-core/components/crop-photo/crop-photo.component.scss":
+/*!*************************************************************************************!*\
+  !*** ./src/app/sub-modules/ic-core/components/crop-photo/crop-photo.component.scss ***!
+  \*************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".button-container {\n  text-align: center;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc3ViLW1vZHVsZXMvaWMtY29yZS9jb21wb25lbnRzL2Nyb3AtcGhvdG8vQzpcXERFVlxcd29ya3NwYWNlc1xcaWNsaW5pY1xcU291cmNlXFxVSS9zcmNcXGFwcFxcc3ViLW1vZHVsZXNcXGljLWNvcmVcXGNvbXBvbmVudHNcXGNyb3AtcGhvdG9cXGNyb3AtcGhvdG8uY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL3N1Yi1tb2R1bGVzL2ljLWNvcmUvY29tcG9uZW50cy9jcm9wLXBob3RvL2Nyb3AtcGhvdG8uY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxrQkFBQTtBQ0NGIiwiZmlsZSI6InNyYy9hcHAvc3ViLW1vZHVsZXMvaWMtY29yZS9jb21wb25lbnRzL2Nyb3AtcGhvdG8vY3JvcC1waG90by5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5idXR0b24tY29udGFpbmVye1xyXG4gIHRleHQtYWxpZ246IGNlbnRlcjtcclxufVxyXG4iLCIuYnV0dG9uLWNvbnRhaW5lciB7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbn0iXX0= */"
+
+/***/ }),
+
+/***/ "./src/app/sub-modules/ic-core/components/crop-photo/crop-photo.component.ts":
+/*!***********************************************************************************!*\
+  !*** ./src/app/sub-modules/ic-core/components/crop-photo/crop-photo.component.ts ***!
+  \***********************************************************************************/
+/*! exports provided: CropPhotoComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CropPhotoComponent", function() { return CropPhotoComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+
+
+const blobToBase64 = blob => new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onerror = reject;
+    reader.onload = () => {
+        resolve(reader.result);
+    };
+    reader.readAsDataURL(blob);
+});
+let CropPhotoComponent = class CropPhotoComponent {
+    constructor() {
+        this.cropped = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+    }
+    ngAfterViewInit() {
+        setTimeout(() => {
+            const element = this.cropZone.nativeElement;
+            this.croppie = new Croppie(element, {
+                viewport: { width: 300, height: 300, type: 'square' },
+                boundary: { width: 400, height: 400 },
+                showZoomer: false,
+            });
+            this.croppie.bind({
+                url: this.dataUrl,
+                orientation: 4
+            });
+        }, 1000);
+    }
+    ngOnChanges(changes) {
+    }
+    crop() {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+            this.croppie.result('blob').then((file) => tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+                const dataUrl = URL.createObjectURL(file);
+                const base64String = yield blobToBase64(file);
+                this.cropped.emit({ file, dataUrl, base64String });
+            }));
+        });
+    }
+};
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('cropZone', { static: false }),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"])
+], CropPhotoComponent.prototype, "cropZone", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
+], CropPhotoComponent.prototype, "dataUrl", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Object)
+], CropPhotoComponent.prototype, "cropped", void 0);
+CropPhotoComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'ic-crop-photo',
+        template: __webpack_require__(/*! raw-loader!./crop-photo.component.html */ "./node_modules/raw-loader/index.js!./src/app/sub-modules/ic-core/components/crop-photo/crop-photo.component.html"),
+        styles: [__webpack_require__(/*! ./crop-photo.component.scss */ "./src/app/sub-modules/ic-core/components/crop-photo/crop-photo.component.scss")]
+    }),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+], CropPhotoComponent);
 
 
 
@@ -1926,6 +2427,364 @@ PageLoaderComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
+/***/ "./src/app/sub-modules/ic-core/components/take-photo-dialog/take-photo.dialog.scss":
+/*!*****************************************************************************************!*\
+  !*** ./src/app/sub-modules/ic-core/components/take-photo-dialog/take-photo.dialog.scss ***!
+  \*****************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3N1Yi1tb2R1bGVzL2ljLWNvcmUvY29tcG9uZW50cy90YWtlLXBob3RvLWRpYWxvZy90YWtlLXBob3RvLmRpYWxvZy5zY3NzIn0= */"
+
+/***/ }),
+
+/***/ "./src/app/sub-modules/ic-core/components/take-photo-dialog/take-photo.dialog.ts":
+/*!***************************************************************************************!*\
+  !*** ./src/app/sub-modules/ic-core/components/take-photo-dialog/take-photo.dialog.ts ***!
+  \***************************************************************************************/
+/*! exports provided: TakePhotoDialog */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TakePhotoDialog", function() { return TakePhotoDialog; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
+
+
+
+let TakePhotoDialog = 
+// tslint:disable-next-line:component-class-suffix
+class TakePhotoDialog {
+    // @Output() taken = new EventEmitter<{ file: File | Blob, dataUrl: string, base64String: string | ArrayBuffer }>();
+    constructor(dialogRef) {
+        this.dialogRef = dialogRef;
+    }
+    ngOnInit() {
+    }
+    takenPhoto(event) {
+        // this.taken.emit(event);
+        this.dialogRef.close(event);
+    }
+};
+TakePhotoDialog.ctorParameters = () => [
+    { type: _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialogRef"] }
+];
+TakePhotoDialog = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'ic-take-photo-dialog',
+        template: __webpack_require__(/*! raw-loader!./take-photo.dialog.html */ "./node_modules/raw-loader/index.js!./src/app/sub-modules/ic-core/components/take-photo-dialog/take-photo.dialog.html"),
+        styles: [__webpack_require__(/*! ./take-photo.dialog.scss */ "./src/app/sub-modules/ic-core/components/take-photo-dialog/take-photo.dialog.scss")]
+    })
+    // tslint:disable-next-line:component-class-suffix
+    ,
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialogRef"]])
+], TakePhotoDialog);
+
+
+
+/***/ }),
+
+/***/ "./src/app/sub-modules/ic-core/components/take-photo/take-photo.component.scss":
+/*!*************************************************************************************!*\
+  !*** ./src/app/sub-modules/ic-core/components/take-photo/take-photo.component.scss ***!
+  \*************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3N1Yi1tb2R1bGVzL2ljLWNvcmUvY29tcG9uZW50cy90YWtlLXBob3RvL3Rha2UtcGhvdG8uY29tcG9uZW50LnNjc3MifQ== */"
+
+/***/ }),
+
+/***/ "./src/app/sub-modules/ic-core/components/take-photo/take-photo.component.ts":
+/*!***********************************************************************************!*\
+  !*** ./src/app/sub-modules/ic-core/components/take-photo/take-photo.component.ts ***!
+  \***********************************************************************************/
+/*! exports provided: TakePhotoComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TakePhotoComponent", function() { return TakePhotoComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _services_dialog_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/dialog.service */ "./src/app/sub-modules/ic-core/services/dialog.service.ts");
+
+
+
+let TakePhotoComponent = class TakePhotoComponent {
+    constructor(dialogService) {
+        this.dialogService = dialogService;
+        this.took = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+    }
+    ngOnInit() {
+    }
+    open() {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+            const capturedData = yield this.dialogService.openCaptureDialog();
+            const croppedData = yield this.dialogService.openCropDialog(capturedData.dataUrl);
+            this.took.emit(croppedData);
+        });
+    }
+};
+TakePhotoComponent.ctorParameters = () => [
+    { type: _services_dialog_service__WEBPACK_IMPORTED_MODULE_2__["DialogService"] }
+];
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Object)
+], TakePhotoComponent.prototype, "took", void 0);
+TakePhotoComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'ic-take-photo',
+        template: __webpack_require__(/*! raw-loader!./take-photo.component.html */ "./node_modules/raw-loader/index.js!./src/app/sub-modules/ic-core/components/take-photo/take-photo.component.html"),
+        styles: [__webpack_require__(/*! ./take-photo.component.scss */ "./src/app/sub-modules/ic-core/components/take-photo/take-photo.component.scss")]
+    }),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_dialog_service__WEBPACK_IMPORTED_MODULE_2__["DialogService"]])
+], TakePhotoComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/sub-modules/ic-core/dao/abstract.dao.ts":
+/*!*********************************************************!*\
+  !*** ./src/app/sub-modules/ic-core/dao/abstract.dao.ts ***!
+  \*********************************************************/
+/*! exports provided: AbstractDao */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AbstractDao", function() { return AbstractDao; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var pouchdb__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! pouchdb */ "./node_modules/pouchdb/lib/index-browser.es.js");
+/* harmony import */ var pouchdb_find__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! pouchdb-find */ "./node_modules/pouchdb-find/lib/index-browser.es.js");
+/* harmony import */ var _ic_core_services_utility_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../ic-core/services/utility.service */ "./src/app/sub-modules/ic-core/services/utility.service.ts");
+
+
+// @ts-ignore
+
+// @ts-ignore
+
+
+pouchdb__WEBPACK_IMPORTED_MODULE_2__["default"].plugin(pouchdb_find__WEBPACK_IMPORTED_MODULE_3__["default"]);
+let AbstractDao = 
+// tslint:disable-next-line:no-shadowed-variable
+class AbstractDao {
+    constructor(clazz) {
+        // private sync: any;
+        this.changeListener = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        this.modelClass = clazz;
+        this.databaseName =
+            clazz.name.replace(/[A-Z]/g, (match, offset, string) => {
+                return (offset ? '_' : '') + match.toLowerCase();
+            });
+        console.log('init data: %s', this.databaseName);
+        // PouchDB.debug.enable('*');
+        this.db = new pouchdb__WEBPACK_IMPORTED_MODULE_2__["default"](this.databaseName);
+        // this.createDBIndex();
+        /*
+        this.sync = PouchDB.sync(this.databaseName, 'http://localhost:5984/' + this.databaseName, {
+          live: true,
+          retry: true
+        }).on('change', (data) => {
+          console.log('%s change: %s', clazz.name, JSON.stringify(data));
+          this.changeListener.emit(data);
+          // handle change
+        }).on('paused', (err) => {
+          // replication paused (e.g. replication up to date, user went offline)
+          console.log('replicate paused: %s', JSON.stringify(err));
+        }).on('active', () => {
+          // replicate resumed (e.g. new changes replicating, user went back online)
+          console.log('replicate active');
+        }).on('denied', (err) => {
+          // a document failed to replicate (e.g. due to permissions)
+          console.log('replicate denied: %s', JSON.stringify(err));
+        }).on('complete', (info) => {
+          // handle complete
+          console.log('replicate complete: %s', JSON.stringify(info));
+        }).on('error', (err) => {
+          // handle error
+          console.log('replicate error: %s', JSON.stringify(err));
+        });
+        */
+        this.getInfo().then((details) => {
+            if (details.doc_count === 0 && details.update_seq === 0) {
+                this.postInit();
+            }
+            else {
+                console.log('dao exists');
+            }
+        }).catch((err) => {
+            console.log('error: ' + err);
+            return;
+        });
+    }
+    createDBIndex() {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+            const fields = _ic_core_services_utility_service__WEBPACK_IMPORTED_MODULE_4__["UtilityService"].findDeclaredProperties(this.modelClass);
+            const fieldNames = fields.map(field => field.name);
+            yield this.db.createIndex({
+                index: { fields: fieldNames }
+            });
+        });
+    }
+    // create default data
+    postInit() {
+    }
+    getChangeListener() {
+        return this.changeListener;
+    }
+    getInfo() {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+            const info = yield this.db.info();
+            console.log(info);
+            return info;
+        });
+    }
+    // tslint:disable-next-line:variable-name
+    get(id) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+            try {
+                const doc = yield this.db.get(id);
+                return new this.modelClass(doc);
+            }
+            catch (err) {
+                console.trace(err.message);
+                return null;
+            }
+        });
+    }
+    getAll() {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+            let result;
+            try {
+                result = yield this.db.allDocs({
+                    include_docs: true,
+                    attachments: true
+                });
+            }
+            catch (err) {
+                console.trace(err.message);
+            }
+            return _ic_core_services_utility_service__WEBPACK_IMPORTED_MODULE_4__["UtilityService"].parseDataToModel(result.docs, this.modelClass);
+        });
+    }
+    search(query) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+            let result;
+            try {
+                result = yield this.db.find({ selector: query });
+            }
+            catch (err) {
+                console.trace(err.message);
+            }
+            return (!!result) ? result.docs.map(item => new this.modelClass(item)) : [];
+        });
+    }
+    create(doc) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+            let result = null;
+            if (!doc.id) {
+                try {
+                    result = yield this.db.post(doc); // Create a new document and let PouchDB auto-generate an _id for it.
+                    /*
+                    Example Response:
+                    {
+                      "ok" : true,
+                      "id" : "8A2C3761-FFD5-4770-9B8C-38C33CED300A",
+                      "rev" : "1-d3a8e0e5aa7c8fff0c376dac2d8a4007"
+                    }
+                    */
+                    doc.id = result.id;
+                }
+                catch (err) {
+                    console.trace(err.message);
+                    throw err;
+                }
+            }
+            else {
+                result = yield this.replace(doc); // Create a new doc with an _id of 'mydoc'
+            }
+            return doc;
+        });
+    }
+    // tslint:disable-next-line:variable-name
+    replace(obj) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+            let result;
+            try {
+                if (!obj._id) {
+                    obj._id = obj.id;
+                }
+                // @ts-ignore
+                // if (obj._rev) {
+                // @ts-ignore
+                // obj['_rev'] = undefined; // destroy 'conflict' version when put
+                // obj['_rev_tree'] = undefined;
+                // }
+                result = yield this.db.put(obj); // Create a new doc with an _id of 'mydoc'
+            }
+            catch (err) {
+                console.trace(err.message);
+                throw err;
+            }
+            return obj;
+        });
+    }
+    // tslint:disable-next-line:variable-name
+    update(obj) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+            let doc = yield this.get(obj.id);
+            if (!doc) {
+                return this.create(obj);
+            }
+            else {
+                doc = Object.assign(doc, obj);
+                return this.replace(doc);
+                // doc = new this.modelClass(JSON.parse(JSON.stringify(doc)));
+            }
+        });
+    }
+    // tslint:disable-next-line:variable-name
+    delete(_id) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+            try {
+                const doc = yield this.db.get(_id);
+                const result = yield this.db.remove(doc._id, doc._rev);
+                return result;
+            }
+            catch (err) {
+                if (err.reason === 'missing') { // there is no _id in dao
+                    return {};
+                }
+                else {
+                    console.trace(err.message);
+                    throw err;
+                }
+            }
+        });
+    }
+};
+AbstractDao.ctorParameters = () => [
+    { type: Function }
+];
+AbstractDao = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+        providedIn: 'root'
+    })
+    // tslint:disable-next-line:no-shadowed-variable
+    ,
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [Function])
+], AbstractDao);
+
+
+
+/***/ }),
+
 /***/ "./src/app/sub-modules/ic-core/decorators/decorators.ts":
 /*!**************************************************************!*\
   !*** ./src/app/sub-modules/ic-core/decorators/decorators.ts ***!
@@ -2015,8 +2874,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_module__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../material-module */ "./src/app/material-module.ts");
 /* harmony import */ var _components_confirm_dialog_confirm_dialog__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/confirm-dialog/confirm.dialog */ "./src/app/sub-modules/ic-core/components/confirm-dialog/confirm.dialog.ts");
 /* harmony import */ var _components_alert_dialog_alert_dialog__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/alert-dialog/alert.dialog */ "./src/app/sub-modules/ic-core/components/alert-dialog/alert.dialog.ts");
+/* harmony import */ var _components_choose_photo_choose_photo_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/choose-photo/choose-photo.component */ "./src/app/sub-modules/ic-core/components/choose-photo/choose-photo.component.ts");
+/* harmony import */ var _components_camera_stream_camera_stream_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/camera-stream/camera-stream.component */ "./src/app/sub-modules/ic-core/components/camera-stream/camera-stream.component.ts");
+/* harmony import */ var _components_take_photo_dialog_take_photo_dialog__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/take-photo-dialog/take-photo.dialog */ "./src/app/sub-modules/ic-core/components/take-photo-dialog/take-photo.dialog.ts");
+/* harmony import */ var _components_crop_photo_crop_photo_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./components/crop-photo/crop-photo.component */ "./src/app/sub-modules/ic-core/components/crop-photo/crop-photo.component.ts");
+/* harmony import */ var _components_take_photo_take_photo_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./components/take-photo/take-photo.component */ "./src/app/sub-modules/ic-core/components/take-photo/take-photo.component.ts");
+/* harmony import */ var _components_crop_photo_dialog_crop_photo_dialog__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./components/crop-photo-dialog/crop-photo.dialog */ "./src/app/sub-modules/ic-core/components/crop-photo-dialog/crop-photo.dialog.ts");
 
 var IcCoreModule_1;
+
+
+
+
+
+
 
 
 
@@ -2038,15 +2909,22 @@ const components = [
     _components_nav_nav_component__WEBPACK_IMPORTED_MODULE_10__["NavComponent"],
     _components_chips_autocomplete_chips_autocomplete_component__WEBPACK_IMPORTED_MODULE_13__["ChipsAutocompleteComponent"],
     _components_page_loader_page_loader_component__WEBPACK_IMPORTED_MODULE_6__["PageLoaderComponent"],
-    _pages_abstract_page_abstract_page_component__WEBPACK_IMPORTED_MODULE_9__["AbstractPageComponent"]
+    _pages_abstract_page_abstract_page_component__WEBPACK_IMPORTED_MODULE_9__["AbstractPageComponent"],
+    _components_choose_photo_choose_photo_component__WEBPACK_IMPORTED_MODULE_17__["ChoosePhotoComponent"],
+    _components_take_photo_take_photo_component__WEBPACK_IMPORTED_MODULE_21__["TakePhotoComponent"]
 ];
 const entryComponents = [
     _components_confirm_dialog_confirm_dialog__WEBPACK_IMPORTED_MODULE_15__["ConfirmDialog"],
-    _components_alert_dialog_alert_dialog__WEBPACK_IMPORTED_MODULE_16__["AlertDialog"]
+    _components_alert_dialog_alert_dialog__WEBPACK_IMPORTED_MODULE_16__["AlertDialog"],
+    _components_take_photo_dialog_take_photo_dialog__WEBPACK_IMPORTED_MODULE_19__["TakePhotoDialog"],
+    _components_crop_photo_dialog_crop_photo_dialog__WEBPACK_IMPORTED_MODULE_22__["CropPhotoDialog"],
+    _components_camera_stream_camera_stream_component__WEBPACK_IMPORTED_MODULE_18__["CameraStreamComponent"],
+    _components_crop_photo_crop_photo_component__WEBPACK_IMPORTED_MODULE_20__["CropPhotoComponent"],
 ];
 const providers = [
     _services_page_loader_service__WEBPACK_IMPORTED_MODULE_7__["PageLoaderService"],
-    _services_utility_service__WEBPACK_IMPORTED_MODULE_8__["UtilityService"],
+    _services_utility_service__WEBPACK_IMPORTED_MODULE_8__["UtilityService"]
+    // AbstractDao
 ];
 const modules = [
     _angular_common__WEBPACK_IMPORTED_MODULE_12__["CommonModule"],
@@ -2069,8 +2947,7 @@ IcCoreModule = IcCoreModule_1 = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
         declarations: [
             ...components,
-            ...entryComponents,
-            _components_alert_dialog_alert_dialog__WEBPACK_IMPORTED_MODULE_16__["AlertDialog"]
+            ...entryComponents
         ],
         entryComponents,
         imports: [
@@ -2092,7 +2969,7 @@ IcCoreModule = IcCoreModule_1 = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]
 /*!**********************************************!*\
   !*** ./src/app/sub-modules/ic-core/index.ts ***!
   \**********************************************/
-/*! exports provided: HeaderComponent, PageLoaderComponent, NavComponent, ChipsAutocompleteComponent, ConfirmDialog, AlertDialog, AbstractPageComponent, PageLoaderService, UtilityService, providers, IcCoreModule, DialogService, InitializerProvider, AbstractRepository, ApiRequestAdapter, Address, Contact, Customer, Phone */
+/*! exports provided: HeaderComponent, PageLoaderComponent, NavComponent, ChipsAutocompleteComponent, ConfirmDialog, AlertDialog, AbstractPageComponent, PageLoaderService, UtilityService, providers, IcCoreModule, DialogService, InitializerProvider, AbstractDao, AbstractApi, AbstractRepository, Address, Contact, Customer, Phone, CustomerProfile */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2130,25 +3007,31 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _providers_initializer_provider__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./providers/initializer.provider */ "./src/app/sub-modules/ic-core/providers/initializer.provider.ts");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "InitializerProvider", function() { return _providers_initializer_provider__WEBPACK_IMPORTED_MODULE_10__["InitializerProvider"]; });
 
-/* harmony import */ var _repositories_abstract_repository__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./repositories/abstract.repository */ "./src/app/sub-modules/ic-core/repositories/abstract.repository.ts");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "AbstractRepository", function() { return _repositories_abstract_repository__WEBPACK_IMPORTED_MODULE_11__["AbstractRepository"]; });
+/* harmony import */ var _dao_abstract_dao__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./dao/abstract.dao */ "./src/app/sub-modules/ic-core/dao/abstract.dao.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "AbstractDao", function() { return _dao_abstract_dao__WEBPACK_IMPORTED_MODULE_11__["AbstractDao"]; });
 
-/* harmony import */ var _adapters_api_request_adapter__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./adapters/api-request.adapter */ "./src/app/sub-modules/ic-core/adapters/api-request.adapter.ts");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ApiRequestAdapter", function() { return _adapters_api_request_adapter__WEBPACK_IMPORTED_MODULE_12__["ApiRequestAdapter"]; });
+/* harmony import */ var _api_abstract_api__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./api/abstract.api */ "./src/app/sub-modules/ic-core/api/abstract.api.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "AbstractApi", function() { return _api_abstract_api__WEBPACK_IMPORTED_MODULE_12__["AbstractApi"]; });
 
-/* harmony import */ var _models_models__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./models/models */ "./src/app/sub-modules/ic-core/models/models.ts");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Address", function() { return _models_models__WEBPACK_IMPORTED_MODULE_13__["Address"]; });
+/* harmony import */ var _repository_abstract_repository__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./repository/abstract.repository */ "./src/app/sub-modules/ic-core/repository/abstract.repository.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "AbstractRepository", function() { return _repository_abstract_repository__WEBPACK_IMPORTED_MODULE_13__["AbstractRepository"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Contact", function() { return _models_models__WEBPACK_IMPORTED_MODULE_13__["Contact"]; });
+/* harmony import */ var _models_models__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./models/models */ "./src/app/sub-modules/ic-core/models/models.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Address", function() { return _models_models__WEBPACK_IMPORTED_MODULE_14__["Address"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Customer", function() { return _models_models__WEBPACK_IMPORTED_MODULE_13__["Customer"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Contact", function() { return _models_models__WEBPACK_IMPORTED_MODULE_14__["Contact"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Phone", function() { return _models_models__WEBPACK_IMPORTED_MODULE_13__["Phone"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Customer", function() { return _models_models__WEBPACK_IMPORTED_MODULE_14__["Customer"]; });
 
-/* harmony import */ var _ic_core_module__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./ic-core.module */ "./src/app/sub-modules/ic-core/ic-core.module.ts");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "providers", function() { return _ic_core_module__WEBPACK_IMPORTED_MODULE_14__["providers"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Phone", function() { return _models_models__WEBPACK_IMPORTED_MODULE_14__["Phone"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "IcCoreModule", function() { return _ic_core_module__WEBPACK_IMPORTED_MODULE_14__["IcCoreModule"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "CustomerProfile", function() { return _models_models__WEBPACK_IMPORTED_MODULE_14__["CustomerProfile"]; });
+
+/* harmony import */ var _ic_core_module__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./ic-core.module */ "./src/app/sub-modules/ic-core/ic-core.module.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "providers", function() { return _ic_core_module__WEBPACK_IMPORTED_MODULE_15__["providers"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "IcCoreModule", function() { return _ic_core_module__WEBPACK_IMPORTED_MODULE_15__["IcCoreModule"]; });
+
 
 
 
@@ -2234,11 +3117,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-class Contact extends _model__WEBPACK_IMPORTED_MODULE_3__["Model"] {
+let Contact = class Contact extends _model__WEBPACK_IMPORTED_MODULE_3__["Model"] {
     constructor(obj) {
         super(obj);
     }
-}
+};
 Contact.ctorParameters = () => [
     { type: Object }
 ];
@@ -2254,6 +3137,121 @@ tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_decorators_decorators__WEBPACK_IMPORTED_MODULE_4__["Field"])({ itemType: _address__WEBPACK_IMPORTED_MODULE_1__["Address"] }),
     tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Array)
 ], Contact.prototype, "addresses", void 0);
+Contact = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_decorators_decorators__WEBPACK_IMPORTED_MODULE_4__["Entity"])(),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [Object])
+], Contact);
+
+
+
+/***/ }),
+
+/***/ "./src/app/sub-modules/ic-core/models/customer-profile.ts":
+/*!****************************************************************!*\
+  !*** ./src/app/sub-modules/ic-core/models/customer-profile.ts ***!
+  \****************************************************************/
+/*! exports provided: CustomerProfile */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CustomerProfile", function() { return CustomerProfile; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _model__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./model */ "./src/app/sub-modules/ic-core/models/model.ts");
+/* harmony import */ var _decorators_decorators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../decorators/decorators */ "./src/app/sub-modules/ic-core/decorators/decorators.ts");
+
+
+
+let CustomerProfile = class CustomerProfile extends _model__WEBPACK_IMPORTED_MODULE_1__["Model"] {
+    /*
+    "medical-histories": [
+      {
+        "id": "496de47dd2aa95db649683bc",
+        "medical-type": "Diabete",
+        "physician-name": "string",
+        "treatment-date": {},
+        "medication-note": "Paracetamol, C, Hazeline",
+        "comment": "Please put your comment here"
+      }
+    ],
+    "shared": [
+      {
+        "id": "496de47dd2aa95db649683bc",
+        "employee-id": "496de47dd2aa95db649683bc",
+        "comment": "Please put your comment here"
+      }
+     */
+    constructor(obj) {
+        super(obj);
+        // this.personalAnamnesis = obj['personalAnamnesis'];
+        // this.familyAnamnesis = obj['familyAnamnesis'];
+    }
+    fromRequestData(data) {
+        super.fromRequestData(data);
+        if (Array.isArray(this.anamnesis)) {
+            this.anamnesis = this.anamnesis;
+            this.personalAnamnesis = this.anamnesis.filter(item => item.type === 'personal').map(item => item.name);
+            this.familyAnamnesis = this.anamnesis.filter(item => item.type === 'family').map(item => item.name);
+        }
+    }
+    toRequestData() {
+        if (Array.isArray(this.personalAnamnesis) && this.personalAnamnesis.length > 0) {
+            this.anamnesis = this.anamnesis || [];
+            this.anamnesis = this.anamnesis.filter(item => item.type !== 'personal');
+            this.anamnesis = [...this.anamnesis, ...this.personalAnamnesis.map(name => Object.assign({ name, type: 'personal' }))];
+        }
+        if (Array.isArray(this.familyAnamnesis) && this.familyAnamnesis.length > 0) {
+            this.anamnesis = this.anamnesis || [];
+            this.anamnesis = this.anamnesis.filter(item => item.type !== 'family');
+            this.anamnesis = [...this.anamnesis, ...this.familyAnamnesis.map(name => Object.assign({ name, type: 'family' }))];
+        }
+        return super.toRequestData();
+    }
+};
+CustomerProfile.ctorParameters = () => [
+    { type: Object }
+];
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_decorators_decorators__WEBPACK_IMPORTED_MODULE_2__["Field"])(),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
+], CustomerProfile.prototype, "customerId", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_decorators_decorators__WEBPACK_IMPORTED_MODULE_2__["Field"])({ itemType: Object }),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Array)
+], CustomerProfile.prototype, "anamnesis", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_decorators_decorators__WEBPACK_IMPORTED_MODULE_2__["Field"])({ itemType: String }),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Array)
+], CustomerProfile.prototype, "personalAnamnesis", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_decorators_decorators__WEBPACK_IMPORTED_MODULE_2__["Field"])({ itemType: String }),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Array)
+], CustomerProfile.prototype, "familyAnamnesis", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_decorators_decorators__WEBPACK_IMPORTED_MODULE_2__["Field"])({ itemType: String }),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Array)
+], CustomerProfile.prototype, "interests", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_decorators_decorators__WEBPACK_IMPORTED_MODULE_2__["Field"])({ itemType: String }),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Array)
+], CustomerProfile.prototype, "habits", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_decorators_decorators__WEBPACK_IMPORTED_MODULE_2__["Field"])({ itemType: Object }),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Array)
+], CustomerProfile.prototype, "notes", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_decorators_decorators__WEBPACK_IMPORTED_MODULE_2__["Field"])({ itemType: String }),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Array)
+], CustomerProfile.prototype, "medicalHistories", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_decorators_decorators__WEBPACK_IMPORTED_MODULE_2__["Field"])({ itemType: String }),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Array)
+], CustomerProfile.prototype, "shared", void 0);
+CustomerProfile = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_decorators_decorators__WEBPACK_IMPORTED_MODULE_2__["Entity"])(),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [Object])
+], CustomerProfile);
+
 
 
 /***/ }),
@@ -2333,26 +3331,49 @@ function setObject(obj, instance) {
     const properties = _services_utility_service__WEBPACK_IMPORTED_MODULE_2__["UtilityService"].findDeclaredProperties(instance.constructor);
     if (!!obj) {
         properties.forEach(({ name, type, itemType }) => {
-            let value = obj[name];
-            if (!!value && !(value.constructor.name === type.name)) {
-                value = new type(value);
+            if (name === '_id') {
+                // @ts-ignore
+                instance.id = obj.id || obj._id;
             }
             else {
-                if (Array.isArray(value)) {
-                    value = value.map(item => new itemType(item));
+                const value = obj[name];
+                if (value !== undefined && value !== null) {
+                    if (_services_utility_service__WEBPACK_IMPORTED_MODULE_2__["UtilityService"].isEntity(type) || type.name === 'Date') {
+                        instance[name] = new type(value);
+                    }
+                    else if ( /*type.name === 'Array' &&*/!!itemType && _services_utility_service__WEBPACK_IMPORTED_MODULE_2__["UtilityService"].isEntity(itemType)) {
+                        instance[name] = value.map(item => new itemType(item));
+                    }
+                    else if (value.constructor.name === type.name) {
+                        instance[name] = value;
+                    }
+                    else {
+                        switch (type.name) {
+                            case 'String':
+                                instance[name] = value + '';
+                                break;
+                            case 'Number':
+                                instance[name] = +value;
+                                break;
+                            case 'Boolean':
+                                instance[name] = !!value && !['no', 'false', 'off', 'disable'].includes(value.toString().toLowerCase());
+                        }
+                    }
                 }
             }
-            instance[name] = value;
         });
     }
 }
 function parseModelToData(instance) {
+    if (!_services_utility_service__WEBPACK_IMPORTED_MODULE_2__["UtilityService"].isEntity(instance.constructor)) {
+        return instance;
+    }
     const obj = {};
     const properties = _services_utility_service__WEBPACK_IMPORTED_MODULE_2__["UtilityService"].findDeclaredProperties(instance.constructor);
     if (!!instance) {
         properties.forEach(({ name, type, mapping, itemType }) => {
             let value = instance[name];
-            if (!!value) {
+            if (value !== undefined && value !== null && value !== '') {
                 if (Array.isArray(value)) {
                     value = parseArrayModelToData(value);
                 }
@@ -2386,9 +3407,11 @@ let Model = class Model {
     get id() {
         return this._id;
     }
-    parseModelToData() {
-        debugger;
+    toRequestData() {
         return parseModelToData(this);
+    }
+    fromRequestData(data) {
+        _services_utility_service__WEBPACK_IMPORTED_MODULE_2__["UtilityService"].setDataToInstance(data, this);
     }
 };
 Model.ctorParameters = () => [
@@ -2398,6 +3421,18 @@ tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_decorators_decorators__WEBPACK_IMPORTED_MODULE_1__["Field"])({ mapping: 'id' }),
     tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
 ], Model.prototype, "_id", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_decorators_decorators__WEBPACK_IMPORTED_MODULE_1__["Field"])(),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
+], Model.prototype, "_rev", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_decorators_decorators__WEBPACK_IMPORTED_MODULE_1__["Field"])(),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Date)
+], Model.prototype, "createdDate", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_decorators_decorators__WEBPACK_IMPORTED_MODULE_1__["Field"])(),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Date)
+], Model.prototype, "modifiedDate", void 0);
 Model = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_decorators_decorators__WEBPACK_IMPORTED_MODULE_1__["Entity"])(),
     tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [Object])
@@ -2411,7 +3446,7 @@ Model = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*!******************************************************!*\
   !*** ./src/app/sub-modules/ic-core/models/models.ts ***!
   \******************************************************/
-/*! exports provided: Address, Contact, Customer, Phone */
+/*! exports provided: Address, Contact, Customer, Phone, CustomerProfile */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2427,6 +3462,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony import */ var _phone__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./phone */ "./src/app/sub-modules/ic-core/models/phone.ts");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Phone", function() { return _phone__WEBPACK_IMPORTED_MODULE_3__["Phone"]; });
+
+/* harmony import */ var _customer_profile__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./customer-profile */ "./src/app/sub-modules/ic-core/models/customer-profile.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "CustomerProfile", function() { return _customer_profile__WEBPACK_IMPORTED_MODULE_4__["CustomerProfile"]; });
+
 
 
 
@@ -2529,6 +3568,11 @@ let AbstractPageComponent = class AbstractPageComponent {
         this.pageTitle = pageTitle;
         this.breadcrumb = breadcrumb;
     }
+    canDeactivate() {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+            return true;
+        });
+    }
 };
 AbstractPageComponent.ctorParameters = () => [
     { type: String },
@@ -2597,10 +3641,10 @@ InitializerProvider = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
-/***/ "./src/app/sub-modules/ic-core/repositories/abstract.repository.ts":
-/*!*************************************************************************!*\
-  !*** ./src/app/sub-modules/ic-core/repositories/abstract.repository.ts ***!
-  \*************************************************************************/
+/***/ "./src/app/sub-modules/ic-core/repository/abstract.repository.ts":
+/*!***********************************************************************!*\
+  !*** ./src/app/sub-modules/ic-core/repository/abstract.repository.ts ***!
+  \***********************************************************************/
 /*! exports provided: AbstractRepository */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2608,210 +3652,105 @@ InitializerProvider = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AbstractRepository", function() { return AbstractRepository; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var pouchdb__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! pouchdb */ "./node_modules/pouchdb/lib/index-browser.es.js");
-/* harmony import */ var pouchdb_find__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! pouchdb-find */ "./node_modules/pouchdb-find/lib/index-browser.es.js");
-/* harmony import */ var _ic_core_services_utility_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../ic-core/services/utility.service */ "./src/app/sub-modules/ic-core/services/utility.service.ts");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
 
 
-// @ts-ignore
-
-// @ts-ignore
-
-
-pouchdb__WEBPACK_IMPORTED_MODULE_2__["default"].plugin(pouchdb_find__WEBPACK_IMPORTED_MODULE_3__["default"]);
 // tslint:disable-next-line:no-shadowed-variable
 class AbstractRepository {
-    constructor(clazz) {
-        // private sync: any;
-        this.changeListener = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
-        this.modelClass = clazz;
-        this.databaseName =
-            clazz.name.replace(/[A-Z]/g, (match, offset, string) => {
-                return (offset ? '_' : '') + match.toLowerCase();
-            });
-        console.log('init data: %s', this.databaseName);
-        // PouchDB.debug.enable('*');
-        this.db = new pouchdb__WEBPACK_IMPORTED_MODULE_2__["default"](this.databaseName);
-        // this.createDBIndex();
-        /*
-        this.sync = PouchDB.sync(this.databaseName, 'http://localhost:5984/' + this.databaseName, {
-          live: true,
-          retry: true
-        }).on('change', (data) => {
-          console.log('%s change: %s', clazz.name, JSON.stringify(data));
-          this.changeListener.emit(data);
-          // handle change
-        }).on('paused', (err) => {
-          // replication paused (e.g. replication up to date, user went offline)
-          console.log('replicate paused: %s', JSON.stringify(err));
-        }).on('active', () => {
-          // replicate resumed (e.g. new changes replicating, user went back online)
-          console.log('replicate active');
-        }).on('denied', (err) => {
-          // a document failed to replicate (e.g. due to permissions)
-          console.log('replicate denied: %s', JSON.stringify(err));
-        }).on('complete', (info) => {
-          // handle complete
-          console.log('replicate complete: %s', JSON.stringify(info));
-        }).on('error', (err) => {
-          // handle error
-          console.log('replicate error: %s', JSON.stringify(err));
-        });
-        */
-        this.getInfo().then((details) => {
-            if (details.doc_count === 0 && details.update_seq === 0) {
-                this.postInit();
-            }
-            else {
-                console.log('database exists');
-            }
-        }).catch((err) => {
-            console.log('error: ' + err);
-            return;
-        });
+    constructor(clazzT, clazzR, clazzA, opt) {
+        this.dao = new clazzR(clazzT);
+        this.api = new clazzA(opt.httpClient, opt.initializerProvider);
+        this.icConfig = opt.initializerProvider.CONFIG;
     }
-    createDBIndex() {
+    create(t) {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
-            const fields = _ic_core_services_utility_service__WEBPACK_IMPORTED_MODULE_4__["UtilityService"].findDeclaredProperties(this.modelClass);
-            const fieldNames = fields.map(field => field.name);
-            yield this.db.createIndex({
-                index: { fields: fieldNames }
-            });
-        });
-    }
-    getChangeListener() {
-        return this.changeListener;
-    }
-    getInfo() {
-        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
-            const info = yield this.db.info();
-            console.log(info);
-            return info;
-        });
-    }
-    // tslint:disable-next-line:variable-name
-    get(id) {
-        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+            // let customerID: CustomerID;
             try {
-                const doc = yield this.db.get(id);
-                return new this.modelClass(doc);
+                if (['online', 'sync'].includes(this.icConfig.dataMode)) {
+                    t = yield this.api.create(t);
+                }
+                if (['offline', 'sync'].includes(this.icConfig.dataMode)) {
+                    t = yield this.dao.create(t);
+                }
             }
             catch (err) {
-                console.trace(err.message);
-                return null;
+                throw err;
+            }
+            return t;
+        });
+    }
+    update(t) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+            if (['online', 'sync'].includes(this.icConfig.dataMode)) {
+                yield this.api.update(t);
+            }
+            if (['offline', 'sync'].includes(this.icConfig.dataMode)) {
+                yield this.dao.update(t);
             }
         });
     }
-    getAll() {
+    replace(t) {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
-            let result;
-            try {
-                result = yield this.db.allDocs({
-                    include_docs: true,
-                    attachments: true
-                });
+            if (['online', 'sync'].includes(this.icConfig.dataMode)) {
+                yield this.api.replace(t);
             }
-            catch (err) {
-                console.trace(err.message);
+            if (['offline', 'sync'].includes(this.icConfig.dataMode)) {
+                yield this.dao.replace(t);
             }
-            return _ic_core_services_utility_service__WEBPACK_IMPORTED_MODULE_4__["UtilityService"].parseDataToModel(result.docs, this.modelClass);
+        });
+    }
+    delete(id) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+            if (['online', 'sync'].includes(this.icConfig.dataMode)) {
+                yield this.api.delete(id);
+            }
+            if (['offline', 'sync'].includes(this.icConfig.dataMode)) {
+                yield this.dao.delete(id);
+            }
         });
     }
     search(query) {
-        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+        // @ts-ignore
+        const observable = new rxjs__WEBPACK_IMPORTED_MODULE_1__["Observable"]((observer) => tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
             let result;
-            try {
-                result = yield this.db.find({ selector: query });
-            }
-            catch (err) {
-                console.trace(err.message);
-            }
-            return (!!result) ? result.docs.map(item => new this.modelClass(item)) : [];
-        });
-    }
-    post(doc) {
-        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
-            let result = null;
-            if (!doc.id) {
-                try {
-                    result = yield this.db.post(doc); // Create a new document and let PouchDB auto-generate an _id for it.
-                    /*
-                    Example Response:
-                    {
-                      "ok" : true,
-                      "id" : "8A2C3761-FFD5-4770-9B8C-38C33CED300A",
-                      "rev" : "1-d3a8e0e5aa7c8fff0c376dac2d8a4007"
+            if (['offline', 'sync'].includes(this.icConfig.dataMode)) {
+                result = yield this.dao.search({
+                    fullName: {
+                        $regex: '.*' + query.textSearch + '.*'
                     }
-                    */
-                    doc.id = result.id;
-                }
-                catch (err) {
-                    console.trace(err.message);
-                    throw err;
-                }
+                });
+                observer.next(result);
             }
-            else {
-                result = yield this.put(doc); // Create a new doc with an _id of 'mydoc'
+            if (['online', 'sync'].includes(this.icConfig.dataMode)) {
+                result = yield this.api.search(Object.assign({}, query));
+                observer.next(result);
             }
-            return doc;
-        });
+            observer.complete();
+        }));
+        return observable;
     }
-    // tslint:disable-next-line:variable-name
-    put(obj) {
-        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
-            let result;
-            try {
-                if (!obj._id) {
-                    obj._id = obj.id;
-                }
-                // @ts-ignore
-                if (obj._rev) {
-                    // @ts-ignore
-                    obj._rev = undefined; // destroy 'conflict' version when put
-                }
-                result = yield this.db.put(obj); // Create a new doc with an _id of 'mydoc'
+    get(id) {
+        // @ts-ignore
+        const observable = new rxjs__WEBPACK_IMPORTED_MODULE_1__["Observable"]((observer) => tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+            let t;
+            if (['offline', 'sync'].includes(this.icConfig.dataMode)) {
+                t = yield this.dao.get(id);
+                observer.next(t);
             }
-            catch (err) {
-                console.trace(err.message);
-                throw err;
+            if (['online', 'sync'].includes(this.icConfig.dataMode)) {
+                t = yield this.api.get(id);
+                observer.next(t);
             }
-            return obj;
-        });
-    }
-    // tslint:disable-next-line:variable-name
-    patch(obj) {
-        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
-            let doc = yield this.get(obj.id);
-            if (!doc) {
-                return null;
-            }
-            else {
-                doc = Object.assign(doc, obj);
-            }
-            return this.put(doc);
-        });
-    }
-    // tslint:disable-next-line:variable-name
-    delete(_id) {
-        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
-            try {
-                const doc = yield this.db.get(_id);
-                const result = yield this.db.remove(doc._id, doc._rev);
-                return result;
-            }
-            catch (err) {
-                if (err.reason === 'missing') { // there is no _id in database
-                    return {};
-                }
-                console.trace(err.message);
-                throw err;
-            }
-        });
+            observer.complete();
+        }));
+        return observable;
     }
 }
 AbstractRepository.ctorParameters = () => [
-    { type: Function }
+    { type: Function },
+    { type: Function },
+    { type: Function },
+    { type: undefined }
 ];
 
 
@@ -2832,6 +3771,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
 /* harmony import */ var _components_alert_dialog_alert_dialog__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/alert-dialog/alert.dialog */ "./src/app/sub-modules/ic-core/components/alert-dialog/alert.dialog.ts");
 /* harmony import */ var _components_confirm_dialog_confirm_dialog__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/confirm-dialog/confirm.dialog */ "./src/app/sub-modules/ic-core/components/confirm-dialog/confirm.dialog.ts");
+/* harmony import */ var _components_take_photo_dialog_take_photo_dialog__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/take-photo-dialog/take-photo.dialog */ "./src/app/sub-modules/ic-core/components/take-photo-dialog/take-photo.dialog.ts");
+/* harmony import */ var _components_crop_photo_dialog_crop_photo_dialog__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/crop-photo-dialog/crop-photo.dialog */ "./src/app/sub-modules/ic-core/components/crop-photo-dialog/crop-photo.dialog.ts");
+
+
 
 
 
@@ -2842,23 +3785,43 @@ let DialogService = class DialogService {
         this.dialog = dialog;
     }
     // @ts-ignore
-    openAlert(message) {
+    openAlert(title, message) {
         return new Promise(resolve => {
             this.dialog.open(_components_alert_dialog_alert_dialog__WEBPACK_IMPORTED_MODULE_3__["AlertDialog"], {
                 width: '300px',
-                data: `Account Has Been Created!`
+                data: { title, message }
             }).afterClosed().subscribe(() => {
                 resolve();
             });
         });
     }
-    openConfirm(message) {
+    openConfirm(title, message) {
         return new Promise(resolve => {
             this.dialog.open(_components_confirm_dialog_confirm_dialog__WEBPACK_IMPORTED_MODULE_4__["ConfirmDialog"], {
                 width: '300px',
-                data: message
+                data: { title, message }
             }).afterClosed().subscribe(result => {
                 resolve(!!result);
+            });
+        });
+    }
+    openCaptureDialog() {
+        return new Promise(resolve => {
+            this.dialog.open(_components_take_photo_dialog_take_photo_dialog__WEBPACK_IMPORTED_MODULE_5__["TakePhotoDialog"], {
+            // width: '400px',
+            // data: {title, message}
+            }).afterClosed().subscribe(result => {
+                resolve(result);
+            });
+        });
+    }
+    openCropDialog(dataUrl) {
+        return new Promise(resolve => {
+            this.dialog.open(_components_crop_photo_dialog_crop_photo_dialog__WEBPACK_IMPORTED_MODULE_6__["CropPhotoDialog"], {
+                // width: '400px',
+                data: { dataUrl }
+            }).afterClosed().subscribe(result => {
+                resolve(result);
             });
         });
     }
@@ -3168,8 +4131,36 @@ let UtilityService = UtilityService_1 = class UtilityService {
         }
         return targetInstance;
     }
+    // tslint:disable-next-line:ban-types
+    static setDataToInstance(data, targetInstance) {
+        // const targetInstance = new targetType();
+        const targetType = targetInstance.constructor;
+        const properties = UtilityService_1.findDeclaredProperties(targetType);
+        if (!!data) {
+            properties.forEach(({ name, type, mapping, itemType }) => {
+                let value = (mapping === './') ? data : UtilityService_1.getDeeplyProperty(data, mapping);
+                if (UtilityService_1.isEntity(type) || type.name === 'Date') {
+                    value = new type(value);
+                }
+                else {
+                    if (type.name === 'Array' && UtilityService_1.isEntity(itemType)) {
+                        value = UtilityService_1.parseDataToArrayModel(value, itemType);
+                    }
+                }
+                targetInstance[name] = value;
+            });
+        }
+    }
     static parseDataToArrayModel(array, itemType) {
-        return array.map(item => UtilityService_1.parseDataToModel(item, itemType));
+        if (!array || !Array.isArray(array)) {
+            return [];
+        }
+        else {
+            return array.map(item => UtilityService_1.parseDataToModel(item, itemType));
+        }
+    }
+    static isEntity(clazz) {
+        return !!Reflect.getOwnMetadata(DESIGN_META_DATA.ENTITY, clazz);
     }
 };
 UtilityService.DESIGN_META_DATA = DESIGN_META_DATA;

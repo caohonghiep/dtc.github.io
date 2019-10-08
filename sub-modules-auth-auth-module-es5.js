@@ -33,6 +33,17 @@ module.exports = "<div class=\"content\">\r\n  <form class=\"form-signin text-ce
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/index.js!./src/app/sub-modules/auth/pages/complete-new-password/complete-new-password.component.html":
+/*!*****************************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/sub-modules/auth/pages/complete-new-password/complete-new-password.component.html ***!
+  \*****************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"content\">\r\n  <form class=\"form-signin text-center\">\r\n    <img src=\"assets/images/logo.png\" alt=\"\" width=\"72\" height=\"72\">\r\n    <h1 class=\"header h3 mb-3\">Change Your Password</h1>\r\n\r\n    <label for=\"newPassword\" class=\"sr-only\">New Password</label>\r\n    <input id=\"newPassword\" name=\"newPassword\" [(ngModel)]=\"newPassword\"  type=\"password\"  class=\"form-control\" placeholder=\"New Password\" required=\"\">\r\n\r\n    <div class=\"login-error text-danger\">{{ errorMessage }}</div>\r\n    <div class=\"sign-action\">\r\n      <button id=\"signInButton\" class=\"btn btn-primary\" [disabled]=\"!newPassword\" (click)=\"changePassword()\">Change Password</button>\r\n    </div>\r\n\r\n\r\n  </form>\r\n\r\n</div>\r\n"
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/index.js!./src/app/sub-modules/auth/pages/forget-password/forget-password.component.html":
 /*!*****************************************************************************************************************!*\
   !*** ./node_modules/raw-loader!./src/app/sub-modules/auth/pages/forget-password/forget-password.component.html ***!
@@ -110,6 +121,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_change_password_change_password_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./pages/change-password/change-password.component */ "./src/app/sub-modules/auth/pages/change-password/change-password.component.ts");
 /* harmony import */ var _pages_active_account_active_account_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./pages/active-account/active-account.component */ "./src/app/sub-modules/auth/pages/active-account/active-account.component.ts");
 /* harmony import */ var _pages_resend_active_code_resend_active_code_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./pages/resend-active-code/resend-active-code.component */ "./src/app/sub-modules/auth/pages/resend-active-code/resend-active-code.component.ts");
+/* harmony import */ var _pages_complete_new_password_complete_new_password_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./pages/complete-new-password/complete-new-password.component */ "./src/app/sub-modules/auth/pages/complete-new-password/complete-new-password.component.ts");
+
 
 
 
@@ -144,6 +157,10 @@ var routes = [
                 path: 'change-password',
                 component: _pages_change_password_change_password_component__WEBPACK_IMPORTED_MODULE_9__["ChangePasswordComponent"],
                 canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_8__["AuthGuard"]]
+            },
+            {
+                path: 'complete-new-password',
+                component: _pages_complete_new_password_complete_new_password_component__WEBPACK_IMPORTED_MODULE_12__["CompleteNewPasswordComponent"]
             },
             {
                 path: 'sign-in',
@@ -183,7 +200,7 @@ var AuthRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "::ng-deep html,\n::ng-deep .content {\n  height: 100%;\n  width: 100%;\n}\n::ng-deep .content {\n  position: fixed;\n  display: flex;\n  align-items: center;\n  padding: 40px;\n  justify-content: center;\n  width: 100%;\n  height: 100%;\n  position: fixed;\n  margin: 0;\n  padding: 0;\n  background-image: url(/assets/images/bg1.png);\n  background-position: center;\n  background-size: cover;\n  background-repeat: no-repeat;\n}\n::ng-deep .content .header {\n  font-size: 20px;\n  color: var(--primary);\n  font-weight: bold;\n}\n::ng-deep .content .form-signin {\n  width: 100%;\n  max-width: 400px;\n  padding: 15px 50px 20px;\n  margin: auto;\n  background-color: white;\n  border-radius: 4px;\n  box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.5), 0px 8px 10px 1px rgba(0, 0, 0, 0.4), 0px 3px 14px 2px rgba(0, 0, 0, 0.3);\n}\n::ng-deep .content .form-signin .form-control {\n  position: relative;\n  box-sizing: border-box;\n  height: auto;\n  padding: 10px;\n}\n::ng-deep .content .form-signin .form-control:focus {\n  z-index: 2;\n}\n::ng-deep .content .form-signin .message {\n  margin-bottom: 4px;\n  margin-top: 4px;\n  font-size: 14px;\n}\n::ng-deep .content .form-signin .sign-action {\n  margin-top: 16px;\n}\n::ng-deep .content .form-signin .sign-action > button {\n  margin-left: 4px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc3ViLW1vZHVsZXMvYXV0aC9DOlxcREVWXFx3b3Jrc3BhY2VzXFxpY2xpbmljXFxTb3VyY2VcXFVJL3NyY1xcYXBwXFxzdWItbW9kdWxlc1xcYXV0aFxcYXV0aC5jb250YWluZXIuc2NzcyIsInNyYy9hcHAvc3ViLW1vZHVsZXMvYXV0aC9hdXRoLmNvbnRhaW5lci5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNFOztFQUVFLFlBQUE7RUFDQSxXQUFBO0FDQUo7QURHRTtFQUNFLGVBQUE7RUFDQSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSxhQUFBO0VBRUEsdUJBQUE7RUFDQSxXQUFBO0VBQ0EsWUFBQTtFQUNBLGVBQUE7RUFDQSxTQUFBO0VBQ0EsVUFBQTtFQUNBLDZDQUFBO0VBQ0EsMkJBQUE7RUFDQSxzQkFBQTtFQUNBLDRCQUFBO0FDRko7QURHSTtFQUNFLGVBQUE7RUFDQSxxQkFBQTtFQUNBLGlCQUFBO0FDRE47QURJSTtFQUNFLFdBQUE7RUFDQSxnQkFBQTtFQUNBLHVCQUFBO0VBQ0EsWUFBQTtFQUdBLHVCQUFBO0VBQ0Esa0JBQUE7RUFDQSx5SEFBQTtBQ0pOO0FETU07RUFDRSxrQkFBQTtFQUNBLHNCQUFBO0VBQ0EsWUFBQTtFQUNBLGFBQUE7QUNKUjtBRE1RO0VBQ0UsVUFBQTtBQ0pWO0FEUU07RUFDRSxrQkFBQTtFQUNBLGVBQUE7RUFDQSxlQUFBO0FDTlI7QURTTTtFQUNFLGdCQUFBO0FDUFI7QURTUTtFQUNFLGdCQUFBO0FDUFYiLCJmaWxlIjoic3JjL2FwcC9zdWItbW9kdWxlcy9hdXRoL2F1dGguY29udGFpbmVyLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyI6Om5nLWRlZXAge1xyXG4gIGh0bWwsXHJcbiAgLmNvbnRlbnQge1xyXG4gICAgaGVpZ2h0OiAxMDAlO1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgfVxyXG5cclxuICAuY29udGVudCB7XHJcbiAgICBwb3NpdGlvbjogZml4ZWQ7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxuICAgIHBhZGRpbmc6IDQwcHg7XHJcbiAgICAvL2JhY2tncm91bmQtY29sb3I6ICNmNWY1ZjU7XHJcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgaGVpZ2h0OiAxMDAlO1xyXG4gICAgcG9zaXRpb246IGZpeGVkO1xyXG4gICAgbWFyZ2luOiAwO1xyXG4gICAgcGFkZGluZzogMDtcclxuICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybCgvYXNzZXRzL2ltYWdlcy9iZzEucG5nKTtcclxuICAgIGJhY2tncm91bmQtcG9zaXRpb246IGNlbnRlcjtcclxuICAgIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XHJcbiAgICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xyXG4gICAgLmhlYWRlciB7XHJcbiAgICAgIGZvbnQtc2l6ZTogMjBweDtcclxuICAgICAgY29sb3I6IHZhcigtLXByaW1hcnkpO1xyXG4gICAgICBmb250LXdlaWdodDogYm9sZDtcclxuICAgIH1cclxuXHJcbiAgICAuZm9ybS1zaWduaW4ge1xyXG4gICAgICB3aWR0aDogMTAwJTtcclxuICAgICAgbWF4LXdpZHRoOiA0MDBweDtcclxuICAgICAgcGFkZGluZzogMTVweCA1MHB4IDIwcHg7XHJcbiAgICAgIG1hcmdpbjogYXV0bztcclxuICAgICAgLy9tYXJnaW46IDIwcHg7XHJcbiAgICAgIC8vZGlzcGxheTogYmxvY2s7XHJcbiAgICAgIGJhY2tncm91bmQtY29sb3I6IHdoaXRlO1xyXG4gICAgICBib3JkZXItcmFkaXVzOiA0cHg7XHJcbiAgICAgIGJveC1zaGFkb3c6IDBweCA1cHggNXB4IC0zcHggcmdiYSgwLCAwLCAwLCAwLjUpLCAwcHggOHB4IDEwcHggMXB4IHJnYmEoMCwgMCwgMCwgMC40KSwgMHB4IDNweCAxNHB4IDJweCByZ2JhKDAsIDAsIDAsIDAuMyk7XHJcblxyXG4gICAgICAuZm9ybS1jb250cm9sIHtcclxuICAgICAgICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbiAgICAgICAgYm94LXNpemluZzogYm9yZGVyLWJveDtcclxuICAgICAgICBoZWlnaHQ6IGF1dG87XHJcbiAgICAgICAgcGFkZGluZzogMTBweDtcclxuXHJcbiAgICAgICAgJjpmb2N1cyB7XHJcbiAgICAgICAgICB6LWluZGV4OiAyO1xyXG4gICAgICAgIH1cclxuICAgICAgfVxyXG5cclxuICAgICAgLm1lc3NhZ2Uge1xyXG4gICAgICAgIG1hcmdpbi1ib3R0b206IDRweDtcclxuICAgICAgICBtYXJnaW4tdG9wOiA0cHg7XHJcbiAgICAgICAgZm9udC1zaXplOiAxNHB4O1xyXG4gICAgICB9XHJcblxyXG4gICAgICAuc2lnbi1hY3Rpb24ge1xyXG4gICAgICAgIG1hcmdpbi10b3A6IDE2cHg7XHJcblxyXG4gICAgICAgID4gYnV0dG9uIHtcclxuICAgICAgICAgIG1hcmdpbi1sZWZ0OiA0cHg7XHJcbiAgICAgICAgfVxyXG4gICAgICB9XHJcbiAgICB9XHJcbiAgfVxyXG59XHJcblxyXG4iLCI6Om5nLWRlZXAgaHRtbCxcbjo6bmctZGVlcCAuY29udGVudCB7XG4gIGhlaWdodDogMTAwJTtcbiAgd2lkdGg6IDEwMCU7XG59XG46Om5nLWRlZXAgLmNvbnRlbnQge1xuICBwb3NpdGlvbjogZml4ZWQ7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIHBhZGRpbmc6IDQwcHg7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICB3aWR0aDogMTAwJTtcbiAgaGVpZ2h0OiAxMDAlO1xuICBwb3NpdGlvbjogZml4ZWQ7XG4gIG1hcmdpbjogMDtcbiAgcGFkZGluZzogMDtcbiAgYmFja2dyb3VuZC1pbWFnZTogdXJsKC9hc3NldHMvaW1hZ2VzL2JnMS5wbmcpO1xuICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiBjZW50ZXI7XG4gIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XG4gIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XG59XG46Om5nLWRlZXAgLmNvbnRlbnQgLmhlYWRlciB7XG4gIGZvbnQtc2l6ZTogMjBweDtcbiAgY29sb3I6IHZhcigtLXByaW1hcnkpO1xuICBmb250LXdlaWdodDogYm9sZDtcbn1cbjo6bmctZGVlcCAuY29udGVudCAuZm9ybS1zaWduaW4ge1xuICB3aWR0aDogMTAwJTtcbiAgbWF4LXdpZHRoOiA0MDBweDtcbiAgcGFkZGluZzogMTVweCA1MHB4IDIwcHg7XG4gIG1hcmdpbjogYXV0bztcbiAgYmFja2dyb3VuZC1jb2xvcjogd2hpdGU7XG4gIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgYm94LXNoYWRvdzogMHB4IDVweCA1cHggLTNweCByZ2JhKDAsIDAsIDAsIDAuNSksIDBweCA4cHggMTBweCAxcHggcmdiYSgwLCAwLCAwLCAwLjQpLCAwcHggM3B4IDE0cHggMnB4IHJnYmEoMCwgMCwgMCwgMC4zKTtcbn1cbjo6bmctZGVlcCAuY29udGVudCAuZm9ybS1zaWduaW4gLmZvcm0tY29udHJvbCB7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgYm94LXNpemluZzogYm9yZGVyLWJveDtcbiAgaGVpZ2h0OiBhdXRvO1xuICBwYWRkaW5nOiAxMHB4O1xufVxuOjpuZy1kZWVwIC5jb250ZW50IC5mb3JtLXNpZ25pbiAuZm9ybS1jb250cm9sOmZvY3VzIHtcbiAgei1pbmRleDogMjtcbn1cbjo6bmctZGVlcCAuY29udGVudCAuZm9ybS1zaWduaW4gLm1lc3NhZ2Uge1xuICBtYXJnaW4tYm90dG9tOiA0cHg7XG4gIG1hcmdpbi10b3A6IDRweDtcbiAgZm9udC1zaXplOiAxNHB4O1xufVxuOjpuZy1kZWVwIC5jb250ZW50IC5mb3JtLXNpZ25pbiAuc2lnbi1hY3Rpb24ge1xuICBtYXJnaW4tdG9wOiAxNnB4O1xufVxuOjpuZy1kZWVwIC5jb250ZW50IC5mb3JtLXNpZ25pbiAuc2lnbi1hY3Rpb24gPiBidXR0b24ge1xuICBtYXJnaW4tbGVmdDogNHB4O1xufSJdfQ== */"
+module.exports = "::ng-deep html,\n::ng-deep .content {\n  height: 100%;\n  width: 100%;\n}\n::ng-deep .content {\n  position: fixed;\n  display: flex;\n  align-items: center;\n  padding: 40px;\n  justify-content: center;\n  width: 100%;\n  height: 100%;\n  position: fixed;\n  margin: 0;\n  padding: 0;\n  background: url(/assets/images/bg2.png) right no-repeat, url(/assets/images/bg1.png) left no-repeat;\n  background-size: contain, contain;\n}\n::ng-deep .content .header {\n  font-size: 20px;\n  color: var(--primary);\n  font-weight: bold;\n}\n::ng-deep .content .form-signin {\n  width: 100%;\n  max-width: 400px;\n  padding: 15px 50px 20px;\n  margin: auto;\n  background-color: white;\n  border-radius: 4px;\n  box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.5), 0px 8px 10px 1px rgba(0, 0, 0, 0.4), 0px 3px 14px 2px rgba(0, 0, 0, 0.3);\n}\n::ng-deep .content .form-signin .form-control {\n  position: relative;\n  box-sizing: border-box;\n  height: auto;\n  padding: 10px;\n}\n::ng-deep .content .form-signin .form-control:focus {\n  z-index: 2;\n}\n::ng-deep .content .form-signin .message {\n  margin-bottom: 4px;\n  margin-top: 4px;\n  font-size: 14px;\n}\n::ng-deep .content .form-signin .sign-action {\n  margin-top: 16px;\n}\n::ng-deep .content .form-signin .sign-action > button {\n  margin-left: 4px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc3ViLW1vZHVsZXMvYXV0aC9DOlxcREVWXFx3b3Jrc3BhY2VzXFxpY2xpbmljXFxTb3VyY2VcXFVJL3NyY1xcYXBwXFxzdWItbW9kdWxlc1xcYXV0aFxcYXV0aC5jb250YWluZXIuc2NzcyIsInNyYy9hcHAvc3ViLW1vZHVsZXMvYXV0aC9hdXRoLmNvbnRhaW5lci5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNFOztFQUVFLFlBQUE7RUFDQSxXQUFBO0FDQUo7QURHRTtFQUNFLGVBQUE7RUFDQSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSxhQUFBO0VBRUEsdUJBQUE7RUFDQSxXQUFBO0VBQ0EsWUFBQTtFQUNBLGVBQUE7RUFDQSxTQUFBO0VBQ0EsVUFBQTtFQUNBLG1HQUFBO0VBQ0EsaUNBQUE7QUNGSjtBREdJO0VBQ0UsZUFBQTtFQUNBLHFCQUFBO0VBQ0EsaUJBQUE7QUNETjtBRElJO0VBQ0UsV0FBQTtFQUNBLGdCQUFBO0VBQ0EsdUJBQUE7RUFDQSxZQUFBO0VBR0EsdUJBQUE7RUFDQSxrQkFBQTtFQUNBLHlIQUFBO0FDSk47QURNTTtFQUNFLGtCQUFBO0VBQ0Esc0JBQUE7RUFDQSxZQUFBO0VBQ0EsYUFBQTtBQ0pSO0FETVE7RUFDRSxVQUFBO0FDSlY7QURRTTtFQUNFLGtCQUFBO0VBQ0EsZUFBQTtFQUNBLGVBQUE7QUNOUjtBRFNNO0VBQ0UsZ0JBQUE7QUNQUjtBRFNRO0VBQ0UsZ0JBQUE7QUNQViIsImZpbGUiOiJzcmMvYXBwL3N1Yi1tb2R1bGVzL2F1dGgvYXV0aC5jb250YWluZXIuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIjo6bmctZGVlcCB7XHJcbiAgaHRtbCxcclxuICAuY29udGVudCB7XHJcbiAgICBoZWlnaHQ6IDEwMCU7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICB9XHJcblxyXG4gIC5jb250ZW50IHtcclxuICAgIHBvc2l0aW9uOiBmaXhlZDtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG4gICAgcGFkZGluZzogNDBweDtcclxuICAgIC8vYmFja2dyb3VuZC1jb2xvcjogI2Y1ZjVmNTtcclxuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgICBoZWlnaHQ6IDEwMCU7XHJcbiAgICBwb3NpdGlvbjogZml4ZWQ7XHJcbiAgICBtYXJnaW46IDA7XHJcbiAgICBwYWRkaW5nOiAwO1xyXG4gICAgYmFja2dyb3VuZDogdXJsKC9hc3NldHMvaW1hZ2VzL2JnMi5wbmcpIHJpZ2h0IG5vLXJlcGVhdCwgdXJsKC9hc3NldHMvaW1hZ2VzL2JnMS5wbmcpIGxlZnQgbm8tcmVwZWF0O1xyXG4gICAgYmFja2dyb3VuZC1zaXplOiBjb250YWluLCBjb250YWluO1xyXG4gICAgLmhlYWRlciB7XHJcbiAgICAgIGZvbnQtc2l6ZTogMjBweDtcclxuICAgICAgY29sb3I6IHZhcigtLXByaW1hcnkpO1xyXG4gICAgICBmb250LXdlaWdodDogYm9sZDtcclxuICAgIH1cclxuXHJcbiAgICAuZm9ybS1zaWduaW4ge1xyXG4gICAgICB3aWR0aDogMTAwJTtcclxuICAgICAgbWF4LXdpZHRoOiA0MDBweDtcclxuICAgICAgcGFkZGluZzogMTVweCA1MHB4IDIwcHg7XHJcbiAgICAgIG1hcmdpbjogYXV0bztcclxuICAgICAgLy9tYXJnaW46IDIwcHg7XHJcbiAgICAgIC8vZGlzcGxheTogYmxvY2s7XHJcbiAgICAgIGJhY2tncm91bmQtY29sb3I6IHdoaXRlO1xyXG4gICAgICBib3JkZXItcmFkaXVzOiA0cHg7XHJcbiAgICAgIGJveC1zaGFkb3c6IDBweCA1cHggNXB4IC0zcHggcmdiYSgwLCAwLCAwLCAwLjUpLCAwcHggOHB4IDEwcHggMXB4IHJnYmEoMCwgMCwgMCwgMC40KSwgMHB4IDNweCAxNHB4IDJweCByZ2JhKDAsIDAsIDAsIDAuMyk7XHJcblxyXG4gICAgICAuZm9ybS1jb250cm9sIHtcclxuICAgICAgICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbiAgICAgICAgYm94LXNpemluZzogYm9yZGVyLWJveDtcclxuICAgICAgICBoZWlnaHQ6IGF1dG87XHJcbiAgICAgICAgcGFkZGluZzogMTBweDtcclxuXHJcbiAgICAgICAgJjpmb2N1cyB7XHJcbiAgICAgICAgICB6LWluZGV4OiAyO1xyXG4gICAgICAgIH1cclxuICAgICAgfVxyXG5cclxuICAgICAgLm1lc3NhZ2Uge1xyXG4gICAgICAgIG1hcmdpbi1ib3R0b206IDRweDtcclxuICAgICAgICBtYXJnaW4tdG9wOiA0cHg7XHJcbiAgICAgICAgZm9udC1zaXplOiAxNHB4O1xyXG4gICAgICB9XHJcblxyXG4gICAgICAuc2lnbi1hY3Rpb24ge1xyXG4gICAgICAgIG1hcmdpbi10b3A6IDE2cHg7XHJcblxyXG4gICAgICAgID4gYnV0dG9uIHtcclxuICAgICAgICAgIG1hcmdpbi1sZWZ0OiA0cHg7XHJcbiAgICAgICAgfVxyXG4gICAgICB9XHJcbiAgICB9XHJcbiAgfVxyXG59XHJcblxyXG4iLCI6Om5nLWRlZXAgaHRtbCxcbjo6bmctZGVlcCAuY29udGVudCB7XG4gIGhlaWdodDogMTAwJTtcbiAgd2lkdGg6IDEwMCU7XG59XG46Om5nLWRlZXAgLmNvbnRlbnQge1xuICBwb3NpdGlvbjogZml4ZWQ7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIHBhZGRpbmc6IDQwcHg7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICB3aWR0aDogMTAwJTtcbiAgaGVpZ2h0OiAxMDAlO1xuICBwb3NpdGlvbjogZml4ZWQ7XG4gIG1hcmdpbjogMDtcbiAgcGFkZGluZzogMDtcbiAgYmFja2dyb3VuZDogdXJsKC9hc3NldHMvaW1hZ2VzL2JnMi5wbmcpIHJpZ2h0IG5vLXJlcGVhdCwgdXJsKC9hc3NldHMvaW1hZ2VzL2JnMS5wbmcpIGxlZnQgbm8tcmVwZWF0O1xuICBiYWNrZ3JvdW5kLXNpemU6IGNvbnRhaW4sIGNvbnRhaW47XG59XG46Om5nLWRlZXAgLmNvbnRlbnQgLmhlYWRlciB7XG4gIGZvbnQtc2l6ZTogMjBweDtcbiAgY29sb3I6IHZhcigtLXByaW1hcnkpO1xuICBmb250LXdlaWdodDogYm9sZDtcbn1cbjo6bmctZGVlcCAuY29udGVudCAuZm9ybS1zaWduaW4ge1xuICB3aWR0aDogMTAwJTtcbiAgbWF4LXdpZHRoOiA0MDBweDtcbiAgcGFkZGluZzogMTVweCA1MHB4IDIwcHg7XG4gIG1hcmdpbjogYXV0bztcbiAgYmFja2dyb3VuZC1jb2xvcjogd2hpdGU7XG4gIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgYm94LXNoYWRvdzogMHB4IDVweCA1cHggLTNweCByZ2JhKDAsIDAsIDAsIDAuNSksIDBweCA4cHggMTBweCAxcHggcmdiYSgwLCAwLCAwLCAwLjQpLCAwcHggM3B4IDE0cHggMnB4IHJnYmEoMCwgMCwgMCwgMC4zKTtcbn1cbjo6bmctZGVlcCAuY29udGVudCAuZm9ybS1zaWduaW4gLmZvcm0tY29udHJvbCB7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgYm94LXNpemluZzogYm9yZGVyLWJveDtcbiAgaGVpZ2h0OiBhdXRvO1xuICBwYWRkaW5nOiAxMHB4O1xufVxuOjpuZy1kZWVwIC5jb250ZW50IC5mb3JtLXNpZ25pbiAuZm9ybS1jb250cm9sOmZvY3VzIHtcbiAgei1pbmRleDogMjtcbn1cbjo6bmctZGVlcCAuY29udGVudCAuZm9ybS1zaWduaW4gLm1lc3NhZ2Uge1xuICBtYXJnaW4tYm90dG9tOiA0cHg7XG4gIG1hcmdpbi10b3A6IDRweDtcbiAgZm9udC1zaXplOiAxNHB4O1xufVxuOjpuZy1kZWVwIC5jb250ZW50IC5mb3JtLXNpZ25pbiAuc2lnbi1hY3Rpb24ge1xuICBtYXJnaW4tdG9wOiAxNnB4O1xufVxuOjpuZy1kZWVwIC5jb250ZW50IC5mb3JtLXNpZ25pbiAuc2lnbi1hY3Rpb24gPiBidXR0b24ge1xuICBtYXJnaW4tbGVmdDogNHB4O1xufSJdfQ== */"
 
 /***/ }),
 
@@ -255,6 +272,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_active_account_active_account_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./pages/active-account/active-account.component */ "./src/app/sub-modules/auth/pages/active-account/active-account.component.ts");
 /* harmony import */ var _pages_resend_active_code_resend_active_code_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./pages/resend-active-code/resend-active-code.component */ "./src/app/sub-modules/auth/pages/resend-active-code/resend-active-code.component.ts");
 /* harmony import */ var _pages_change_password_change_password_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./pages/change-password/change-password.component */ "./src/app/sub-modules/auth/pages/change-password/change-password.component.ts");
+/* harmony import */ var _pages_complete_new_password_complete_new_password_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./pages/complete-new-password/complete-new-password.component */ "./src/app/sub-modules/auth/pages/complete-new-password/complete-new-password.component.ts");
+
 
 
 
@@ -282,7 +301,8 @@ var AuthModule = /** @class */ (function () {
                 _pages_sign_up_sign_up_component__WEBPACK_IMPORTED_MODULE_10__["SignUpComponent"],
                 _pages_active_account_active_account_component__WEBPACK_IMPORTED_MODULE_11__["ActiveAccountComponent"],
                 _pages_resend_active_code_resend_active_code_component__WEBPACK_IMPORTED_MODULE_12__["ResendActiveCodeComponent"],
-                _pages_change_password_change_password_component__WEBPACK_IMPORTED_MODULE_13__["ChangePasswordComponent"]
+                _pages_change_password_change_password_component__WEBPACK_IMPORTED_MODULE_13__["ChangePasswordComponent"],
+                _pages_complete_new_password_complete_new_password_component__WEBPACK_IMPORTED_MODULE_14__["CompleteNewPasswordComponent"]
             ],
             imports: [
                 _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
@@ -518,6 +538,96 @@ var ChangePasswordComponent = /** @class */ (function () {
             _ic_core__WEBPACK_IMPORTED_MODULE_4__["PageLoaderService"]])
     ], ChangePasswordComponent);
     return ChangePasswordComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/sub-modules/auth/pages/complete-new-password/complete-new-password.component.scss":
+/*!***************************************************************************************************!*\
+  !*** ./src/app/sub-modules/auth/pages/complete-new-password/complete-new-password.component.scss ***!
+  \***************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".content .form-signin {\n  font-size: 16px;\n}\n.content .form-signin img {\n  margin-bottom: 0;\n}\n.content .form-signin:focus {\n  z-index: 2;\n}\n.content input[type=text] {\n  margin-bottom: -1px;\n  border-bottom-right-radius: 0;\n  border-bottom-left-radius: 0;\n}\n.content input[type=password] {\n  margin-bottom: 10px;\n  border-top-left-radius: 0;\n  border-top-right-radius: 0;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc3ViLW1vZHVsZXMvYXV0aC9wYWdlcy9jb21wbGV0ZS1uZXctcGFzc3dvcmQvQzpcXERFVlxcd29ya3NwYWNlc1xcaWNsaW5pY1xcU291cmNlXFxVSS9zcmNcXGFwcFxcc3ViLW1vZHVsZXNcXGF1dGhcXHBhZ2VzXFxjb21wbGV0ZS1uZXctcGFzc3dvcmRcXGNvbXBsZXRlLW5ldy1wYXNzd29yZC5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvc3ViLW1vZHVsZXMvYXV0aC9wYWdlcy9jb21wbGV0ZS1uZXctcGFzc3dvcmQvY29tcGxldGUtbmV3LXBhc3N3b3JkLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNFO0VBQ0UsZUFBQTtBQ0FKO0FEQ0k7RUFDRSxnQkFBQTtBQ0NOO0FERUk7RUFDRSxVQUFBO0FDQU47QURJRTtFQUNFLG1CQUFBO0VBQ0EsNkJBQUE7RUFDQSw0QkFBQTtBQ0ZKO0FES0U7RUFDRSxtQkFBQTtFQUNBLHlCQUFBO0VBQ0EsMEJBQUE7QUNISiIsImZpbGUiOiJzcmMvYXBwL3N1Yi1tb2R1bGVzL2F1dGgvcGFnZXMvY29tcGxldGUtbmV3LXBhc3N3b3JkL2NvbXBsZXRlLW5ldy1wYXNzd29yZC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jb250ZW50IHtcclxuICAuZm9ybS1zaWduaW4ge1xyXG4gICAgZm9udC1zaXplOiAxNnB4O1xyXG4gICAgaW1nIHtcclxuICAgICAgbWFyZ2luLWJvdHRvbTogMDtcclxuICAgIH1cclxuXHJcbiAgICAmOmZvY3VzIHtcclxuICAgICAgei1pbmRleDogMjtcclxuICAgIH1cclxuICB9XHJcblxyXG4gIGlucHV0W3R5cGU9XCJ0ZXh0XCJdIHtcclxuICAgIG1hcmdpbi1ib3R0b206IC0xcHg7XHJcbiAgICBib3JkZXItYm90dG9tLXJpZ2h0LXJhZGl1czogMDtcclxuICAgIGJvcmRlci1ib3R0b20tbGVmdC1yYWRpdXM6IDA7XHJcbiAgfVxyXG5cclxuICBpbnB1dFt0eXBlPVwicGFzc3dvcmRcIl0ge1xyXG4gICAgbWFyZ2luLWJvdHRvbTogMTBweDtcclxuICAgIGJvcmRlci10b3AtbGVmdC1yYWRpdXM6IDA7XHJcbiAgICBib3JkZXItdG9wLXJpZ2h0LXJhZGl1czogMDtcclxuICB9XHJcbn1cclxuXHJcbiIsIi5jb250ZW50IC5mb3JtLXNpZ25pbiB7XG4gIGZvbnQtc2l6ZTogMTZweDtcbn1cbi5jb250ZW50IC5mb3JtLXNpZ25pbiBpbWcge1xuICBtYXJnaW4tYm90dG9tOiAwO1xufVxuLmNvbnRlbnQgLmZvcm0tc2lnbmluOmZvY3VzIHtcbiAgei1pbmRleDogMjtcbn1cbi5jb250ZW50IGlucHV0W3R5cGU9dGV4dF0ge1xuICBtYXJnaW4tYm90dG9tOiAtMXB4O1xuICBib3JkZXItYm90dG9tLXJpZ2h0LXJhZGl1czogMDtcbiAgYm9yZGVyLWJvdHRvbS1sZWZ0LXJhZGl1czogMDtcbn1cbi5jb250ZW50IGlucHV0W3R5cGU9cGFzc3dvcmRdIHtcbiAgbWFyZ2luLWJvdHRvbTogMTBweDtcbiAgYm9yZGVyLXRvcC1sZWZ0LXJhZGl1czogMDtcbiAgYm9yZGVyLXRvcC1yaWdodC1yYWRpdXM6IDA7XG59Il19 */"
+
+/***/ }),
+
+/***/ "./src/app/sub-modules/auth/pages/complete-new-password/complete-new-password.component.ts":
+/*!*************************************************************************************************!*\
+  !*** ./src/app/sub-modules/auth/pages/complete-new-password/complete-new-password.component.ts ***!
+  \*************************************************************************************************/
+/*! exports provided: CompleteNewPasswordComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CompleteNewPasswordComponent", function() { return CompleteNewPasswordComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _services_auth_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../services/auth.service */ "./src/app/sub-modules/auth/services/auth.service.ts");
+/* harmony import */ var _ic_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../ic-core */ "./src/app/sub-modules/ic-core/index.ts");
+
+
+
+
+
+var CompleteNewPasswordComponent = /** @class */ (function () {
+    function CompleteNewPasswordComponent(route, router, authService, pageLoaderService) {
+        this.route = route;
+        this.router = router;
+        this.authService = authService;
+        this.pageLoaderService = pageLoaderService;
+        this.loginUrl = 'auth/sign-in';
+    }
+    CompleteNewPasswordComponent.prototype.ngOnInit = function () {
+        this.returnUrl = this.route.snapshot.queryParams.returnUrl || '/';
+    };
+    CompleteNewPasswordComponent.prototype.changePassword = function () {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var result;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        this.pageLoaderService.showPageLoader();
+                        return [4 /*yield*/, this.authService.completeNewPassword(this.newPassword)];
+                    case 1:
+                        result = _a.sent();
+                        this.pageLoaderService.hidePageLoader();
+                        if (!result.result) return [3 /*break*/, 3];
+                        return [4 /*yield*/, this.router.navigate([this.returnUrl])];
+                    case 2:
+                        _a.sent();
+                        return [3 /*break*/, 4];
+                    case 3:
+                        this.errorMessage = "Error: " + result.error;
+                        _a.label = 4;
+                    case 4: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    CompleteNewPasswordComponent.ctorParameters = function () { return [
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
+        { type: _services_auth_service__WEBPACK_IMPORTED_MODULE_3__["AuthService"] },
+        { type: _ic_core__WEBPACK_IMPORTED_MODULE_4__["PageLoaderService"] }
+    ]; };
+    CompleteNewPasswordComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'ic-change-password',
+            template: __webpack_require__(/*! raw-loader!./complete-new-password.component.html */ "./node_modules/raw-loader/index.js!./src/app/sub-modules/auth/pages/complete-new-password/complete-new-password.component.html"),
+            styles: [__webpack_require__(/*! ./complete-new-password.component.scss */ "./src/app/sub-modules/auth/pages/complete-new-password/complete-new-password.component.scss")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"],
+            _services_auth_service__WEBPACK_IMPORTED_MODULE_3__["AuthService"],
+            _ic_core__WEBPACK_IMPORTED_MODULE_4__["PageLoaderService"]])
+    ], CompleteNewPasswordComponent);
+    return CompleteNewPasswordComponent;
 }());
 
 
@@ -878,6 +988,7 @@ var SignInComponent = /** @class */ (function () {
         this.router = router;
         this.authService = authService;
         this.pageLoaderService = pageLoaderService;
+        this.completeNewPasswordUrl = 'auth/complete-new-password';
     }
     SignInComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -904,13 +1015,18 @@ var SignInComponent = /** @class */ (function () {
                     case 1:
                         result = _a.sent();
                         this.pageLoaderService.hidePageLoader();
-                        if (result.result) {
-                            // await this.router.navigate([this.returnUrl]); => ngOnInit()
-                        }
-                        else {
-                            this.errorMessage = "Error: " + result.error;
-                        }
-                        return [2 /*return*/];
+                        if (!result.result) return [3 /*break*/, 4];
+                        if (!(result.user.challengeName === 'NEW_PASSWORD_REQUIRED')) return [3 /*break*/, 3];
+                        this.authService['NEW_PASSWORD_REQUIRED'] = result.user;
+                        return [4 /*yield*/, this.router.navigate([this.completeNewPasswordUrl], { queryParams: { returnUrl: this.returnUrl } })];
+                    case 2:
+                        _a.sent();
+                        _a.label = 3;
+                    case 3: return [3 /*break*/, 5];
+                    case 4:
+                        this.errorMessage = "Error: " + result.error;
+                        _a.label = 5;
+                    case 5: return [2 /*return*/];
                 }
             });
         });

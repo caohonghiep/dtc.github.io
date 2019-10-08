@@ -1,9 +1,10 @@
 {
   "api": {
-    "contextPath": "https://b5cy8ueqv1.execute-api.ap-southeast-1.amazonaws.com/Stage",
+    "contextPath": "https://rem0phqcpl.execute-api.ap-southeast-1.amazonaws.com/Stage",
     "uri": {
-      "customers": "customers",
-      "services": "services"
+      "customer": "customers",
+      "service": "services",
+      "customerProfile": "profile"
     }
   },
   "awsAmplify": {
@@ -13,5 +14,6 @@
     "aws_user_pools_id": "us-east-1_ejQhP1J5d",
     "aws_user_pools_web_client_id": "71hte8f8lgbgscs7hhcrg6q12p",
     "oauth": {}
-  }
+  },
+  "dataMode": "online"
 }
