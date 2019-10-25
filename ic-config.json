@@ -4,7 +4,11 @@
     "uri": {
       "customer": "customers",
       "service": "services",
-      "customerProfile": "profile"
+      "customerProfile": "profile",
+      "appointment": "appointments",
+      "invoice": "billings",
+      "order": "orders",
+      "payment": "payments"
     }
   },
   "awsAmplify": {
